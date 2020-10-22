@@ -1,0 +1,39 @@
+.window__bar {
+  height: 28px;
+  border: 1px solid var(--black);
+  transform: translateY(1px);
+  background-color: var(--background);
+}
+
+.window__circles {
+  display: flex;
+  margin: 7px;
+  margin-left: 10px;
+}
+
+.window__circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: 1px solid var(--black);
+  margin-right: 8px;
+}
+
+.window__bar__info {
+  margin-left: 4px;
+  transform: translateY(-1px);
+}
+
+.window__image-wrapper {
+  /* adds scrollbars */
+  position: relative;
+  border: 1px solid var(--black);
+  background-color: var(--background);
+
+}
+
+.window__image-wrapper__image {
+  vertical-align: bottom;
+  mix-blend-mode: multiply;
+
+}

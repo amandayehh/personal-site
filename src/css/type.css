@@ -1,0 +1,21 @@
+* {
+    color: var(--black);
+}
+
+h3 {
+    font-family: neuebit, Helvetica, Arial sans-serif;
+    font-size: 24px;
+}
+
+p {
+    font-family: neuebit, Helvetica, Arial sans-serif;
+    font-size: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: underline;
+}

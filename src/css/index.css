@@ -1,0 +1,15 @@
+.index {
+    overflow-x: hidden;
+}
+
+.index__voices {
+    position: relative;
+    margin-left: 24vw;
+    transform: translateY(-60px);
+}
+
+.index__type-mirror {
+    position: relative;
+    margin-left: 4vw;
+    transform: translateY(-150px);
+}
