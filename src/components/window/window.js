@@ -14,17 +14,27 @@ class Window extends Component {
     super(props);
     this.width = props.sizeW
     this.height = props.sizeH
-    console.log(props.isScroll)
     if(props.isScroll==true){
       this.scroll = "auto"
     }else{
       this.scroll = "hidden"
     }
-    console.log(props.sizeW)
+
+    if(props.isVideo == true){
+      this.isVideo = true;
+    }else{
+      this.isVideo = false;
+    }
+
   }
 
-  componentDidMount() {
-    // console.log(this.props.width)
+  renderSrc(){
+    if(this.isVideo == false){
+      return( <img className="window__image-wrapper__image" src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />);
+    }
+    else{
+    return(<video src={this.props.src}  alt={this.props.alt} style={{ width: this.width }} preload="yes" autoPlay="autoplay" loop muted playsInline></video>      )
+    }
   }
 
 
@@ -53,7 +63,8 @@ class Window extends Component {
           </div>
         </div>
         <div className="window__image-wrapper" style={{ width: this.width, height: this.height, overflow:this.scroll}} >
-          <img className="window__image-wrapper__image" src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />
+      
+       {this.renderSrc()}
         </div>
       </div>
     )

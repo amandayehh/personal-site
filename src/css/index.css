@@ -30,3 +30,33 @@
     position: relative;
     transform: translate(-10vw, -210px);
 }
+
+.index__audio-visualizer {
+    position: relative;
+    margin-left: 37vw;
+    transform: translateY(-250px);
+}
+
+.index__posters {
+    transform: translateY(-270px);
+    position: relative;
+    margin-left: 4vw;
+}
+
+.index__canvas {
+    position: relative;
+    margin-left: 65vw;
+    transform: translateY(-80px);
+}
+
+.index__ditto {
+    position: relative;
+    margin-left: 6vw;
+    transform: translateY(-60px);
+}
+
+.index__pixel {
+    position: relative;
+    margin-left: 25vw;
+    transform: translateY(-110px);
+}

@@ -1,0 +1,27 @@
+.book {
+  display: flex;
+}
+
+.book__spine {
+  width: 28px;
+  border: 1px solid var(--black);
+  background-color: var(--background);
+}
+
+.book__spine__title {
+  /* transform: rotate(90deg); */
+  margin-top: 10px;
+  margin-left: 3px;
+  writing-mode: vertical-rl;
+
+}
+
+.book__wrapper {
+  background-color: var(--background);
+}
+
+.book__img {
+  border: 1px solid var(--black);
+  transform: translateX(-1px);
+  mix-blend-mode: multiply;
+}

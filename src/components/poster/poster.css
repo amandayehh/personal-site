@@ -1,0 +1,9 @@
+.poster {
+  background-color: var(-background);
+  position: absolute;
+}
+
+.poster__img {
+  mix-blend-mode: normal;
+  border: 0.685237px solid var(--black);
+}
