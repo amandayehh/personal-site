@@ -1,15 +1,63 @@
+@font-face {
+    font-family: 'Mondwest', serif;
+    src: url(../fonts/Mondwest-Regular.woff2) format('woff2'),
+        url(../fonts/Mondwest-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Mondwest', serif;
+    src: url(../fonts/Mondwest-Bold.woff2) format('woff2'),
+        url(../fonts/Mondwest-Bold.woff) format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'NeueBit', sans-serif;
+    src: url(../fonts/NeueBit-Regular.woff2) format('woff2'),
+        url(../fonts/NeueBit-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'NeueBit', sans-serif;
+    src: url(../fonts/NeueBit-Bold.woff2) format('woff2'),
+        url(../fonts/NeueBit-Bold.woff) format('woff');
+    font-weight: 700;
+
+}
+
+
+
 * {
     color: var(--black);
 }
 
+h2 {
+    font-family: 'Mondwest', serif;
+    font-size: 30px;
+}
+
 h3 {
-    font-family: neuebit, Helvetica, Arial sans-serif;
+    font-family: 'NeueBit', sans-serif;
     font-size: 24px;
 }
 
 p {
-    font-family: neuebit, Helvetica, Arial sans-serif;
+    font-family: 'NeueBit', sans-serif;
     font-size: 20px;
+}
+
+#small-title {
+    font-family: 'NeueBit', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+p.bold {
+    font-weight: bold;
+    font-family: 'Mondwest', serif;
+
+    font-size: 15px;
 }
 
 .bold {

@@ -1,0 +1,17 @@
+.colophon {
+  background-color: var(--secondary);
+  padding: 28px 14px;
+  margin: 0 16px;
+}
+
+.colophon * {
+  color: white;
+}
+
+.colophon__title {
+  margin-bottom: 20px;
+}
+
+.colophon__group__1 {
+  margin-bottom: 20px;
+}

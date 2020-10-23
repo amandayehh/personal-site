@@ -21,7 +21,7 @@
 
 .window__bar__info {
   margin-left: 4px;
-  transform: translateY(-1px);
+  transform: translateY(-1.5px);
 }
 
 .window__image-wrapper {

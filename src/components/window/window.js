@@ -59,7 +59,7 @@ class Window extends Component {
             <div className="window__circle"></div>
             <div className="window__circle"></div>
             <div className="window__circle"></div>
-            <p className="window__bar__info bold">{this.props.title}</p>
+            <p className="window__bar__info"id="small-title">{this.props.title}</p>
           </div>
         </div>
         <div className="window__image-wrapper" style={{ width: this.width, height: this.height, overflow:this.scroll}} >

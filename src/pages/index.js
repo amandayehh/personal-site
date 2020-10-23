@@ -1,11 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+
 import SEO from "../components/seo"
 import Name from "../components/name/name"
 import Sticky from "../components/sticky/sticky"
 import Window from "../components/window/window"
 import Poster from "../components/poster/poster"
 import Book from "../components/book/book"
+import Colophon from "../components/colophon/colophon"
+import Footer from "../components/footer/footer"
 
 import "../css/global.css"
 import "../css/reset.css"
@@ -72,6 +75,15 @@ const Index = () => (
     <div className="index__pixel">
       <Window sizeW={"75vw"} sizeH={"57vw"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" isScroll={true} />
     </div>
+
+    <div className="index__colophon">
+      <Colophon />
+    </div>
+    <div className="index__footer">
+      <Footer />
+    </div>
+
+
   </div>
 )
 

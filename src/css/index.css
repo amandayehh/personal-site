@@ -1,5 +1,7 @@
 .index {
     overflow-x: hidden;
+    max-height: min-content;
+    vertical-align: bottom;
 }
 
 .index__voices {
@@ -59,4 +61,16 @@
     position: relative;
     margin-left: 25vw;
     transform: translateY(-110px);
+    z-index: 10;
+
+}
+
+.index__colophon {
+    position: relative;
+    transform: translateY(-130px);
+}
+
+.index__footer {
+    position: relative;
+    transform: translateY(-130px);
 }
