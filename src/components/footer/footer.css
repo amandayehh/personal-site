@@ -1,6 +1,40 @@
 .footer {
-  width: 220px;
-  height: 194px;
+  margin-top: 16px;
   border: 1px solid var(--black);
 
+  padding: 16px;
+  float: right;
+  margin-right: 16px;
+  margin-bottom: 16px;
+
+}
+
+.footer__links {
+  margin-bottom: 1em;
+}
+
+.footer__links__title {
+  display: flex;
+}
+
+.footer__links__title__img {
+  height: 1em;
+}
+
+.footer__links__title__text {
+  margin-top: 2px;
+  margin-left: 6px;
+}
+
+.footer__note__heart {
+  display: flex;
+}
+
+.footer__note__heart__text {
+  margin-top: 3px;
+}
+
+.footer__note__heart__img {
+  height: 1.5em;
+  margin-left: 6px;
 }

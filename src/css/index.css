@@ -4,6 +4,10 @@
     vertical-align: bottom;
 }
 
+.index__wrapper {
+    margin-bottom: -130px;
+}
+
 .index__voices {
     position: relative;
     margin-left: 24vw;
@@ -67,10 +71,23 @@
 
 .index__colophon {
     position: relative;
-    transform: translateY(-130px);
+    z-index: 10;
 }
 
 .index__footer {
     position: relative;
-    transform: translateY(-130px);
+}
+
+.index__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.index__cat {}
+
+.index__cat__img {
+    width: 20vw;
+    margin-bottom: -1vw;
+
 }
