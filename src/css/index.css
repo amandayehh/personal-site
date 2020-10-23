@@ -13,3 +13,20 @@
     margin-left: 4vw;
     transform: translateY(-150px);
 }
+
+
+.index__kilotype {
+    position: relative;
+    transform: translate(-9vw, -120px);
+}
+
+.index__sel {
+    position: relative;
+    margin-left: 14vw;
+    transform: translateY(-160px);
+}
+
+.index__semaphore {
+    position: relative;
+    transform: translate(-10vw, -210px);
+}

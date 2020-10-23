@@ -11,7 +11,7 @@ const Sticky = ({ siteTitle }) => (
   <div className="sticky">
     <div className="sticky__bio">
       <h3 className="sticky__bio__1" >I’m pretty good at making websites. I sometimes make print designs.</h3>
-      <h3 className="sticky__bio__2" >I sometimes make print designs.Open to work on weird things. Just reach out!</h3>
+      <h3 className="sticky__bio__2" >Open to work on weird things. Just reach out!</h3>
       <div className="sticky__bio__links">
         <p className="sticky__bio__links__1">
           <a href="">aye01@mica.edu</a>

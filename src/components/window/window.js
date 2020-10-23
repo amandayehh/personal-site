@@ -53,7 +53,7 @@ class Window extends Component {
           </div>
         </div>
         <div className="window__image-wrapper" style={{ width: this.width, height: this.height, overflow:this.scroll}} >
-          <img className="window__image-wrapper__image" src={this.props.src} alt="" style={{ width: this.width }} />
+          <img className="window__image-wrapper__image" src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />
         </div>
       </div>
     )
