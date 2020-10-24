@@ -49,6 +49,21 @@
     margin-left: 4vw;
 }
 
+.index__posters__1 {
+    margin-left: 8vw;
+    transform: translateY(10vw);
+
+}
+
+.index__posters__2 {
+    margin-left: 3vw;
+    transform: translateY(10vw);
+}
+
+.index__posters__3 {
+    margin-left: 10vw;
+}
+
 .index__canvas {
     position: relative;
     margin-left: 65vw;
@@ -84,10 +99,9 @@
     align-items: flex-end;
 }
 
-.index__cat {}
-
 .index__cat__img {
     width: 20vw;
     margin-bottom: -1vw;
-
 }
+
+@media only screen and (max-width: 600px) {}

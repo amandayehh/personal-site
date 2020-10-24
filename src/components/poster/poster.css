@@ -1,9 +1,10 @@
 .poster {
-  background-color: var(-background);
+  background-color: var(--background);
   position: absolute;
 }
 
 .poster__img {
-  mix-blend-mode: normal;
+  mix-blend-mode: multiply;
   border: 0.685237px solid var(--black);
+  vertical-align: bottom;
 }

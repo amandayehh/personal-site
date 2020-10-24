@@ -37,7 +37,7 @@ const Index = () => (
       <Name />
       <Sticky />
       <div className="index__voices">
-        <Window sizeW={"72vw"} sizeH={"390px"} src={voicesAndVoids} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" isScroll={true} />
+        <Window sizeW={"72vw"} sizeH={"120vw"} src={voicesAndVoids} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" isScroll={true} />
       </div>
 
       <div className="index__type-mirror">
@@ -60,9 +60,18 @@ const Index = () => (
         <Window sizeW={"88vw"} sizeH={"58vw"} isVideo={true} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
       </div>
       <div className="index__posters">
-        <Poster sizeW={"45vw"} left={"4vw"} top={"7vw"} src={poster1} alt="Poster for photo exhibition" />
-        <Poster sizeW={"40vw"} left={"0vw"} top={"12vw"} src={poster3} alt="Poster for photo a machine learning workshop" />
-        <Poster sizeW={"48vw"} left={"7vw"} top={"0px"} src={poster2} alt="Poster for the all mighty pumpkin spice cult" />
+        <div className="index__posters__1">
+          <Poster sizeW={"45vw"} src={poster1} alt="Poster for photo exhibition" />
+        </div>
+
+        <div className="index__posters__2">
+          <Poster sizeW={"40vw"} src={poster3} alt="Poster for photo a machine learning workshop" />
+        </div>
+
+        <div className="index__posters__3">
+          <Poster sizeW={"48vw"} src={poster2} alt="Poster for the all mighty pumpkin spice cult" />
+        </div>
+
       </div>
 
       <div className="index__canvas">
