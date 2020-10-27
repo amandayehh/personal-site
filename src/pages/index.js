@@ -37,53 +37,53 @@ const Index = () => (
       <Name />
       <Sticky />
       <div className="index__voices">
-        <Window sizeW={"72vw"} sizeH={"120vw"} src={voicesAndVoids} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" isScroll={true} />
+        <Window  src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
       </div>
 
       <div className="index__type-mirror">
-        <Window sizeW={"50vw"} sizeH={"36vw"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
+        <Window  imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
       </div>
 
       <div className="index__kilotype">
-        <Window sizeW={"85vw"} sizeH={"200px"} src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website" isScroll={true} />
+        <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"}  src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website"  />
       </div>
 
       <div className="index__sel">
-        <Window sizeW={"120vw"} sizeH={"350px"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website" isScroll={true} />
+        <Window  imgClass={"index__sel__img"} wrpClass={"index__sel__wrp"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website"  />
       </div>
 
       <div className="index__semaphore">
-        <Window sizeW={"70vw"} sizeH={"57vw"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
+        <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
       </div>
 
       <div className="index__audio-visualizer">
-        <Window sizeW={"88vw"} sizeH={"58vw"} isVideo={true} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
+        <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={true} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
       </div>
       <div className="index__posters">
         <div className="index__posters__1">
-          <Poster sizeW={"45vw"} src={poster1} alt="Poster for photo exhibition" />
+          <Poster imgClass="index__posters__1_img" src={poster1} alt="Poster for photo exhibition" />
         </div>
 
         <div className="index__posters__2">
-          <Poster sizeW={"40vw"} src={poster3} alt="Poster for photo a machine learning workshop" />
+          <Poster  imgClass="index__posters__2_img" src={poster3} alt="Poster for photo a machine learning workshop" />
         </div>
 
         <div className="index__posters__3">
-          <Poster sizeW={"48vw"} src={poster2} alt="Poster for the all mighty pumpkin spice cult" />
+          <Poster  imgClass="index__posters__3_img"  src={poster2} alt="Poster for the all mighty pumpkin spice cult" />
         </div>
 
       </div>
 
       <div className="index__canvas">
-        <Book sizeH={"55vw"} src={canvas} title={"Beyond a Blank Canvas"} alt="Book cover for beyond a blank canvas" />
+        <Book src={canvas} spineClass={"index__canvas__spine"} wrpClass={"index__canvas__wrapper"} imgClass={"index__canvas__img"} title={"Beyond a Blank Canvas"} alt="Book cover for beyond a blank canvas"/>
       </div>
 
       <div className="index__ditto">
-        <Window sizeW={"60vw"} sizeH={"50vw"} src={ditto} title={"Ditto"} alt="Screeonshot of Ditto's website" isScroll={true} />
+        <Window imgClass={"index__ditto__img"} wrpClass={"index__ditto__wrp"} src={ditto} title={"Ditto"} alt="Screeonshot of Ditto's website"/>
       </div>
 
       <div className="index__pixel">
-        <Window sizeW={"75vw"} sizeH={"57vw"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" isScroll={true} />
+        <Window imgClass={"index__pixel__img"} wrpClass={"index__pixel__wrp"}  src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website"/>
       </div>
 
     </div>

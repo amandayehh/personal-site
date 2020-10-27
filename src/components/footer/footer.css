@@ -1,12 +1,11 @@
 .footer {
   margin-top: 16px;
   border: 1px solid var(--black);
-
+  width: 10em;
   padding: 16px;
   float: right;
   margin-right: 16px;
   margin-bottom: 16px;
-
 }
 
 .footer__links {

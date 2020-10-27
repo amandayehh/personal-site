@@ -4,47 +4,114 @@
     vertical-align: bottom;
 }
 
-.index__wrapper {
-    margin-bottom: -130px;
+.index>* {
+    overflow: hidden;
 }
+
+
+.index>* {
+    overflow: hidden;
+}
+
+.index__wrapper {}
 
 .index__voices {
     position: relative;
     margin-left: 24vw;
-    transform: translateY(-60px);
+    transform: translateY(-14vw);
+    width: 72vw;
+    height: 100vw;
+}
+
+.index__voices-and-voids__wrp {
+    height: 100vw;
+}
+
+.index__voices-and-voids__img {
+    width: 72vw;
 }
 
 .index__type-mirror {
     position: relative;
     margin-left: 4vw;
-    transform: translateY(-150px);
+    transform: translateY(-22vw);
+    width: 50vw;
+    height: 36vw;
 }
 
+.index__type-mirror__wrp {
+    height: 36vw;
+}
+
+.index__type-mirror__img {
+    width: 50vw;
+}
 
 .index__kilotype {
     position: relative;
-    transform: translate(-9vw, -120px);
+    transform: translate(-9vw, -8vw);
+    width: 85vw;
+    height: 60vw;
+}
+
+.index__kilotype__wrp {
+    height: 60vw;
+}
+
+.index__kilotype__img {
+    width: 85vw;
 }
 
 .index__sel {
     position: relative;
     margin-left: 14vw;
-    transform: translateY(-160px);
+    transform: translateY(-15vw);
+    width: 120vw;
+    height: 80vw;
+}
+
+.index__sel__wrp {
+    height: 80vw;
+}
+
+.index__sel__img {
+    width: 120vw;
 }
 
 .index__semaphore {
     position: relative;
-    transform: translate(-10vw, -210px);
+    transform: translate(-10vw, -20vw);
+    width: 70vw;
+    height: 57vw;
+}
+
+.index__semaphore__wrp {
+    height: 57vw;
+}
+
+.index__semaphore__img {
+    width: 70vw;
 }
 
 .index__audio-visualizer {
     position: relative;
     margin-left: 37vw;
-    transform: translateY(-250px);
+    transform: translateY(-30vw);
+    z-index: -3;
+    width: 88vw;
+    height: 58vw;
+}
+
+.index__audio-visualizer__wrp {
+    height: 58vw;
+}
+
+.index__audio-visualizer__img {
+    width: 88vw;
 }
 
 .index__posters {
-    transform: translateY(-270px);
+    transform: translateY(-40vw);
     position: relative;
     margin-left: 4vw;
 }
@@ -52,7 +119,10 @@
 .index__posters__1 {
     margin-left: 8vw;
     transform: translateY(10vw);
+}
 
+.index__posters__1_img {
+    width: 39vw;
 }
 
 .index__posters__2 {
@@ -60,33 +130,74 @@
     transform: translateY(10vw);
 }
 
+.index__posters__2_img {
+    width: 34vw;
+}
+
+
 .index__posters__3 {
     margin-left: 10vw;
+}
+
+.index__posters__3_img {
+    width: 42vw;
 }
 
 .index__canvas {
     position: relative;
     margin-left: 65vw;
-    transform: translateY(-80px);
+    transform: translateY(-10vw);
+    height: 50vw
+}
+
+.index__canvas__spine {
+    height: 50vw
+}
+
+.index__canvas__wrapper {
+    height: 50vw
+}
+
+.index__canvas__img {
+    height: 50vw
 }
 
 .index__ditto {
     position: relative;
     margin-left: 6vw;
-    transform: translateY(-60px);
+    transform: translateY(-2vw);
+    width: 60vw;
+    height: 40vw;
+}
+
+.index__ditto__wrp {
+    height: 40vw;
+}
+
+.index__ditto__img {
+    width: 60vw;
+
 }
 
 .index__pixel {
     position: relative;
     margin-left: 25vw;
-    transform: translateY(-110px);
-    z-index: 10;
+    transform: translateY(0vw);
+    z-index: 1;
+    width: 75vw;
+    height: 100vw;
+}
 
+.index__pixel__wrp {}
+
+.index__pixel__img {
+    width: 75vw;
 }
 
 .index__colophon {
     position: relative;
     z-index: 10;
+    margin-top: 5vw;
 }
 
 .index__footer {
@@ -104,4 +215,186 @@
     margin-bottom: -1vw;
 }
 
-@media only screen and (max-width: 600px) {}
+@media only screen and (min-width: 600px) {
+    .index__voices {
+        width: 64vw;
+        height: 90vw;
+        margin-left: 32vw;
+    }
+
+    .index__voices-and-voids__wrp {
+        height: 90vw;
+    }
+
+    .index__voices-and-voids__img {
+        width: 64vw;
+    }
+
+    .index__type-mirror {
+        margin-left: 6vw;
+        width: 30vw;
+        height: 22vw;
+        transform: translateY(-80vw);
+    }
+
+    .index__type-mirror__wrp {
+        height: 22vw;
+    }
+
+    .index__type-mirror__img {
+        width: 30vw;
+    }
+
+    .index__kilotype {
+        position: relative;
+        transform: translate(-1vw, -52vw);
+        width: 65vw;
+        height: 46vw;
+        z-index: 100;
+    }
+
+    .index__kilotype__wrp {
+        height: 46vw;
+    }
+
+    .index__kilotype__img {
+        width: 65vw;
+    }
+
+    .index__sel {
+        position: relative;
+        margin-left: 20vw;
+        transform: translateY(-56vw);
+        width: 80vw;
+        height: 100vw;
+    }
+
+    .index__sel__wrp {
+        height: 100vw;
+    }
+
+    .index__sel__img {
+        width: 80vw;
+    }
+
+    .index__semaphore {
+        position: relative;
+        transform: translate(2vw, -75vw);
+        width: 44vw;
+    }
+
+    .index__semaphore__wrp {}
+
+    .index__semaphore__img {
+        width: 44vw;
+    }
+
+    .index__audio-visualizer {
+        position: relative;
+        margin-left: 37vw;
+        transform: translateY(-100vw);
+        z-index: -3;
+        width: 50vw;
+        height: 33vw;
+    }
+
+    .index__audio-visualizer__wrp {
+        height: 33vw;
+    }
+
+    .index__audio-visualizer__img {
+        width: 50vw;
+    }
+
+    .index__posters {
+        transform: translateY(-102vw);
+        position: relative;
+        margin-left: 4vw;
+    }
+
+    .index__posters__1 {
+        margin-left: 8vw;
+        transform: translateY(10vw);
+    }
+
+    .index__posters__1_img {
+        width: 28vw;
+    }
+
+    .index__posters__2 {
+        margin-left: 3vw;
+        transform: translateY(10vw);
+    }
+
+    .index__posters__2_img {
+        width: 26vw;
+    }
+
+
+    .index__posters__3 {
+        margin-left: 10vw;
+    }
+
+    .index__posters__3_img {
+        width: 30vw;
+    }
+
+    .index__canvas {
+        position: relative;
+        margin-left: 60vw;
+        transform: translateY(-70vw);
+        height: 40vw
+    }
+
+    .index__canvas__spine {
+        height: 40vw
+    }
+
+    .index__canvas__wrapper {
+        height: 40vw
+    }
+
+    .index__canvas__img {
+        height: 40vw
+    }
+
+    .index__ditto {
+        position: relative;
+        margin-left: -6vw;
+        transform: translateY(-80vw);
+        width: 50vw;
+        height: 30vw;
+    }
+
+    .index__ditto__wrp {
+        height: 30vw;
+    }
+
+    .index__ditto__img {
+        width: 50vw;
+    }
+
+    .index__pixel {
+        position: relative;
+        margin-left: 34vw;
+        transform: translateY(-82vw);
+        z-index: 1;
+        width: 50vw;
+    }
+
+    .index__pixel__wrp {}
+
+    .index__pixel__img {
+        width: 50vw;
+    }
+
+    .index__wrapper {
+        margin-bottom: -132vw;
+    }
+
+    .index__cat__img {
+        width: 8vw;
+        margin-bottom: -1vw;
+    }
+
+}

@@ -3,8 +3,15 @@
   margin-top: 16px;
   margin-left: 16px;
   z-index: 2;
-
 }
 
 
 .name__svg path {}
+
+@media only screen and (min-width: 600px) {
+  .name__svg {
+    margin-top: 2vw;
+    margin-left: 2vw;
+  }
+
+}

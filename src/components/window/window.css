@@ -29,6 +29,7 @@
   position: relative;
   border: 1px solid var(--black);
   background-color: var(--background);
+  overflow: hidden;
 
 }
 

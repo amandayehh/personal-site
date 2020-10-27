@@ -10,6 +10,7 @@ import "../../css/type.css"
 class Poster extends Component {
   constructor(props) {
     super(props);
+    this.imgClass=props.imgClass
     this.width = props.sizeW
     this.height = props.sizeH
     this.left = props.left
@@ -20,7 +21,7 @@ class Poster extends Component {
   render() {
     return (
       <div className="poster">
-        <img  className="poster__img" src={this.props.src} alt={this.props.alt} style={{ width: this.width, marginTop: this.top, marginLeft: this.left }}/>
+        <img  className={`poster__img ${ this.props.imgClass }`} src={this.props.src} alt={this.props.alt} style={{ width: this.width, marginTop: this.top, marginLeft: this.left }}/>
       </div>
     )
   }

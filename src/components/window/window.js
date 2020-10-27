@@ -12,6 +12,8 @@ import voicesAndVoids from "../../images/index/voicesandvoids.png"
 class Window extends Component {
   constructor(props) {
     super(props);
+    this.imgClass = props.imgClass;
+    console.log(props.imgClass)
     this.width = props.sizeW
     this.height = props.sizeH
     if(props.isScroll==true){
@@ -19,7 +21,7 @@ class Window extends Component {
     }else{
       this.scroll = "hidden"
     }
-
+    
     if(props.isVideo == true){
       this.isVideo = true;
     }else{
@@ -30,27 +32,13 @@ class Window extends Component {
 
   renderSrc(){
     if(this.isVideo == false){
-      return( <img className="window__image-wrapper__image" src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />);
+      return( <img  className={`window__image-wrapper__image ${ this.props.imgClass }`} src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />);
     }
     else{
-    return(<video src={this.props.src}  alt={this.props.alt} style={{ width: this.width }} preload="yes" autoPlay="autoplay" loop muted playsInline></video>      )
+    return(<video src={this.props.src}  alt={this.props.alt}  className={`window__image-wrapper__image ${ this.props.imgClass }`} preload="yes" autoPlay="autoplay" loop muted playsInline></video>      )
     }
   }
 
-
-
-
-
-
-  // getImageSize() {
-  //   if (this.props.colorMode == "on-dark") {
-  //     return "back-nav__on-dark-stroke "
-  //   } else if (this.props.colorMode == "is-red") {
-  //     return "back-nav__red-stroke"
-  //   } else {
-  //     return "back-nav__on-light-stroke"
-  //   }
-  // }
   render() {
     return (
       <div className="window">
@@ -61,9 +49,10 @@ class Window extends Component {
             <div className="window__circle"></div>
             <p className="window__bar__info"id="small-title">{this.props.title}</p>
           </div>
+          {console.log(this.props.imgClass)}
         </div>
-        <div className="window__image-wrapper" style={{ width: this.width, height: this.height, overflow:this.scroll}} >
-      
+        <div className={`window__image-wrapper ${ this.props.wrpClass }`} style={{ width: this.width, height: this.height, overflow:this.hidden}} >
+
        {this.renderSrc()}
         </div>
       </div>

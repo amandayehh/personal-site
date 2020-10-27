@@ -15,3 +15,10 @@
 .colophon__group__1 {
   margin-bottom: 20px;
 }
+
+@media only screen and (min-width: 600px) {
+  .colophon {
+    width: 520px;
+    margin-left: 6vw;
+  }
+}

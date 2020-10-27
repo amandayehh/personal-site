@@ -67,3 +67,12 @@ p.bold {
 a {
     text-decoration: underline;
 }
+
+@media only screen and (min-width: 600px) {
+
+    h3 {
+        font-family: 'NeueBit', sans-serif;
+        font-size: 33px;
+    }
+
+}

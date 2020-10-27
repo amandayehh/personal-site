@@ -10,17 +10,21 @@ import "../../css/type.css"
 class Book extends Component {
   constructor(props) {
     super(props);
+    this.spineClass = props.spineClass
+    this.wrpClass = props.wrpClass
+    this.imgClass = props.imgClass
     this.height = props.sizeH
   }
 
   render() {
     return (
       <div className="book">
-        <div className="book__spine" style={{ height: this.height }}>
+        <div className={`book__spine ${this.spineClass}`}>
           <p className="book__spine__title" id="small-title" >{this.props.title}</p>
         </div>
-        <div className="book__wrapper" style={{ height: this.height }}>
-          <img className="book__img" src={this.props.src} alt={this.props.alt} style={{ height: this.height }} />
+        <div className={`book__wrapper ${this.wrpClass}`}>
+          {console.log(this.imgClass)}
+          <img className={`book__img ${this.imgClass}`} src={this.props.src} alt={this.props.alt} style={{ height: this.height }} />
         </div>
       </div>
     )
