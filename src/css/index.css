@@ -9,10 +9,9 @@
 }
 
 
-.index>* {
-    overflow: hidden;
+.index__wrapper a {
+    text-decoration: none;
 }
-
 
 
 .shortcuts {
@@ -28,6 +27,7 @@
     width: 72vw;
     height: 130vw;
     z-index: 10;
+
 }
 
 .index__voices-and-voids__wrp {

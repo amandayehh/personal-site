@@ -14,7 +14,7 @@ class Shortcut extends Component {
   render() {
     return (
       <div className="shortcut">
-        <a href="" className="shortcut__link">
+        <a href={this.props.href} target="_blank" className="shortcut__link">
           <img className="shortcut__img" src={this.props.src} alt={this.props.alt} />
           <p className="shortcut__link__text">
             {this.props.text}

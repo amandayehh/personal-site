@@ -3,6 +3,7 @@
   border: 1px solid var(--black);
   transform: translateY(1px);
   background-color: var(--secondary);
+  text-decoration: none;
 }
 
 .window__circles {
@@ -22,6 +23,8 @@
 .window__bar__info {
   margin-left: 4px;
   transform: translateY(-1.5px);
+  text-decoration: none;
+
 }
 
 .window__image-wrapper {

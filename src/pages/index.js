@@ -42,11 +42,11 @@ const Index = () => (
       <Name />
       <Sticky />
       <div className="shortcuts">
-        <Shortcut className="shortcuts__1" src={mail} alt={"mail icon"} text={"ayeh@mica.edu"} />
-        <Shortcut className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
-        <Shortcut className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
+        <Shortcut href={"mailto:ayeh01@mica.edu"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"ayeh@mica.edu"} />
+        <Shortcut href={"https://www.are.na/amanda"} className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
+        <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
       </div>
-      <a href="http://voicesandvoids.net/" target="_blank">
+      <a classname="index__href" href="http://voicesandvoids.net/" target="_blank">
         <div className="index__voices">
           <Window src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
         </div>

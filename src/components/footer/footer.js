@@ -24,9 +24,9 @@ class Footer extends Component {
             <img className="footer__links__title__img" src={me} alt="Pixelated Amanda's face" />
             <p className="bold footer__links__title__text">Find me at</p>
           </div>
-          <p><a href="">www.are.na/amanda</a></p>
-          <p><a href="">github.com/amandayehh</a></p>
-          <p><a href="">aye01@mica.edu</a></p>
+          <p><a href="https://www.are.na/amanda" target="_blank">www.are.na/amanda</a></p>
+          <p><a href="https://github.com/amandayehh" >github.com/amandayehh</a></p>
+          <p><a href="mailto:ayeh01@mica.edu" target="_blank">aye01@mica.edu</a></p>
         </div>
         <div className="footer__note">
           <div className="footer__note__heart">
