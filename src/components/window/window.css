@@ -2,7 +2,7 @@
   height: 28px;
   border: 1px solid var(--black);
   transform: translateY(1px);
-  background-color: #FF4D00;
+  background-color: var(--secondary);
 }
 
 .window__circles {
