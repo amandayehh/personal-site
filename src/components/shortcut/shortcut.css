@@ -1,0 +1,25 @@
+.shortcut {
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1.6em;
+}
+
+.shortcut__img {
+  width: 48px;
+  margin-bottom: 2px;
+}
+
+.shortcut__link {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .shortcut {}
+
+}

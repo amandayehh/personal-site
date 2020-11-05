@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 import Name from "../components/name/name"
 import Sticky from "../components/sticky/sticky"
+import Shortcut from "../components/shortcut/shortcut"
+
 import Window from "../components/window/window"
 import Poster from "../components/poster/poster"
 import Book from "../components/book/book"
@@ -15,6 +17,9 @@ import "../css/reset.css"
 import "../css/type.css"
 import "../css/index.css"
 
+import mail from "../images/shortcut/mail.png"
+
+import web from "../images/shortcut/web.png"
 import voicesAndVoids from "../images/index/voicesandvoids.png"
 import typeMirror from "../images/index/type-mirror.png"
 import kilotype from "../images/index/kilotype.png"
@@ -36,10 +41,14 @@ const Index = () => (
     <div className="index__wrapper">
       <Name />
       <Sticky />
+      <div className="shortcuts">
+      <Shortcut className="shortcuts__1" src ={mail} alt={"mail icon"} text={"ayeh@mica.edu"}/>
+      <Shortcut className="shortcuts__2" src ={web} alt={"website icon"} text={"are.na"}/>
+      <Shortcut className="shortcuts__3" src ={web} alt={"website icon"} text={"github"}/>
+      </div>
       <div className="index__voices">
         <Window  src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
       </div>
-
       <div className="index__type-mirror">
         <Window  imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
       </div>

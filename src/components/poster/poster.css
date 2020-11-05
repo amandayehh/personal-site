@@ -4,7 +4,6 @@
 }
 
 .poster__img {
-  mix-blend-mode: multiply;
   border: 0.685237px solid var(--black);
   vertical-align: bottom;
 }

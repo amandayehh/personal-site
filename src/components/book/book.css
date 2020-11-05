@@ -23,5 +23,4 @@
 .book__img {
   border: 1px solid var(--black);
   transform: translateX(-1px);
-  mix-blend-mode: multiply;
 }

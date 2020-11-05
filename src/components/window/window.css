@@ -2,7 +2,7 @@
   height: 28px;
   border: 1px solid var(--black);
   transform: translateY(1px);
-  background-color: var(--background);
+  background-color: #FF4D00;
 }
 
 .window__circles {
@@ -34,7 +34,6 @@
 }
 
 .window__image-wrapper__image {
-  vertical-align: bottom;
-  mix-blend-mode: multiply;
+  vertical-align: top;
 
 }

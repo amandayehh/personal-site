@@ -1,6 +1,7 @@
 .footer {
   margin-top: 16px;
   border: 1px solid var(--black);
+  background-color: white;
   width: 10em;
   padding: 16px;
   float: right;

@@ -13,18 +13,25 @@
     overflow: hidden;
 }
 
-.index__wrapper {}
+
+
+.shortcuts {
+    position: absolute;
+    top: 380px;
+    left: 16px;
+}
 
 .index__voices {
     position: relative;
     margin-left: 24vw;
-    transform: translateY(-14vw);
+    transform: translateY(-10vw);
     width: 72vw;
-    height: 100vw;
+    height: 130vw;
+    z-index: 10;
 }
 
 .index__voices-and-voids__wrp {
-    height: 100vw;
+    height: 130vw;
 }
 
 .index__voices-and-voids__img {
@@ -37,6 +44,7 @@
     transform: translateY(-22vw);
     width: 50vw;
     height: 36vw;
+    z-index: 10;
 }
 
 .index__type-mirror__wrp {
@@ -52,6 +60,7 @@
     transform: translate(-9vw, -8vw);
     width: 85vw;
     height: 60vw;
+    z-index: 1;
 }
 
 .index__kilotype__wrp {
@@ -68,6 +77,7 @@
     transform: translateY(-15vw);
     width: 120vw;
     height: 80vw;
+    z-index: 100;
 }
 
 .index__sel__wrp {
@@ -83,6 +93,8 @@
     transform: translate(-10vw, -20vw);
     width: 70vw;
     height: 57vw;
+    z-index: 100;
+
 }
 
 .index__semaphore__wrp {
@@ -93,13 +105,14 @@
     width: 70vw;
 }
 
+
 .index__audio-visualizer {
     position: relative;
     margin-left: 37vw;
     transform: translateY(-30vw);
-    z-index: -3;
     width: 88vw;
     height: 58vw;
+    z-index: 100;
 }
 
 .index__audio-visualizer__wrp {
@@ -216,6 +229,12 @@
 }
 
 @media only screen and (min-width: 600px) {
+    .shortcuts {
+        position: absolute;
+        top: 160px;
+        left: 70px;
+    }
+
     .index__voices {
         width: 64vw;
         height: 90vw;
@@ -293,7 +312,6 @@
         position: relative;
         margin-left: 37vw;
         transform: translateY(-100vw);
-        z-index: -3;
         width: 50vw;
         height: 33vw;
     }
