@@ -3,9 +3,9 @@
 }
 
 .book__spine {
-  width: 28px;
+  width: 24px;
   border: 1px solid var(--black);
-  background-color: var(--background);
+  background-color: var(--secondary);
 }
 
 .book__spine__title {

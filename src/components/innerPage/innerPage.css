@@ -1,4 +1,11 @@
-.window__bar {
+.innerPage__window {
+  width: 90vw;
+  position: fixed;
+  z-index: 100;
+  left: 5vw;
+}
+
+.innerPage__window__bar {
   height: 24px;
   border: 1px solid var(--black);
   transform: translateY(1px);
@@ -6,13 +13,13 @@
   text-decoration: none;
 }
 
-.window__circles {
+.innerPage__window__circles {
   display: flex;
   margin: 6px;
   margin-left: 10px;
 }
 
-.window__circle {
+.innerPage__window__circle {
   width: 10px;
   height: 10px;
   border-radius: 100%;
@@ -20,23 +27,9 @@
   margin-right: 6px;
 }
 
-.window__bar__info {
+.innerPage__window__bar__info {
   margin-left: 4px;
   transform: translateY(-2px);
   text-decoration: none;
-
-}
-
-.window__image-wrapper {
-  /* adds scrollbars */
-  position: relative;
-  border: 1px solid var(--black);
-  background-color: var(--background);
-  overflow: hidden;
-
-}
-
-.window__image-wrapper__image {
-  vertical-align: top;
 
 }

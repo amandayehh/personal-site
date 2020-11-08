@@ -23,8 +23,10 @@
 @media only screen and (min-width: 600px) {
   .sticky {
     width: 380px;
-    height: 368px;
+    height: 350px;
     left: 22vw;
+    top: -10px;
+
 
   }
 

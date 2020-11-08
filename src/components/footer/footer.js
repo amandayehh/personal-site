@@ -7,7 +7,6 @@ import "../../css/reset.css"
 import "../../css/type.css"
 
 import me from "../../images/me.png"
-
 import yargle from "../../images/footer/yargle.gif"
 
 class Footer extends Component {

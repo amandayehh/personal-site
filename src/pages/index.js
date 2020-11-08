@@ -1,16 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
+import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+
 
 import SEO from "../components/seo"
+import Noise from "../components/noise/noise"
 import Name from "../components/name/name"
 import Sticky from "../components/sticky/sticky"
 import Shortcut from "../components/shortcut/shortcut"
-
 import Window from "../components/window/window"
-import Poster from "../components/poster/poster"
 import Book from "../components/book/book"
 import Colophon from "../components/colophon/colophon"
 import Footer from "../components/footer/footer"
+
+import InnerPage from "../components/innerPage/innerPage"
+
 
 import "../css/global.css"
 import "../css/reset.css"
@@ -18,7 +22,6 @@ import "../css/type.css"
 import "../css/index.css"
 
 import mail from "../images/shortcut/mail.png"
-
 import web from "../images/shortcut/web.png"
 import voicesAndVoids from "../images/index/voicesandvoids.png"
 import typeMirror from "../images/index/type-mirror.png"
@@ -36,52 +39,67 @@ import cat from "../images/cat.gif"
 
 
 const Index = () => (
+
   <div className="index">
+
     <SEO title="Amanda Yeh" />
+
+    <Noise />
     <div className="index__wrapper">
       <Name />
+      <InnerPage className="index__innerPage" />
+
       <Sticky />
+
       <div className="shortcuts">
         <Shortcut href={"mailto:ayeh01@mica.edu"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"ayeh@mica.edu"} />
         <Shortcut href={"https://www.are.na/amanda"} className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
         <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
       </div>
-      <a classname="index__href" href="http://voicesandvoids.net/" target="_blank">
-        <div className="index__voices">
+
+      <div className="index__voices" >
+        <a className="index__href" href="http://voicesandvoids.net/" target="_blank">
           <Window src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
-        </div>
-      </a>
-      <a href="https://amandayehh.github.io/type-mirror/" target="_blank">
-        <div className="index__type-mirror">
+        </a>
+      </div>
+
+
+      <div className="index__type-mirror">
+        <a href="https://amandayehh.github.io/type-mirror/" target="_blank">
           <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <a href="https://kilotype.de/" target="_blank">
-        <div className="index__kilotype">
+
+      <div className="index__kilotype">
+        <a href="https://kilotype.de/" target="_blank">
           <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <a href="http://exploresel.gse.harvard.edu/" target="_blank">
-        <div className="index__sel">
+
+      <div className="index__sel">
+        <a href="http://exploresel.gse.harvard.edu/" target="_blank">
           <Window imgClass={"index__sel__img"} wrpClass={"index__sel__wrp"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website" />
-        </div>
-      </a>
+        </a>
 
-      <a href="https://ygev.github.io/semaphore/" target="_blank">
-        <div className="index__semaphore">
+      </div>
+
+
+      <div className="index__semaphore">
+        <a href="https://ygev.github.io/semaphore/" target="_blank">
           <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <a href="https://amandayehh.github.io/audio-visualizer/" target="_blank">
-        <div className="index__audio-visualizer">
+
+      <div className="index__audio-visualizer">
+        <a href="https://amandayehh.github.io/audio-visualizer/" target="_blank">
           <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={true} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <div className="index__posters">
+      {/* <div className="index__posters">
         <div className="index__posters__1">
           <Poster imgClass="index__posters__1_img" src={poster1} alt="Poster for photo exhibition" />
         </div>
@@ -94,23 +112,24 @@ const Index = () => (
           <Poster imgClass="index__posters__3_img" src={poster2} alt="Poster for the all mighty pumpkin spice cult" />
         </div>
 
-      </div>
+      </div> */}
 
       <div className="index__canvas">
         <Book src={canvas} spineClass={"index__canvas__spine"} wrpClass={"index__canvas__wrapper"} imgClass={"index__canvas__img"} title={"Beyond a Blank Canvas"} alt="Book cover for beyond a blank canvas" />
       </div>
 
-      <a href="https://ygev.github.io/ditto/" target="_blank">
-        <div className="index__ditto">
+      <div className="index__ditto">
+        <a href="https://ygev.github.io/ditto/" target="_blank">
           <Window imgClass={"index__ditto__img"} wrpClass={"index__ditto__wrp"} src={ditto} title={"Ditto"} alt="Screeonshot of Ditto's website" />
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <a href="https://pixelation.micagraphicdesign.org/" target="_blank">
-        <div className="index__pixel">
+      <div className="index__pixel">
+        <a href="https://pixelation.micagraphicdesign.org/" target="_blank">
           <Window imgClass={"index__pixel__img"} wrpClass={"index__pixel__wrp"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" />
-        </div>
-      </a>
+        </a>
+      </div>
+
 
     </div>
     <div className="index__colophon">
@@ -126,7 +145,7 @@ const Index = () => (
     </div>
 
 
-  </div>
+  </div >
 )
 
 export default Index
