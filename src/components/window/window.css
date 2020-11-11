@@ -38,5 +38,5 @@
 
 .window__image-wrapper__image {
   vertical-align: top;
-
+  clear: both;
 }

@@ -1,6 +1,13 @@
-import React from "react"
+// import React from "react"
+import React, { Component } from "react"
+
 import { Link } from "gatsby"
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 
 import SEO from "../components/seo"
@@ -15,6 +22,7 @@ import Footer from "../components/footer/footer"
 
 import InnerPage from "../components/innerPage/innerPage"
 
+import UnderConstruction from "../components/underConstruction/underConstruction"
 
 import "../css/global.css"
 import "../css/reset.css"
@@ -38,68 +46,118 @@ import pixel from "../images/index/pixel.png"
 import cat from "../images/cat.gif"
 
 
-const Index = () => (
+class Index extends Component {
+  constructor() {
+    super();
+    this.state = {
+      openWindow: false,
+      mainLink: "/",
+      title: "/",
+      summary: "/"
 
-  <div className="index">
+    }
+    this.openWindow = this.openWindow.bind(this);
 
-    <SEO title="Amanda Yeh" />
+  }
 
-    <Noise />
-    <div className="index__wrapper">
-      <Name />
-      <InnerPage className="index__innerPage" />
-
-      <Sticky />
-
-      <div className="shortcuts">
-        <Shortcut href={"mailto:ayeh01@mica.edu"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"ayeh@mica.edu"} />
-        <Shortcut href={"https://www.are.na/amanda"} className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
-        <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
-      </div>
-
-      <div className="index__voices" >
-        <a className="index__href" href="http://voicesandvoids.net/" target="_blank">
-          <Window src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
-        </a>
-      </div>
+  openWindow(e, title, summary, mainLink) {
+    this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink })
 
 
-      <div className="index__type-mirror">
-        <a href="https://amandayehh.github.io/type-mirror/" target="_blank">
-          <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
-        </a>
-      </div>
+  }
+
+  renderCompnent() {
+    {
+      if (this.state.openWindow == true) {
+        return (<InnerPage title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} />
+        )
+      }
+    }
+  }
+
+  // appendChild() {
+  //   if (this.openWindow == true) {
+  //     console.log("here")
+  //     return (
+  //       <InnerPage className="index__innerPage" mainLink="https://voicesandvoids.net/" collabLinks="https://yg.is/" />
+  //     )
+  //   }
+  // }
+  // openPage(e) {
+  //           console.log(e)
 
 
-      <div className="index__kilotype">
-        <a href="https://kilotype.de/" target="_blank">
-          <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
-        </a>
-      </div>
+  //   document.getElementsByClassName("index")[0].insertAdjacentHTML('beforeend', '<InnerPage className="index__innerPage" mainLink="https://voicesandvoids.net/" collabLinks="https://yg.is/" />')
+  //   {/* <InnerPage className="index__innerPage" mainLink="https://voicesandvoids.net/" collabLinks="https://yg.is/" /> */}
+  // }
+
+  render() {
+
+    return (
+
+      <div className="index">
+        {/* */}
+        {this.renderCompnent()}
+        <SEO title="Amanda Yeh" />
 
 
-      <div className="index__sel">
-        <a href="http://exploresel.gse.harvard.edu/" target="_blank">
-          <Window imgClass={"index__sel__img"} wrpClass={"index__sel__wrp"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website" />
-        </a>
+        <div className="index__filter"></div>
+        <div className="index__wrapper">
 
-      </div>
+          <Name />
+          <UnderConstruction />
+
+          <Sticky />
+
+          <div className="shortcuts">
+            <Shortcut href={"mailto:ayeh01@mica.edu"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"ayeh@mica.edu"} />
+            <Shortcut href={"https://www.are.na/amanda"} className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
+            <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
+          </div>
+
+          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/")}>
+
+            <Window src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
+
+          </div>
 
 
-      <div className="index__semaphore">
-        <a href="https://ygev.github.io/semaphore/" target="_blank">
-          <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
-        </a>
-      </div>
+          <div className="index__type-mirror">
+            <a href="https://amandayehh.github.io/type-mirror/" target="_blank">
+              <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
+            </a>
+          </div>
 
 
-      <div className="index__audio-visualizer">
-        <a href="https://amandayehh.github.io/audio-visualizer/" target="_blank">
-          <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={true} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
-        </a>
-      </div>
+          <div className="index__kilotype">
+            <a href="https://kilotype.de/" target="_blank">
+              <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
+            </a>
+          </div>
 
-      {/* <div className="index__posters">
+
+          <div className="index__sel">
+            <a href="http://exploresel.gse.harvard.edu/" target="_blank">
+              <Window imgClass={"index__sel__img"} wrpClass={"index__sel__wrp"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website" />
+            </a>
+
+          </div>
+
+
+          <div className="index__semaphore">
+            <a href="https://ygev.github.io/semaphore/" target="_blank">
+              <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
+            </a>
+          </div>
+
+
+          <div className="index__audio-visualizer">
+            <a href="https://amandayehh.github.io/audio-visualizer/" target="_blank">
+              <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={true} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
+            </a>
+          </div>
+
+          {/* <div className="index__posters">
         <div className="index__posters__1">
           <Poster imgClass="index__posters__1_img" src={poster1} alt="Poster for photo exhibition" />
         </div>
@@ -114,38 +172,41 @@ const Index = () => (
 
       </div> */}
 
-      <div className="index__canvas">
-        <Book src={canvas} spineClass={"index__canvas__spine"} wrpClass={"index__canvas__wrapper"} imgClass={"index__canvas__img"} title={"Beyond a Blank Canvas"} alt="Book cover for beyond a blank canvas" />
-      </div>
+          <div className="index__canvas">
+            <Book src={canvas} spineClass={"index__canvas__spine"} wrpClass={"index__canvas__wrapper"} imgClass={"index__canvas__img"} title={"Beyond a Blank Canvas"} alt="Book cover for beyond a blank canvas" />
+          </div>
 
-      <div className="index__ditto">
-        <a href="https://ygev.github.io/ditto/" target="_blank">
-          <Window imgClass={"index__ditto__img"} wrpClass={"index__ditto__wrp"} src={ditto} title={"Ditto"} alt="Screeonshot of Ditto's website" />
-        </a>
-      </div>
+          <div className="index__ditto">
+            <a href="https://ygev.github.io/ditto/" target="_blank">
+              <Window imgClass={"index__ditto__img"} wrpClass={"index__ditto__wrp"} src={ditto} title={"Ditto"} alt="Screeonshot of Ditto's website" />
+            </a>
+          </div>
 
-      <div className="index__pixel">
-        <a href="https://pixelation.micagraphicdesign.org/" target="_blank">
-          <Window imgClass={"index__pixel__img"} wrpClass={"index__pixel__wrp"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" />
-        </a>
-      </div>
-
-
-    </div>
-    <div className="index__colophon">
-      <Colophon />
-    </div>
-    <div className="index__bottom">
-      <div className="index__cat" >
-        <img className="index__cat__img" src={cat} alt="vibing cat" />
-      </div>
-      <div className="index__footer">
-        <Footer />
-      </div>
-    </div>
+          <div className="index__pixel">
+            <a href="https://pixelation.micagraphicdesign.org/" target="_blank">
+              <Window imgClass={"index__pixel__img"} wrpClass={"index__pixel__wrp"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" />
+            </a>
+          </div>
 
 
-  </div >
-)
+        </div>
+        <div className="index__colophon">
+          <Colophon />
+        </div>
+        <div className="index__bottom">
+          <div className="index__cat" >
+            <img className="index__cat__img" src={cat} alt="vibing cat" />
+          </div>
+          <div className="index__footer">
+            <Footer />
+          </div>
+        </div>
+
+
+      </div >
+    )
+  }
+}
+
 
 export default Index

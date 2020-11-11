@@ -23,7 +23,6 @@ class Book extends Component {
           <p className="book__spine__title" id="small-title" >{this.props.title}</p>
         </div>
         <div className={`book__wrapper ${this.wrpClass}`}>
-          {console.log(this.imgClass)}
           <img className={`book__img ${this.imgClass}`} src={this.props.src} alt={this.props.alt} style={{ height: this.height }} />
         </div>
       </div>

@@ -1,3 +1,9 @@
+body {
+    /* margin: 0;
+    height: 100%;
+    overflow: hidden; */
+}
+
 .index {
     overflow-x: hidden;
     max-height: min-content;
@@ -11,7 +17,22 @@
 
 .index__wrapper a {
     text-decoration: none;
+
 }
+
+.index__filter {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    position: fixed;
+    z-index: 110;
+    mix-blend-mode: lighten;
+    display: none;
+
+}
+
+.index__wrapper {}
+
 
 
 .shortcuts {
@@ -19,8 +40,6 @@
     top: 380px;
     left: 16px;
 }
-
-
 
 .index__voices {
     position: relative;
@@ -373,7 +392,7 @@
     }
 
     .index__canvas__wrapper {
-        height: 20vw
+        height: 20vw;
     }
 
     .index__canvas__img {

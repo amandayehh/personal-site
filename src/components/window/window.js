@@ -13,7 +13,6 @@ class Window extends Component {
   constructor(props) {
     super(props);
     this.imgClass = props.imgClass;
-    console.log(props.imgClass)
     this.width = props.sizeW
     this.height = props.sizeH
     if(props.isScroll==true){
@@ -49,7 +48,6 @@ class Window extends Component {
             <div className="window__circle"></div>
             <p className="window__bar__info"id="small-title">{this.props.title}</p>
           </div>
-          {console.log(this.props.imgClass)}
         </div>
         <div className={`window__image-wrapper ${ this.props.wrpClass }`} style={{ width: this.width, height: this.height, overflow:this.hidden}} >
 
