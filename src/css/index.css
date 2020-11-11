@@ -17,8 +17,9 @@ body {
 
 .index__wrapper a {
     text-decoration: none;
-
 }
+
+
 
 .index__filter {
     width: 100vw;
@@ -28,7 +29,27 @@ body {
     z-index: 110;
     mix-blend-mode: lighten;
     display: none;
+    opacity: 0;
+    transition-duration: 4s;
+    animation-duration: 4s;
 
+}
+
+.index__filter__active {
+    display: inherit;
+
+    animation: fadeIn 0.3s ease-out forwards;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .index__wrapper {}

@@ -1,10 +1,6 @@
 import { Link } from "gatsby"
 import React, { Component } from "react"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+
 
 import "./innerPage.css"
 import "../../css/global.css"
@@ -24,6 +20,7 @@ class InnerPage extends Component {
   render() {
     return (
       <div className="innerPage">
+
         <a name="chapter4"></a>
         <div className="innerPage__window">
           <div className="innerPage__window__bar" style={{ width: this.width }} >
@@ -63,6 +60,7 @@ class InnerPage extends Component {
 
 
         </div>
+
       </div>
     )
   }

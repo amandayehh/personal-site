@@ -62,14 +62,14 @@ class Index extends Component {
 
   openWindow(e, title, summary, mainLink) {
     this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink })
-
+    document.getElementsByClassName("index__filter")[0].classList.add("index__filter__active")
 
   }
 
   renderCompnent() {
     {
       if (this.state.openWindow == true) {
-        return (<InnerPage title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} />
+        return (<InnerPage className="index__innerPage" title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} />
         )
       }
     }

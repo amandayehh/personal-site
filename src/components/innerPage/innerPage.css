@@ -9,7 +9,7 @@
   z-index: 120;
   margin-top: 6vh;
   overflow: scroll;
-
+  animation: popUp 0.8s cubic-bezier(.4, 1.33, .17, .97) forwards;
 
 }
 
@@ -79,4 +79,17 @@
   width: 100%;
   outline: 1px solid var(--black);
 
+}
+
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translate(0px, 40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
