@@ -9,9 +9,9 @@
   z-index: 120;
   margin-top: 6vh;
   overflow: scroll;
-  animation: popUp 0.8s cubic-bezier(.4, 1.33, .17, .97) forwards;
-
 }
+
+
 
 .innerPage__window__bar {
   height: 24px;
@@ -81,15 +81,26 @@
 
 }
 
+.innerPage__back {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid var(--black);
+  z-index: 120;
+  bottom: 12px;
+  left: 12px;
+}
 
-@keyframes popUp {
-  from {
-    opacity: 0;
-    transform: translate(0px, 40px);
-  }
+.innerPage__back__glyph {
+  font-family: 'NeueBit', sans-serif;
 
-  to {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
+  font-size: 29px;
+
+  text-align: center;
+  margin: auto;
+  line-height: 175%;
 }

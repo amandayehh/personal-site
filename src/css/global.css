@@ -9,3 +9,81 @@
 html {
   background-color: var(--background);
 }
+
+.popOut {
+  animation: popOut 0.7s cubic-bezier(.31, 1.49, .48, 1) forwards;
+  position: fixed;
+  z-index: 120;
+}
+
+.popUp {
+  animation: popUp 0.7s cubic-bezier(.31, 1.49, .48, 1);
+}
+
+.fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.fadeOut {
+  animation: fadeOut 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+    margin-top: 30px;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+
+}
+
+@keyframes popOut {
+  0% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+
+  }
+
+  99% {
+    opacity: 0;
+    transform: translate(0px, 30px);
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translate(0px, 30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}

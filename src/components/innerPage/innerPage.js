@@ -7,15 +7,34 @@ import "../../css/global.css"
 import "../../css/reset.css"
 import "../../css/type.css"
 
-import google from "../../images/voices/google.png"
-
-
 class InnerPage extends Component {
   constructor(props) {
     super(props);
-    console.log(props.collabLinks);
   }
 
+  componentDidMount() {
+    document.getElementsByClassName("innerPage__window")[0].classList.add("popUp")
+    document.getElementsByClassName("innerPage__back")[0].classList.add("fadeIn")
+  }
+
+  closeWindow(e) {
+    document.getElementsByClassName("index__filter")[0].classList.remove("fadeIn")
+    document.getElementsByClassName("index__filter")[0].classList.add("fadeOut")
+
+    document.getElementsByClassName("innerPage__window")[0].classList.remove("popUp")
+    document.getElementsByClassName("innerPage__window")[0].classList.add("popOut")
+
+    document.getElementsByClassName("innerPage__back")[0].classList.add("popOut")
+    document.getElementsByClassName("innerPage__back")[0].classList.remove("fadeIn")
+
+
+    // setTimeout(function () {
+    //   document.getElementsByClassName("innerPage")[0].remove()
+    // }, 1500);
+
+
+
+  }
 
   render() {
     return (
@@ -51,16 +70,18 @@ class InnerPage extends Component {
               </section>
             </div>
             <section className="innerPage__window__display" >
-              <img className="innerPage__window__display__img" src={google} alt="" />
-              <img className="innerPage__window__display__img" src={google} alt="" />
-              <img className="innerPage__window__display__img" src={google} alt="" />
+              <img className="innerPage__window__display__img" src={this.props.img1} alt="" />
+              <img className="innerPage__window__display__img" src={this.props.img2} alt="" />
+              <img className="innerPage__window__display__img" src={this.props.img3} alt="" />
+              <img className="innerPage__window__display__img" src={this.props.img4} alt="" />
+
             </section>
           </main>
 
-
-
         </div>
-
+        <div className="innerPage__back" onClick={(e) => this.closeWindow(e)}>
+          <div className="innerPage__back__glyph">←</div>
+        </div>
       </div>
     )
   }

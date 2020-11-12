@@ -46,6 +46,13 @@ import pixel from "../images/index/pixel.png"
 import cat from "../images/cat.gif"
 
 
+success//Voices and Voids
+import voices__img1 from "../images/voices/google.png"
+import voices__img2 from "../images/voices/voices.png"
+import voices__img3 from "../images/voices/music.png"
+import voices__img4 from "../images/voices/chit.png"
+
+
 class Index extends Component {
   constructor() {
     super();
@@ -53,23 +60,49 @@ class Index extends Component {
       openWindow: false,
       mainLink: "/",
       title: "/",
-      summary: "/"
+      summary: "/",
+      img1: "",
+      img2: "",
+      img3: "",
+      img4: ""
+
 
     }
     this.openWindow = this.openWindow.bind(this);
 
   }
 
-  openWindow(e, title, summary, mainLink) {
-    this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink })
-    document.getElementsByClassName("index__filter")[0].classList.add("index__filter__active")
+  openWindow(e, title, summary, mainLink, img1, img2, img3, img4) {
+    this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink, img1: img1, img2: img2, img3: img3, img4: img4 })
+    document.getElementsByClassName("index__filter")[0].classList.add("fadeIn")
+    document.getElementsByClassName("index__filter")[0].classList.remove("fadeOut")
+
+
+    if (document.getElementsByClassName("index__filter")[0].classList.contains("fadeOut")) {
+      document.getElementsByClassName("index__filter")[0].classList.remove("fadeOut")
+    }
+
+    if (document.getElementsByClassName("innerPage")[0] != undefined) {
+      document.getElementsByClassName("innerPage__window")[0].classList.add("popUp")
+      document.getElementsByClassName("innerPage__window")[0].classList.remove("popOut")
+    }
+
+    if (document.getElementsByClassName("innerPage__back")[0] != undefined) {
+      document.getElementsByClassName("innerPage__back")[0].classList.add("fadeIn")
+      document.getElementsByClassName("innerPage__back")[0].classList.remove("popOut")
+    }
+
+
+    // .remove__window
 
   }
 
   renderCompnent() {
     {
+
       if (this.state.openWindow == true) {
-        return (<InnerPage className="index__innerPage" title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} />
+        console.log("open + render")
+        return (<InnerPage className="index__innerPage" title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} img1={this.state.img1} img2={this.state.img2} img3={this.state.img3} img4={this.state.img4} />
         )
       }
     }
@@ -101,7 +134,7 @@ class Index extends Component {
         <SEO title="Amanda Yeh" />
 
 
-        <div className="index__filter"></div>
+        <div className="index__filter fadeOut"></div>
         <div className="index__wrapper">
 
           <Name />
@@ -115,17 +148,15 @@ class Index extends Component {
             <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
           </div>
 
-          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/")}>
-
+          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", voices__img1, voices__img2, voices__img3, voices__img4)}>
             <Window src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
-
           </div>
 
 
-          <div className="index__type-mirror">
-            <a href="https://amandayehh.github.io/type-mirror/" target="_blank">
-              <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
-            </a>
+          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/")}>
+
+            <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
+
           </div>
 
 
