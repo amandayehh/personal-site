@@ -55,25 +55,26 @@ class InnerPage extends Component {
             <div className="innerPage__window__main__text">
               <h3 className="innerPage__window__main__text__sum" >{this.props.summary}</h3>
               <a href={this.props.mainLink} target="_blank">
-                <h3 className="serif innerPage__window__main__text__link">voicesandvoids.net</h3>
+                <h3 className="serif innerPage__window__main__text__link">{this.props.linkText}</h3>
               </a>
               <section className="innerPage__window__main__text__info">
                 <div className="innerPage__window__main__text__info__sec" >
-                  <p className="innerPage__window__main__text__info__sec__content" > <span className="innerPage__window__main__text__info__sec__label bold" >Scope</span> Front-end Development, Net Art</p>
+                  <p className="innerPage__window__main__text__info__sec__content" > <span className="innerPage__window__main__text__info__sec__label bold" >Scope: </span>{this.props.scope}</p>
                 </div>
                 <div className="innerPage__window__main__text__info__sec" >
-                  <p className="innerPage__window__main__text__info__sec__content" >  <span className="innerPage__window__main__text__info__sec__label bold" >Technology</span> React, Gatsby, JSX, View source code on Github</p>
+                  <p className="innerPage__window__main__text__info__sec__content" >  <span className="innerPage__window__main__text__info__sec__label bold" >Technology: </span>  <a href={this.props.techLink1}>{this.props.tech1}</a></p>
                 </div>
                 <div className="innerPage__window__main__text__info__sec" >
-                  <p className="innerPage__window__main__text__info__sec__content" >  <span className="innerPage__window__main__text__info__sec__label bold" >Collaborators</span> Audrey Desjardins, Afroditi Psarra, Bonnie Whiting</p>
+                  <p className="innerPage__window__main__text__info__sec__content" >  <span className="innerPage__window__main__text__info__sec__label bold" >Collaborators: </span> {this.props.collaborator1}</p>
                 </div>
+
               </section>
             </div>
             <section className="innerPage__window__display" >
-              <img className="innerPage__window__display__img" src={this.props.img1} alt="" />
-              <img className="innerPage__window__display__img" src={this.props.img2} alt="" />
-              <img className="innerPage__window__display__img" src={this.props.img3} alt="" />
-              <img className="innerPage__window__display__img" src={this.props.img4} alt="" />
+              <img className="innerPage__window__display__img" src={this.props.img1} alt={this.props.alt1} />
+              <img className="innerPage__window__display__img" src={this.props.img2} alt={this.props.alt2} />
+              <img className="innerPage__window__display__img" src={this.props.img3} alt={this.props.alt3} />
+              <img className="innerPage__window__display__img" src={this.props.img4} alt={this.props.alt4} />
 
             </section>
           </main>

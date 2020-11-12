@@ -46,7 +46,7 @@ import pixel from "../images/index/pixel.png"
 import cat from "../images/cat.gif"
 
 
-success//Voices and Voids
+//Voices and Voids
 import voices__img1 from "../images/voices/google.png"
 import voices__img2 from "../images/voices/voices.png"
 import voices__img3 from "../images/voices/music.png"
@@ -59,12 +59,20 @@ class Index extends Component {
     this.state = {
       openWindow: false,
       mainLink: "/",
+      linkText: "/",
       title: "/",
       summary: "/",
+      scope: "/",
+      tech1: "/",
+      collaborator1: "/",
       img1: "",
       img2: "",
       img3: "",
-      img4: ""
+      img4: "",
+      alt1: "",
+      alt2: "",
+      alt3: "",
+      alt4: ""
 
 
     }
@@ -72,8 +80,8 @@ class Index extends Component {
 
   }
 
-  openWindow(e, title, summary, mainLink, img1, img2, img3, img4) {
-    this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink, img1: img1, img2: img2, img3: img3, img4: img4 })
+  openWindow(e, title, summary, mainLink, linkText, scope, tech1, collaborator1, img1, alt1, img2, alt2, img3, alt3, img4, alt4) {
+    this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink, linkText: linkText, scope: scope, tech1: tech1, collaborator1: collaborator1, img1: img1, alt1: alt1, img2: img2, alt2: alt2, img3: img3, alt3: alt3, img4: img4, alt4: alt4 })
     document.getElementsByClassName("index__filter")[0].classList.add("fadeIn")
     document.getElementsByClassName("index__filter")[0].classList.remove("fadeOut")
 
@@ -102,27 +110,13 @@ class Index extends Component {
 
       if (this.state.openWindow == true) {
         console.log("open + render")
-        return (<InnerPage className="index__innerPage" title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} img1={this.state.img1} img2={this.state.img2} img3={this.state.img3} img4={this.state.img4} />
+        return (<InnerPage className="index__innerPage" title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} linkText={this.state.linkText} scope={this.state.scope} tech1={this.state.tech1} collaborator1={this.state.collaborator1} img1={this.state.img1} alt1={this.state.alt1} img2={this.state.img2} alt2={this.state.alt2} img3={this.state.img3} alt3={this.state.alt3} img4={this.state.img4} alt4={this.state.alt4} />
         )
       }
     }
   }
 
-  // appendChild() {
-  //   if (this.openWindow == true) {
-  //     console.log("here")
-  //     return (
-  //       <InnerPage className="index__innerPage" mainLink="https://voicesandvoids.net/" collabLinks="https://yg.is/" />
-  //     )
-  //   }
-  // }
-  // openPage(e) {
-  //           console.log(e)
 
-
-  //   document.getElementsByClassName("index")[0].insertAdjacentHTML('beforeend', '<InnerPage className="index__innerPage" mainLink="https://voicesandvoids.net/" collabLinks="https://yg.is/" />')
-  //   {/* <InnerPage className="index__innerPage" mainLink="https://voicesandvoids.net/" collabLinks="https://yg.is/" /> */}
-  // }
 
   render() {
 
@@ -148,15 +142,15 @@ class Index extends Component {
             <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
           </div>
 
-          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", voices__img1, voices__img2, voices__img3, voices__img4)}>
+          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", "voicesandvoids.net", "Net Art, Front-end Development", "React, Gatsby, Github", "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting", voices__img1, "screenshot of AI generated google assistant text", voices__img2, "screenshot of numerous voice assistant inputs", voices__img3, "screenshot of artists and musicians and artists performing with voice assistances", { voices__img4 }, "screenshot of Alexa poem overlayed on alexas")}>
             <Window src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
           </div>
 
 
-          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/")}>
-
-            <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
-
+          <div className="index__type-mirror">
+            <a href="https://amandayehh.github.io/type-mirror/">
+              <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
+            </a>
           </div>
 
 
