@@ -10,6 +10,11 @@ body {
     vertical-align: bottom;
 }
 
+.noScroll {
+    overflow: hidden;
+}
+
+
 .index>* {
     overflow: hidden;
 }
@@ -219,7 +224,7 @@ body {
     position: relative;
     margin-left: 25vw;
     transform: translateY(0vw);
-    z-index: 1;
+    z-index: 100;
     width: 75vw;
     height: 100vw;
 }
@@ -232,8 +237,8 @@ body {
 
 .index__colophon {
     position: relative;
-    z-index: 10;
-    margin-top: 5vw;
+    z-index: 100;
+    /* margin-top: 5vw; */
 }
 
 .index__footer {
@@ -251,6 +256,7 @@ body {
     margin-bottom: -1vw;
 }
 
+
 @media only screen and (min-width: 600px) {
     .shortcuts {
         position: absolute;
@@ -262,6 +268,7 @@ body {
         width: 64vw;
         height: 90vw;
         margin-left: 32vw;
+        transform: translateY(-10vw);
     }
 
     .index__voices-and-voids__wrp {
@@ -289,7 +296,7 @@ body {
 
     .index__kilotype {
         position: relative;
-        transform: translate(2vw, -55vw);
+        transform: translate(2vw, -50vw);
         width: 55vw;
         height: 39vw;
     }
@@ -305,7 +312,7 @@ body {
     .index__sel {
         position: relative;
         margin-left: 40vw;
-        transform: translateY(-56vw);
+        transform: translateY(-52vw);
         width: 70vw;
         height: 70vw;
     }
@@ -320,7 +327,7 @@ body {
 
     .index__semaphore {
         position: relative;
-        transform: translate(-2vw, -110vw);
+        transform: translate(-2vw, -100vw);
         width: 44vw;
     }
 
@@ -384,7 +391,7 @@ body {
         margin-left: 80vw;
         transform: translateY(-90vw);
         height: 20vw;
-        z-index: 100;
+        z-index: 101;
     }
 
     .index__canvas__spine {
@@ -419,23 +426,34 @@ body {
         position: relative;
         margin-left: 34vw;
         transform: translateY(-150vw);
-        z-index: 1;
+        z-index: 100;
         width: 50vw;
     }
-
-
 
     .index__pixel__img {
         width: 50vw;
     }
 
-    .index__wrapper {
-        margin-bottom: -202vw;
+
+    .index__colophon {
+        position: relative;
+        z-index: 100;
     }
+
+
+    .index__wrapper {
+        height: calc(260vw + 470px);
+        overflow-y: hidden;
+    }
+
 
     .index__cat__img {
         width: 8vw;
         margin-bottom: -1vw;
     }
+
+
+
+
 
 }

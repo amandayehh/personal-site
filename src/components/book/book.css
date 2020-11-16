@@ -1,5 +1,6 @@
 .book {
   display: flex;
+  cursor: pointer;
 }
 
 .book__spine {

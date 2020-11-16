@@ -46,10 +46,10 @@ class Sticky extends Component {
     if (!isMobile) {
       return (
         <svg width="383" height="368" viewBox="0 0 383 368" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M70 298.5V298H69.5H0.5V0.5H382.5V367.5H70V298.5ZM69 299V366.793L1.2071 299H69Z" fill="#FFED47"/>
-        <path d="M70 298.5V298H69.5H0.5V0.5H382.5V367.5H70V298.5ZM69 299V366.793L1.2071 299H69Z" stroke="black"/>
+          <path d="M70 298.5V298H69.5H0.5V0.5H382.5V367.5H70V298.5ZM69 299V366.793L1.2071 299H69Z" fill="#FFED47" />
+          <path d="M70 298.5V298H69.5H0.5V0.5H382.5V367.5H70V298.5ZM69 299V366.793L1.2071 299H69Z" stroke="black" />
         </svg>
-        
+
 
       )
     } else {
@@ -71,10 +71,11 @@ class Sticky extends Component {
     return (
       <div className="sticky">
         <div className="sticky__bio">
-          <h3 className="sticky__bio__1" >I’m pretty good at making websites. I sometimes make posters.</h3>
+          <h3 className="sticky__bio__1" >I enjoy making websites, many of which you can find here.</h3>
+          {/* <h3 className="sticky__bio__2" ></h3> */}
           <h3 className="sticky__bio__2" >Open to work on weird things. Just reach out!</h3>
           <div className="sticky__bio__links">
-            
+
           </div>
         </div>
         {this.fillSvg()}

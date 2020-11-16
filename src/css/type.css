@@ -43,11 +43,11 @@ h3 {
 
 h3.serif {
     font-family: 'Mondwest', sans-serif;
-    font-size: 19px;
+    font-size: 21px;
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 p {
@@ -80,7 +80,24 @@ a>p {
 
     h3 {
         font-family: 'NeueBit', sans-serif;
-        font-size: 33px;
+        font-size: 30px;
     }
+
+    h3.serif {
+        font-family: 'Mondwest', sans-serif;
+        font-size: 25px;
+    }
+
+    p {
+        font-family: 'NeueBit', sans-serif;
+        font-size: 20px;
+    }
+
+    p.bold {
+        font-weight: bold;
+        font-family: 'Mondwest', serif;
+        font-size: 16px;
+    }
+
 
 }
