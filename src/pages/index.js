@@ -181,7 +181,7 @@ class Index extends Component {
         <SEO title="Amanda Yeh" />
 
         <div className="index__background"></div>
-        <img className="index__noise" src={noise} alt="noise background element" />
+        {/* <img className="index__noise" src={noise} alt="noise background element" /> */}
         <div className="index__filter fadeOut">
           <img className="index__noise" src={noise} alt="noise background element" />
 
