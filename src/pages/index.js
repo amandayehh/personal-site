@@ -196,7 +196,7 @@ class Index extends Component {
           </div>
 
 
-          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography. Turn on your webcam and see how you can manipulate typography with just your reflection", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror")}>
+          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography. Turn on your webcam and dance with letter forms", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror")}>
             <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
           </div>
 
@@ -216,7 +216,7 @@ class Index extends Component {
           </div>
 
 
-          <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "A program that visualizes music using frequencies and peak detection. Try it with your music!", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
+          <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "A program that visualizes music using frequencies and peak detection. Try dropping in your music!", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
             <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
           </div>
 
@@ -235,7 +235,7 @@ class Index extends Component {
 
       </div> */}
 
-          <div className="index__canvas" onClick={(e) => this.openWindow(e, "Beyond a Blank Canvas — Info", "Beyond a Blank Canvas is a book proposing how non-pixel based and experimental design tools can help us create graphics that subverts the status quo.", "", "", "Print design", "Figma", "Just me", canvas__img8, "Cover of Beyond a Blank Canvas", canvas__img1, "Table of contents of Beyond a Blank Canvas", canvas__img2, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img3, "spread of Beyond a Blank Canvas consisting of an article and a frame illustration", canvas__img4, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img5, "spread of Beyond a Blank Canvas consisting of 2 posters", canvas__img6, "spread of Beyond a Blank Canvas consisting of an article and a screenshot of a Figma plugin", canvas__img7, "spread of Beyond a Blank Canvas consisting of an article and an illustration")}>
+          <div className="index__canvas" onClick={(e) => this.openWindow(e, "Beyond a Blank Canvas — Info", "Beyond a Blank Canvas is a collection of essays proposing how non-pixel based and experimental design tools can help us create forms that subvert the graphic design status quo.", "", "", "Print design", "Figma", "Just me", canvas__img8, "Cover of Beyond a Blank Canvas", canvas__img1, "Table of contents of Beyond a Blank Canvas", canvas__img2, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img3, "spread of Beyond a Blank Canvas consisting of an article and a frame illustration", canvas__img4, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img5, "spread of Beyond a Blank Canvas consisting of 2 posters", canvas__img6, "spread of Beyond a Blank Canvas consisting of an article and a screenshot of a Figma plugin", canvas__img7, "spread of Beyond a Blank Canvas consisting of an article and an illustration")}>
             <Book src={canvas} spineClass={"index__canvas__spine"} wrpClass={"index__canvas__wrapper"} imgClass={"index__canvas__img"} title={"Beyond a Blank Canvas"} alt="Book cover for beyond a blank canvas" />
           </div>
 
@@ -245,7 +245,7 @@ class Index extends Component {
             </a>
           </div>
 
-          <div className="index__pixel" onClick={(e) => this.openWindow(e, "Pixelation — Info", "Pixelation is a site exhibiting the thesis projects of MICA's 2020 graphic design program.", "https://pixelation.micagraphicdesign.org/", "pixelation.micagraphicdesign.org", "Front-end development, Web design", "Gatsby, React", "Yana Gevorgyan, Tony Kim, Zoey Russomano, Anne Xin", pixel__img1, "The pixelation site displayed on a retro computer", pixel__img2, "2 screenshots of the Pixelation site", pixel__img3, "Hovering over projects on Pixelation")}>
+          <div className="index__pixel" onClick={(e) => this.openWindow(e, "Pixelation — Info", "Pixelation is a website exhibiting the thesis projects of MICA's 2020 graphic design program.", "https://pixelation.micagraphicdesign.org/", "pixelation.micagraphicdesign.org", "Front-end development, Web design", "Gatsby, React", "Yana Gevorgyan, Tony Kim, Zoey Russomano, Anne Xin", pixel__img1, "The pixelation site displayed on a retro computer", pixel__img2, "2 screenshots of the Pixelation site", pixel__img3, "Hovering over projects on Pixelation")}>
             <Window imgClass={"index__pixel__img"} wrpClass={"index__pixel__wrp"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" />
           </div>
 

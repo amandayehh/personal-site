@@ -71,9 +71,9 @@ class Sticky extends Component {
     return (
       <div className="sticky">
         <div className="sticky__bio">
-          <h3 className="sticky__bio__1" >I enjoy making websites, many of which you can find here.</h3>
-          {/* <h3 className="sticky__bio__2" ></h3> */}
+          <h3 className="sticky__bio__1" >I like making things on the web.</h3>
           <h3 className="sticky__bio__2" >Open to work on weird things. Just reach out!</h3>
+          {/* <h3 className="sticky__bio__2" >Open to work on weird things. Just reach out!</h3> */}
           <div className="sticky__bio__links">
 
           </div>
