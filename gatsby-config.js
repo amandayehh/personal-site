@@ -10,6 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
+        background_color: `#B0DEDB`,
         theme_color: `#B0DEDB`,
         path: `${__dirname}/src/images`,
       },
