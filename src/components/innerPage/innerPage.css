@@ -85,6 +85,8 @@
   flex-direction: column;
   position: absolute;
   top: 60vh;
+  overflow-y: hidden;
+
 
 }
 
@@ -146,5 +148,6 @@
     overflow: scroll;
     outline: 1px solid var(--black);
     margin-top: 24px;
+    overflow-y: hidden;
   }
 }

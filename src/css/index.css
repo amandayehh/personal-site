@@ -19,6 +19,10 @@ body {
     overflow: hidden;
 }
 
+.index__wrapper {
+    margin-bottom: -10vw;
+}
+
 
 .index__wrapper a {
     text-decoration: none;
@@ -49,7 +53,7 @@ body {
 .index__voices {
     position: relative;
     margin-left: 24vw;
-    transform: translateY(-13vw);
+    transform: translateY(-30vw);
     width: 72vw;
     height: 130vw;
     z-index: 10;
@@ -66,7 +70,7 @@ body {
 .index__type-mirror {
     position: relative;
     margin-left: 4vw;
-    transform: translateY(-22vw);
+    transform: translateY(-40vw);
     width: 50vw;
     height: 36vw;
     z-index: 10;
@@ -82,7 +86,7 @@ body {
 
 .index__kilotype {
     position: relative;
-    transform: translate(-9vw, -8vw);
+    transform: translate(-9vw, -20vw);
     width: 85vw;
     height: 60vw;
     z-index: 50;
@@ -99,7 +103,7 @@ body {
 .index__sel {
     position: relative;
     margin-left: 14vw;
-    transform: translateY(-15vw);
+    transform: translateY(-24vw);
     width: 120vw;
     height: 80vw;
     z-index: 51;
@@ -116,7 +120,7 @@ body {
 
 .index__semaphore {
     position: relative;
-    transform: translate(-10vw, -20vw);
+    transform: translate(-10vw, -28vw);
     width: 70vw;
     height: 57vw;
     z-index: 100;
@@ -150,7 +154,7 @@ body {
 }
 
 .index__posters {
-    transform: translateY(-40vw);
+    transform: translateY(-45vw);
     position: relative;
     margin-left: 4vw;
 }
@@ -185,7 +189,7 @@ body {
 .index__canvas {
     position: relative;
     margin-left: 65vw;
-    transform: translateY(-10vw);
+    transform: translateY(-30vw);
     height: 50vw
 }
 
@@ -204,7 +208,7 @@ body {
 .index__ditto {
     position: relative;
     margin-left: 6vw;
-    transform: translateY(-2vw);
+    transform: translateY(-10vw);
     width: 60vw;
     height: 40vw;
     z-index: 100;
@@ -223,7 +227,7 @@ body {
 .index__pixel {
     position: relative;
     margin-left: 25vw;
-    transform: translateY(0vw);
+    transform: translateY(-15vw);
     z-index: 100;
     width: 75vw;
     height: 100vw;
