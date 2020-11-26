@@ -280,6 +280,10 @@ body {
     align-items: flex-end;
 }
 
+.index__cat {
+    z-index: 100;
+}
+
 .index__cat__img {
     width: 20vw;
     margin-bottom: -1vw;
