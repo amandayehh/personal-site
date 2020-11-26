@@ -133,6 +133,8 @@ class Index extends Component {
     document.getElementsByTagName("body")[0].classList.add("noScroll")
 
 
+
+
     if (document.getElementsByClassName("index__filter")[0].classList.contains("fadeOut")) {
       document.getElementsByClassName("index__filter")[0].classList.remove("fadeOut")
     }
@@ -153,6 +155,7 @@ class Index extends Component {
   }
 
   renderCompnent() {
+
     {
 
       if (this.state.openWindow == true) {

@@ -11,6 +11,13 @@
   overflow: scroll;
 }
 
+.innerPage__background {
+  width: 100vw;
+  position: absolute;
+  z-index: 111;
+  opacity: 40%;
+  /* background-color: red; */
+}
 
 
 .innerPage__window__bar {

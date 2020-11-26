@@ -23,37 +23,26 @@ class InnerPage extends Component {
   }
 
   componentDidMount() {
+
+    document.getElementsByClassName("innerPage__background")[0].style.height = document.body.scrollHeight + "px"
+
+
     document.getElementsByClassName("innerPage__window")[0].classList.add("popUp")
     document.getElementsByClassName("innerPage__back")[0].classList.add("fadeIn")
-
-    // const element = <h3>Hello, world</h3>;
-    // if (this.props.img3 != undefined) {
-
-    //   ReactDOM.render(
-    //     <h3>Hello, world</h3>,
-    //     document.getElementById('root')
-    //   );
-    // }
-
-    // // ReactDOM.render(<h3>Hello, world</h3>, this.refs.img__container)
-    // console.log(document.getElementsByClassName("innerPage__window__display")[0]);
-    // document.getElementsByClassName("innerPage__window__display")[0].appendChild(<h3>Hello, world</h3>);     // Append <li> to <ul> with id="myList"
-
-
-
-
 
 
 
   }
+
   componentDidUpdate() {
     console.log(this.props.img5)
-
+    document.getElementsByClassName("innerPage__background")[0].classList.remove("remove")
 
   }
 
 
   renderCompnent() {
+
     let imgDivs = [<img className="innerPage__window__display__img" src={this.props.img1} alt={this.props.alt1} />, <img className="innerPage__window__display__img" src={this.props.img2} alt={this.props.alt2} />]
 
     if (this.props.img3 != undefined) {
@@ -94,6 +83,8 @@ class InnerPage extends Component {
     document.getElementsByClassName("index__filter")[0].classList.remove("fadeIn")
     document.getElementsByClassName("index__filter")[0].classList.add("fadeOut")
 
+    document.getElementsByClassName("innerPage__background")[0].classList.add("remove")
+
     document.getElementsByClassName("innerPage__window")[0].classList.remove("popUp")
     document.getElementsByClassName("innerPage__window")[0].classList.add("popOut")
 
@@ -112,7 +103,7 @@ class InnerPage extends Component {
 
 
       < div className="innerPage" >
-
+        <div className="innerPage__background" onClick={(e) => this.closeWindow(e)}></div>
         <div className="innerPage__window">
           <div className="innerPage__window__bar" style={{ width: this.width }} >
             <div className="innerPage__window__circles">
@@ -134,7 +125,7 @@ class InnerPage extends Component {
                     <p className="innerPage__window__main__text__info__sec__content" > <span className="innerPage__window__main__text__info__sec__label bold" >Scope: </span>{this.props.scope}</p>
                   </div>
                   <div className="innerPage__window__main__text__info__sec" >
-                    <p className="innerPage__window__main__text__info__sec__content" >  <span className="innerPage__window__main__text__info__sec__label bold" >Technology: </span>  <a href={this.props.techLink1}>{this.props.tech1}</a></p>
+                    <p className="innerPage__window__main__text__info__sec__content" >  <span className="innerPage__window__main__text__info__sec__label bold" >Technology: </span> {this.props.tech1}</p>
                   </div>
                   <div className="innerPage__window__main__text__info__sec" >
                     <p className="innerPage__window__main__text__info__sec__content" >  <span className="innerPage__window__main__text__info__sec__label bold" >Collaborators: </span> {this.props.collaborator1}</p>
