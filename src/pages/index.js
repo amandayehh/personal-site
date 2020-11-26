@@ -11,7 +11,6 @@ import {
 
 
 import SEO from "../components/seo"
-import Noise from "../components/noise/noise"
 import Name from "../components/name/name"
 import Sticky from "../components/sticky/sticky"
 import Shortcut from "../components/shortcut/shortcut"
@@ -21,8 +20,6 @@ import Colophon from "../components/colophon/colophon"
 import Footer from "../components/footer/footer"
 
 import InnerPage from "../components/innerPage/innerPage"
-
-import UnderConstruction from "../components/underConstruction/underConstruction"
 
 import "../css/global.css"
 import "../css/reset.css"
@@ -182,7 +179,6 @@ class Index extends Component {
         <div className="index__wrapper">
 
           <Name />
-          <UnderConstruction />
 
           <Sticky />
 
