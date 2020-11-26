@@ -1,3 +1,5 @@
+# gatsby files
+.cache/
 public/*
 !public/CNAME
 
