@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="blob:https://imgur.com/2b0513d0-b427-4cdb-b01a-ff7e7e0ded27" alt="Amanda's homepage" width="1000px" >
+  <img src="https://i.imgur.com/JrTvXsk.png" alt="Amanda's homepage" width="1000px" >
 </p>
 
 <h2 align="center">Amanda Yeh's Website</h2>
