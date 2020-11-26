@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/personal-site",
+  pathPrefix: "/",
   siteMetadata: {
     description: `Amanda Yeh's website`,
     author: `@gatsbyjs`,
