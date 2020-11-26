@@ -1,7 +1,4 @@
-# gatsby files
-.cache/
-public/*
-!public/CNAME
+
 
 # Logs
 logs
@@ -61,7 +58,8 @@ typings/
 
 # gatsby files
 .cache/
-public
+public/*
+!public/CNAME
 
 # Mac files
 .DS_Store
