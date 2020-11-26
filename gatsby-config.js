@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/",
   siteMetadata: {
     description: `Amanda Yeh's website`,
-    author: `@gatsbyjs`,
+    author: `Amanda Yeh`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
