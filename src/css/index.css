@@ -8,6 +8,22 @@ body {
     overflow-x: hidden;
     max-height: min-content;
     vertical-align: bottom;
+
+
+}
+
+.index__noise {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    mix-blend-mode: soft-light;
+}
+
+.index__background {
+    background: linear-gradient(180deg, #D59EFF 0%, #95A7F6 100%);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
 }
 
 .noScroll {
@@ -33,12 +49,21 @@ body {
 .index__filter {
     width: 100vw;
     height: 100vh;
-    background-color: var(--background);
+    background: var(--background);
     position: fixed;
     z-index: 110;
     mix-blend-mode: lighten;
 }
 
+/* .index__blur {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    filter: blur(200px);
+    top: 0;
+    z-index: 1000;
+
+} */
 
 .index__wrapper {}
 
@@ -46,13 +71,13 @@ body {
 
 .shortcuts {
     position: absolute;
-    top: 380px;
+    top: 365px;
     left: 16px;
 }
 
 .index__voices {
     position: relative;
-    margin-left: 24vw;
+    margin-left: 38vw;
     transform: translateY(-30vw);
     width: 72vw;
     height: 130vw;

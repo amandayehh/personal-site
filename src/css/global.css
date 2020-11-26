@@ -1,5 +1,5 @@
 :root {
-  --background: #B0DEDB;
+  --background: linear-gradient(180deg, #D59EFF 0%, #95A7F6 100%);
   --black: #000000;
   --secondary: white;
   --accent: #F64A00;
@@ -7,7 +7,7 @@
 }
 
 html {
-  background-color: var(--background);
+  /* background: linear-gradient(180deg, #D59EFF 0%, #95A7F6 100%); */
 }
 
 .popOut {

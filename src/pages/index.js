@@ -42,6 +42,8 @@ import ditto from "../images/index/ditto.png"
 import pixel from "../images/index/pixel.png"
 import cat from "../images/cat.gif"
 
+import noise from "../images/noise.png"
+
 
 //Voices and Voids
 import voices__img1 from "../images/voices/google.png"
@@ -178,8 +180,13 @@ class Index extends Component {
         {this.renderCompnent()}
         <SEO title="Amanda Yeh" />
 
+        <div className="index__background"></div>
+        <img className="index__noise" src={noise} alt="noise background element" />
+        <div className="index__filter fadeOut">
+          <img className="index__noise" src={noise} alt="noise background element" />
 
-        <div className="index__filter fadeOut"></div>
+        </div>
+
         <div className="index__wrapper">
 
           <Name />
@@ -221,21 +228,6 @@ class Index extends Component {
             <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
           </div>
 
-          {/* <div className="index__posters">
-        <div className="index__posters__1">
-          <Poster imgClass="index__posters__1_img" src={poster1} alt="Poster for photo exhibition" />
-        </div>
-
-        <div className="index__posters__2">
-          <Poster imgClass="index__posters__2_img" src={poster3} alt="Poster for photo a machine learning workshop" />
-        </div>
-
-        <div className="index__posters__3">
-          <Poster imgClass="index__posters__3_img" src={poster2} alt="Poster for the all mighty pumpkin spice cult" />
-        </div>
-
-      </div> */}
-
           <div className="index__canvas" onClick={(e) => this.openWindow(e, "Beyond a Blank Canvas — Info", "Beyond a Blank Canvas is a collection of essays proposing how non-pixel based and experimental design tools can help us create forms that subvert the graphic design status quo.", "", "", "Print design", "Figma", "Just me", canvas__img8, "Cover of Beyond a Blank Canvas", canvas__img1, "Table of contents of Beyond a Blank Canvas", canvas__img2, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img3, "spread of Beyond a Blank Canvas consisting of an article and a frame illustration", canvas__img4, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img5, "spread of Beyond a Blank Canvas consisting of 2 posters", canvas__img6, "spread of Beyond a Blank Canvas consisting of an article and a screenshot of a Figma plugin", canvas__img7, "spread of Beyond a Blank Canvas consisting of an article and an illustration")}>
             <Book src={canvas} spineClass={"index__canvas__spine"} wrpClass={"index__canvas__wrapper"} imgClass={"index__canvas__img"} title={"Beyond a Blank Canvas"} alt="Book cover for beyond a blank canvas" />
           </div>
@@ -252,6 +244,7 @@ class Index extends Component {
 
 
         </div>
+
         <div className="index__colophon">
           <Colophon />
         </div>

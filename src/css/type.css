@@ -43,11 +43,23 @@ h3 {
 
 h3.serif {
     font-family: 'Mondwest', sans-serif;
-    font-size: 21px;
+    font-size: 25px;
+}
+
+h3 .serif {
+    font-family: 'Mondwest', sans-serif;
+    font-size: 25px;
+
 }
 
 a {
     text-decoration: underline;
+    transition-duration: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+a:hover {
+    letter-spacing: 0.1em;
 }
 
 p {

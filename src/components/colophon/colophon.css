@@ -2,6 +2,8 @@
   background-color: #484859;
   padding: 28px 14px;
   margin: 0 16px;
+  border: 1px solid var(--black);
+
 }
 
 .colophon * {
