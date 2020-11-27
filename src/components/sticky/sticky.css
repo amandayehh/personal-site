@@ -28,8 +28,6 @@
     height: 350px;
     left: 22vw;
     top: -10px;
-
-
   }
 
   .sticky__bio {
@@ -37,6 +35,7 @@
     z-index: 1;
     padding: 24px;
   }
+
 
 
 }
