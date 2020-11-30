@@ -43,12 +43,12 @@ h3 {
 
 h3.serif {
     font-family: 'Mondwest', sans-serif;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 h3 .serif {
     font-family: 'Mondwest', sans-serif;
-    font-size: 20px;
+    font-size: 19px;
 
 }
 
@@ -97,7 +97,12 @@ a>p {
 
     h3.serif {
         font-family: 'Mondwest', sans-serif;
-        font-size: 25px;
+        font-size: 24px;
+    }
+
+    h3 .serif {
+        font-family: 'Mondwest', sans-serif;
+        font-size: 24px;
     }
 
     p {
