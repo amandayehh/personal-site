@@ -203,27 +203,27 @@ class Index extends Component {
           </div>
 
 
-          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography. Turn on your webcam and dance with letter forms", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror", mirror__img3, "gif of user spinning in type mirror")}>
+          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography.", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror", mirror__img3, "gif of user spinning in type mirror")}>
             <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
           </div>
 
 
-          <div className="index__kilotype" onClick={(e) => this.openWindow(e, "Kilotype — Info", "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together a vibrant color palette and interactive variable typography to showcase William Montrose and Sebastian Losch’s debut typefaces.", "https://kilotype.de/", "kilotype.de", "Web design", "Sketch", "Friends of the Web, Kilotype", kilo__img1, "screenshot of Kilotype's type testers", kilo__img2, "screenshot of kilotype's homepage", kilo__img3, "screenshot of kilotype's about page")}>
+          <div className="index__kilotype" onClick={(e) => this.openWindow(e, "Kilotype — Info", "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch’s debut typefaces.", "https://kilotype.de/", "kilotype.de", "Web design", "Sketch", "Friends of the Web, Kilotype", kilo__img1, "screenshot of Kilotype's type testers", kilo__img2, "screenshot of kilotype's homepage", kilo__img3, "screenshot of kilotype's about page")}>
             <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
           </div>
 
 
-          <div className="index__sel" onClick={(e) => this.openWindow(e, "Explore SEL — Info", "While working at Friends of the Web, we collaborated with Harvard’s Graduate School of Education to design and develop this research site that untangles the complexities of social and emotional learning frameworks. I worked through many data visualization problems.", "http://exploresel.gse.harvard.edu/", "exploresel.gse.harvard.edu", "Data Visualization, Web Design", "Sketch", "Harvard’s Graduate School of Education, Friends of the Web", sel__img2, "CASEL framework profile", sel__img4, "Homepage of Explore SEL", sel__img1, "framework comparison tool", sel__img3, "Term definition for peaceful conflict resolution")}>
+          <div className="index__sel" onClick={(e) => this.openWindow(e, "Explore SEL — Info", "Explore SEL is a research site developed in collaboration with Harvard’s Graduate School of Education. The site features research tools and data visualizations that untangle the complexities of social and emotional learning frameworks.", "http://exploresel.gse.harvard.edu/", "exploresel.gse.harvard.edu", "Data Visualization, Web Design", "Sketch", "Harvard’s Graduate School of Education, Friends of the Web", sel__img2, "CASEL framework profile", sel__img4, "Homepage of Explore SEL", sel__img1, "framework comparison tool", sel__img3, "Term definition for peaceful conflict resolution")}>
             <Window imgClass={"index__sel__img"} wrpClass={"index__sel__wrp"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website" />
           </div>
 
 
-          <div className="index__semaphore" onClick={(e) => this.openWindow(e, "Learn Semaphore — Info", "Say no more, Semaphore is a webcam enabled game perfect for social distancing. In 20 seconds, players must pose correctly for as many letters as they can. Try out the game and see what high score you can get!", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")}>
+          <div className="index__semaphore" onClick={(e) => this.openWindow(e, "Learn Semaphore — Info", "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")}>
             <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
           </div>
 
 
-          <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "A program that visualizes music using frequencies and peak detection. Try it out by dropping in your music!", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
+          <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
             <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
           </div>
 
@@ -237,7 +237,7 @@ class Index extends Component {
             </a>
           </div>
 
-          <div className="index__pixel" onClick={(e) => this.openWindow(e, "Pixelation — Info", "Pixelation is a website exhibiting the thesis projects of MICA's 2020 graphic design program.", "https://pixelation.micagraphicdesign.org/", "pixelation.micagraphicdesign.org", "Front-end development, Web design", "Gatsby, React", "Yana Gevorgyan, Tony Kim, Zoey Russomano, Anne Xin", pixel__img1, "The pixelation site displayed on a retro computer", pixel__img2, "2 screenshots of the Pixelation site", pixel__img3, "Hovering over projects on Pixelation")}>
+          <div className="index__pixel" onClick={(e) => this.openWindow(e, "Pixelation — Info", "Built for the graduating class of 2020, Pixelation is a virtual exhibition showcasing the degree projects of MICA's 2020 BFA graphic design program.", "https://pixelation.micagraphicdesign.org/", "pixelation.micagraphicdesign.org", "Front-end development, Web design", "Gatsby, React", "Yana Gevorgyan, Tony Kim, Zoey Russomano, Anne Xin", pixel__img1, "The pixelation site displayed on a retro computer", pixel__img2, "2 screenshots of the Pixelation site", pixel__img3, "Hovering over projects on Pixelation")}>
             <Window imgClass={"index__pixel__img"} wrpClass={"index__pixel__wrp"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" />
           </div>
 
