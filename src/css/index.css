@@ -36,7 +36,7 @@ body {
 }
 
 .index__wrapper {
-    margin-bottom: -10vw;
+    margin-bottom: -15vw;
 }
 
 
@@ -163,8 +163,8 @@ body {
 
 .index__audio-visualizer {
     position: relative;
-    /* margin-left: 37vw; */
-    transform: translate(-30vw);
+    margin-left: 20vw;
+    transform: translateY(-25vw);
     width: 88vw;
     height: 58vw;
     z-index: 100;
@@ -232,7 +232,7 @@ body {
 
 .index__ditto {
     position: relative;
-    margin-left: 6vw;
+    margin-left: 30vw;
     transform: translateY(-10vw);
     width: 60vw;
     height: 40vw;
@@ -251,8 +251,8 @@ body {
 
 .index__pixel {
     position: relative;
-    margin-left: 25vw;
-    transform: translateY(-15vw);
+    margin-left: 8vw;
+    transform: translateY(-20vw);
     z-index: 100;
     width: 75vw;
     height: 100vw;
@@ -296,6 +296,8 @@ body {
         top: 160px;
         left: 70px;
     }
+
+
 
     .index__voices {
         width: 64vw;
@@ -372,8 +374,8 @@ body {
 
     .index__audio-visualizer {
         position: relative;
-        margin-left: 55vw;
-        transform: translateY(-115vw);
+        margin-left: 8vw;
+        transform: translateY(-100vw);
         width: 40vw;
         height: 25vw;
     }
@@ -457,8 +459,8 @@ body {
 
     .index__pixel {
         position: relative;
-        margin-left: 34vw;
-        transform: translateY(-150vw);
+        margin-left: 52vw;
+        transform: translateY(-140vw);
         z-index: 100;
         width: 50vw;
     }
@@ -475,7 +477,7 @@ body {
 
 
     .index__wrapper {
-        height: calc(260vw + 470px);
+        height: calc(240vw + 470px);
         overflow-y: hidden;
     }
 
