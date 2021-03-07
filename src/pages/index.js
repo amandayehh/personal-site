@@ -248,8 +248,10 @@ class Index extends Component {
           <Colophon />
         </div>
         <div className="index__bottom">
-          <div className="index__cat" >
-            <img className="index__cat__img" src={cat} alt="vibing cat" />
+          <div className="index__cat">
+            <a href="https://amandayehh.github.io/uwu/">
+              <img className="index__cat__img" src={cat} alt="vibing cat" />
+            </a>
           </div>
           <div className="index__footer">
             <Footer />
