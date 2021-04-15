@@ -30,6 +30,8 @@ import mail from "../images/shortcut/mail.png"
 import web from "../images/shortcut/web.png"
 import voicesAndVoids from "../images/index/voicesandvoids.png"
 import typeMirror from "../images/index/type-mirror.png"
+import keyboardDoodler from "../images/index/doodler.png"
+
 import kilotype from "../images/index/kilotype.png"
 import sel from "../images/index/sel.png"
 import sema from "../images/index/sema.png"
@@ -56,6 +58,13 @@ import voices__img4 from "../images/voices/chit.png"
 import mirror__img1 from "../images/mirror/typose_1.gif"
 import mirror__img2 from "../images/mirror/typose.png"
 import mirror__img3 from "../images/mirror/yana.gif"
+
+//Keyboard doodler
+import doodler__img1 from "../images/doodler/doodler1.png"
+import doodler__img2 from "../images/doodler/doodler2.png"
+import doodler__img3 from "../images/doodler/doodler3.png"
+import doodler__img4 from "../images/doodler/doodler4.png"
+
 
 
 //Kilotype
@@ -207,21 +216,26 @@ class Index extends Component {
             <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
           </div>
 
+          <div className="index__doodler" onClick={(e) => this.openWindow(e, "Keyboard Doodler — Info", "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", "Try it out!", "Design tool", "Typescript, Figma pluginAPI", "Josh Shi", doodler__img1, "Generative drawings created with Keyboard Doodler", doodler__img2, "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY", doodler__img3, "Keyboard Doodler UI", doodler__img4, "Drawings superimposed over a keyboard")}>
+            <Window imgClass={"index__doodler__img"} wrpClass={"index__doodler__wrp"} src={keyboardDoodler} title={"Keyboard Doodler"} alt="Screen shot of type mirror's website" />
+          </div>
+
+          <div className="index__semaphore" onClick={(e) => this.openWindow(e, "Learn Semaphore — Info", "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")}>
+            <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
+          </div>
+
 
           <div className="index__kilotype" onClick={(e) => this.openWindow(e, "Kilotype — Info", "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch’s debut typefaces.", "https://kilotype.de/", "kilotype.de", "Web design", "Sketch", "Friends of the Web, Kilotype", kilo__img1, "screenshot of Kilotype's type testers", kilo__img2, "screenshot of kilotype's homepage", kilo__img3, "screenshot of kilotype's about page")}>
             <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
           </div>
 
 
-          <div className="index__sel" onClick={(e) => this.openWindow(e, "Explore SEL — Info", "Explore SEL is a research site developed in collaboration with Harvard’s Graduate School of Education. The site features research tools and data visualizations that untangle the complexities of social and emotional learning frameworks.", "http://exploresel.gse.harvard.edu/", "exploresel.gse.harvard.edu", "Data Visualization, Web Design", "Sketch", "Harvard’s Graduate School of Education, Friends of the Web", sel__img2, "CASEL framework profile", sel__img4, "Homepage of Explore SEL", sel__img1, "framework comparison tool", sel__img3, "Term definition for peaceful conflict resolution")}>
+          {/* <div className="index__sel" onClick={(e) => this.openWindow(e, "Explore SEL — Info", "Explore SEL is a research site developed in collaboration with Harvard’s Graduate School of Education. The site features research tools and data visualizations that untangle the complexities of social and emotional learning frameworks.", "http://exploresel.gse.harvard.edu/", "exploresel.gse.harvard.edu", "Data Visualization, Web Design", "Sketch", "Harvard’s Graduate School of Education, Friends of the Web", sel__img2, "CASEL framework profile", sel__img4, "Homepage of Explore SEL", sel__img1, "framework comparison tool", sel__img3, "Term definition for peaceful conflict resolution")}>
             <Window imgClass={"index__sel__img"} wrpClass={"index__sel__wrp"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website" />
-          </div>
+          </div> */}
 
 
-          <div className="index__semaphore" onClick={(e) => this.openWindow(e, "Learn Semaphore — Info", "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")}>
-            <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
-          </div>
-
+      
 
           <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
             <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
@@ -237,9 +251,9 @@ class Index extends Component {
             </a>
           </div> */}
 
-          <div className="index__pixel" onClick={(e) => this.openWindow(e, "Pixelation — Info", "Built for the graduating class of 2020, Pixelation is a virtual exhibition showcasing the degree projects of MICA's 2020 BFA graphic design program.", "https://pixelation.micagraphicdesign.org/", "pixelation.micagraphicdesign.org", "Front-end development, Web design", "Gatsby, React", "Yana Gevorgyan, Tony Kim, Zoey Russomano, Anne Xin", pixel__img1, "The pixelation site displayed on a retro computer", pixel__img2, "2 screenshots of the Pixelation site", pixel__img3, "Hovering over projects on Pixelation")}>
+          {/* <div className="index__pixel" onClick={(e) => this.openWindow(e, "Pixelation — Info", "Built for the graduating class of 2020, Pixelation is a virtual exhibition showcasing the degree projects of MICA's 2020 BFA graphic design program.", "https://pixelation.micagraphicdesign.org/", "pixelation.micagraphicdesign.org", "Front-end development, Web design", "Gatsby, React", "Yana Gevorgyan, Tony Kim, Zoey Russomano, Anne Xin", pixel__img1, "The pixelation site displayed on a retro computer", pixel__img2, "2 screenshots of the Pixelation site", pixel__img3, "Hovering over projects on Pixelation")}>
             <Window imgClass={"index__pixel__img"} wrpClass={"index__pixel__wrp"} src={pixel} title={"Pixelation"} alt="Screeonshot of Pixelation's website" />
-          </div>
+          </div> */}
 
 
         </div>

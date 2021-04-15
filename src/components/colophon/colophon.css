@@ -3,7 +3,6 @@
   padding: 28px 14px;
   margin: 0 16px;
   border: 1px solid var(--black);
-
 }
 
 .colophon * {
@@ -21,6 +20,6 @@
 @media only screen and (min-width: 600px) {
   .colophon {
     width: 520px;
-    margin-left: 6vw;
+    margin-left: 20vw;
   }
 }

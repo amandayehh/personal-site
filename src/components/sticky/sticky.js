@@ -13,7 +13,7 @@ class Sticky extends Component {
     super(props)
     this.state = {
       width: 0,
-      mobileWidth: 600,
+      mobileWidth: 760,
     }
   }
 

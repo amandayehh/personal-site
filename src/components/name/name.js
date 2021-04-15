@@ -12,7 +12,7 @@ class Name extends Component {
     super(props)
     this.state = {
       width: 0,
-      mobileWidth: 700,
+      mobileWidth: 600,
     }
   }
 
@@ -44,7 +44,7 @@ class Name extends Component {
   }
 
   render() {
-    const isMobile = this.state.width <= 700
+    const isMobile = this.state.width <= 600
 
     if (!isMobile) {
       return <div className="name">
