@@ -2,12 +2,6 @@
 import React, { Component } from "react"
 
 import { Link } from "gatsby"
-import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
 
 
 import SEO from "../components/seo"
@@ -198,7 +192,6 @@ class Index extends Component {
         <div className="index__wrapper">
 
           <Name />
-
           <Sticky />
 
           <div className="shortcuts">

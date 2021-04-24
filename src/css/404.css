@@ -1,0 +1,51 @@
+html {
+    overflow: hidden;
+}
+
+.landscape {
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.landscape__sky {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background: linear-gradient(180deg, rgba(163, 227, 193, 0) 0%, #FFF59A 100%);
+    border-bottom: 1px solid var(--black);
+}
+
+.landscape__404 {
+    position: absolute;
+    bottom: 0px;
+    left: 40vw;
+    background-color: var(--secondary);
+    padding: 12px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    outline: 1px solid var(--black);
+}
+
+.landscape__info {
+    position: absolute;
+    bottom: 0px;
+    left: 64vw;
+    background-color: var(--secondary);
+    padding: 10px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    outline: 1px solid var(--black);
+}
+
+.landscape__ground {
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(180deg, #D6B7C4 0%, #E6D495 100%);
+}
