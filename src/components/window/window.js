@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React, { Component } from "react"
 
+
 import "./window.css"
 import "../../css/global.css"
 import "../../css/reset.css"
@@ -31,7 +32,12 @@ class Window extends Component {
 
   renderSrc(){
     if(this.isVideo == false){
-      return( <img  className={`window__image-wrapper__image ${ this.props.imgClass }`} src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />);
+      // return( <img  className={`window__image-wrapper__image ${ this.props.imgClass }`} srcSet={this.props.srcSet} sizes={this.props.sizes} src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />);
+      return(<picture>
+        <source srcset={this.props.large} media="(min-width: 800px)" />
+        <source srcset={this.props.small} media="(max-width: 800px)" />
+        <img className={`window__image-wrapper__image ${ this.props.imgClass }`} src={this.props.large} alt={this.props.alt}/>
+      </picture>)
     }
     else{
     return(<video src={this.props.src}  alt={this.props.alt}  className={`window__image-wrapper__image ${ this.props.imgClass }`} preload="yes" autoPlay="autoplay" loop muted playsInline></video>      )
