@@ -20,6 +20,8 @@
     "react-helmet": "^6.1.0",
     "react-parallax": "^3.1.2",
     "react-parallax-effect": "^1.0.6",
+    "react-resize-image": "^1.0.4",
+    "react-responsive-picture": "^3.2.2",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scroll-parallax": "^2.3.4",

@@ -22,20 +22,24 @@ import "../css/index.css"
 
 import mail from "../images/shortcut/mail.png"
 import web from "../images/shortcut/web.png"
+
+//large
 import voicesAndVoids from "../images/index/voicesandvoids.png"
 import typeMirror from "../images/index/type-mirror.png"
 import keyboardDoodler from "../images/index/doodler.png"
-
 import kilotype from "../images/index/kilotype.png"
-import sel from "../images/index/sel.png"
 import sema from "../images/index/sema.png"
 import audioVisualizer from "../images/index/audio.png"
-import poster1 from "../images/index/poster1.png"
-import poster2 from "../images/index/poster2.png"
-import poster3 from "../images/index/poster3.png"
-import canvas from "../images/index/canvas.png"
-import ditto from "../images/index/ditto.png"
-import pixel from "../images/index/pixel.png"
+
+//small
+import voicesAndVoidsSmall from "../images/index/small-voicesandvoids.png"
+import typeMirrorSmall from "../images/index/small-type-mirror.png"
+import keyboardDoodlerSmall from "../images/index/small-doodler.png"
+import kilotypeSmall from "../images/index/small-kilotype.png"
+import semaSmall from "../images/index/small-sema.png"
+import audioVisualizerSmall from "../images/index/small-audio.png"
+
+
 import cat from "../images/cat.gif"
 
 import noise from "../images/noise.png"
@@ -179,6 +183,7 @@ class Index extends Component {
     return (
 
       <div className="index">
+
         {/* */}
         {this.renderCompnent()}
         <SEO title="Amanda Yeh" />
@@ -201,37 +206,36 @@ class Index extends Component {
           </div>
 
           <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", "voicesandvoids.net", "Net Art, Front-end Development", "React, Gatsby, Github", "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting", voices__img1, "screenshot of AI generated google assistant text", voices__img2, "screenshot of numerous voice assistant inputs", voices__img3, "screenshot of artists and musicians and artists performing with voice assistances", voices__img4, "screenshot of Alexa poem overlayed on alexas")}>
-            <Window src={voicesAndVoids} imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
+            <Window imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} large={voicesAndVoids} small={voicesAndVoidsSmall} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
           </div>
 
 
           <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography.", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror", mirror__img3, "gif of user spinning in type mirror")}>
-            <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} src={typeMirror} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
+            <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} large={typeMirror} small={typeMirrorSmall} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
           </div>
 
           <div className="index__doodler" onClick={(e) => this.openWindow(e, "Keyboard Doodler — Info", "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", "Try it out!", "Design tool", "Typescript, Figma pluginAPI", "Josh Shi", doodler__img1, "Generative drawings created with Keyboard Doodler", doodler__img2, "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY", doodler__img3, "Keyboard Doodler UI", doodler__img4, "Drawings superimposed over a keyboard")}>
-            <Window imgClass={"index__doodler__img"} wrpClass={"index__doodler__wrp"} src={keyboardDoodler} title={"Keyboard Doodler"} alt="Screen shot of type mirror's website" />
+            <Window imgClass={"index__doodler__img"} wrpClass={"index__doodler__wrp"} large={keyboardDoodler} small={keyboardDoodlerSmall} title={"Keyboard Doodler"} alt="Screen shot of type mirror's website" />
           </div>
 
           <div className="index__semaphore" onClick={(e) => this.openWindow(e, "Learn Semaphore — Info", "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")}>
-            <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} src={sema} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
+            <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} large={sema} small={semaSmall} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
           </div>
 
 
           <div className="index__kilotype" onClick={(e) => this.openWindow(e, "Kilotype — Info", "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch’s debut typefaces.", "https://kilotype.de/", "kilotype.de", "Web design", "Sketch", "Friends of the Web, Kilotype", kilo__img1, "screenshot of Kilotype's type testers", kilo__img2, "screenshot of kilotype's homepage", kilo__img3, "screenshot of kilotype's about page")}>
-            <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} src={kilotype} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
+            <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} large={kilotype} small={kilotypeSmall} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
           </div>
-
 
           {/* <div className="index__sel" onClick={(e) => this.openWindow(e, "Explore SEL — Info", "Explore SEL is a research site developed in collaboration with Harvard’s Graduate School of Education. The site features research tools and data visualizations that untangle the complexities of social and emotional learning frameworks.", "http://exploresel.gse.harvard.edu/", "exploresel.gse.harvard.edu", "Data Visualization, Web Design", "Sketch", "Harvard’s Graduate School of Education, Friends of the Web", sel__img2, "CASEL framework profile", sel__img4, "Homepage of Explore SEL", sel__img1, "framework comparison tool", sel__img3, "Term definition for peaceful conflict resolution")}>
             <Window imgClass={"index__sel__img"} wrpClass={"index__sel__wrp"} src={sel} title={"Explore SEL"} alt="Screen shot of Explore SEL's website" />
           </div> */}
 
 
-      
+
 
           <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
-            <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} src={audioVisualizer} title={"Audio Visualizer"} alt="Video of music animation" />
+            <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} large={audioVisualizer} small={audioVisualizerSmall} title={"Audio Visualizer"} alt="Video of music animation" />
           </div>
 
           {/* <div className="index__canvas" onClick={(e) => this.openWindow(e, "Beyond a Blank Canvas — Info", "Beyond a Blank Canvas is a collection of essays proposing how non-pixel based and experimental design tools can help us create forms that subvert the graphic design status quo.", "", "", "Print design", "Figma", "Just me", canvas__img8, "Cover of Beyond a Blank Canvas", canvas__img1, "Table of contents of Beyond a Blank Canvas", canvas__img2, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img3, "spread of Beyond a Blank Canvas consisting of an article and a frame illustration", canvas__img4, "spread of Beyond a Blank Canvas consisting of a title and an article", canvas__img5, "spread of Beyond a Blank Canvas consisting of 2 posters", canvas__img6, "spread of Beyond a Blank Canvas consisting of an article and a screenshot of a Figma plugin", canvas__img7, "spread of Beyond a Blank Canvas consisting of an article and an illustration")}>
