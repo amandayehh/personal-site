@@ -2,6 +2,7 @@
     font-family: 'Mondwest';
     src: url(../fonts/Mondwest-Regular.woff2) format('woff2'),
         url(../fonts/Mondwest-Regular.woff) format('woff');
+    font-display: swap
 }
 
 @font-face {
@@ -9,23 +10,24 @@
     src: url(../fonts/Mondwest-Bold.woff2) format('woff2'),
         url(../fonts/Mondwest-Bold.woff) format('woff');
     font-weight: 700;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'NeueBit';
     src: url(../fonts/NeueBit-Regular.woff2) format('woff2'),
         url(../fonts/NeueBit-Regular.woff) format('woff');
+    font-display: swap
 }
+
 
 @font-face {
     font-family: 'NeueBit';
     src: url(../fonts/NeueBit-Bold.woff2) format('woff2'),
         url(../fonts/NeueBit-Bold.woff) format('woff');
     font-weight: 700;
-
+    font-display: swap
 }
-
-
 
 * {
     color: var(--black);

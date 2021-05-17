@@ -11,15 +11,10 @@
 
 .shortcut__img {
   width: 48px;
+  height: 48px;
   margin-bottom: 2px;
 }
 
 .shortcut__link__text {
   text-decoration: none;
-}
-
-@media only screen and (min-width: 600px) {
-
-  .shortcut {}
-
 }

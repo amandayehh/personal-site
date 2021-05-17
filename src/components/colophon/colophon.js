@@ -19,11 +19,11 @@ class Colophon extends Component {
         <h2 className="colophon__title">Colophon</h2>
         <div className="colophon__group__1">
           <p className="bold">Technology</p>
-          <p>This webiste is open source and hosted on <a href="https://github.com/amandayehh/personal-site" target="_blank">Github.</a></p>
+          <p>This webiste is open source and hosted on <a href="https://github.com/amandayehh/personal-site" target="_blank" rel="noopener">Github.</a></p>
         </div>
         <div className="colophon__group__2">
           <p className="bold">Typography</p>
-          <p>This website uses bitmap typefaces <a href="https://pangrampangram.com/products/bitmap-fonts?variant=32840636858422" target="_blank">Mondwest and Neuebit</a> by Pangram Pangram.</p>
+          <p>This website uses bitmap typefaces <a href="https://pangrampangram.com/products/bitmap-fonts?variant=32840636858422" target="_blank"rel="noopener">Mondwest and Neuebit</a> by Pangram Pangram.</p>
         </div>
       </div>
     )

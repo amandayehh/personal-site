@@ -26,6 +26,7 @@
     "react-router-dom": "^5.2.0",
     "react-scroll-parallax": "^2.3.4",
     "reactjs-localstorage": "^1.0.1",
+    "unused-webpack-plugin": "^2.4.0",
     "velocity-react": "^1.4.3"
   },
   "devDependencies": {

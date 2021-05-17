@@ -34,8 +34,8 @@ class Window extends Component {
     if(this.isVideo == false){
       // return( <img  className={`window__image-wrapper__image ${ this.props.imgClass }`} srcSet={this.props.srcSet} sizes={this.props.sizes} src={this.props.src} alt={this.props.alt} style={{ width: this.width }} />);
       return(<picture>
-        <source srcset={this.props.large} media="(min-width: 800px)" />
-        <source srcset={this.props.small} media="(max-width: 800px)" />
+        <source srcSet={this.props.large} media="(min-width: 500px)" />
+        <source srcSet={this.props.small} media="(max-width: 500px)" />
         <img className={`window__image-wrapper__image ${ this.props.imgClass }`} src={this.props.large} alt={this.props.alt}/>
       </picture>)
     }

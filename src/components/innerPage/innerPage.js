@@ -119,7 +119,7 @@ class InnerPage extends Component {
               <div className="innerPage__window__main__text__container">
                 <h3 className="innerPage__window__main__text__sum" >{this.props.summary}</h3>
 
-                <h3 className="serif innerPage__window__main__text__link"><a className="innerPage__window__main__text__link__a" href={this.props.mainLink} target="_blank">{this.props.linkText}</a></h3>
+                <h3 className="serif innerPage__window__main__text__link"><a className="innerPage__window__main__text__link__a" href={this.props.mainLink} target="_blank" rel="noopener" >{this.props.linkText}</a></h3>
                 <section className="innerPage__window__main__text__info">
                   <div className="innerPage__window__main__text__info__sec" >
                     <p className="innerPage__window__main__text__info__sec__content" > <span className="innerPage__window__main__text__info__sec__label bold" >Scope: </span>{this.props.scope}</p>
