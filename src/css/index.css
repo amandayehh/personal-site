@@ -10,6 +10,11 @@ body {
     vertical-align: bottom;
 }
 
+/* .index__wrapper {
+    height: calc(328vh - 300px);
+    overflow-y: hidden;
+} */
+
 .index__noise {
     position: fixed;
     width: 100vw;
@@ -34,14 +39,12 @@ body {
 }
 
 .index__wrapper {
-    margin-bottom: 10vw;
+    margin-bottom: -20vw;
 }
 
 .index__wrapper a {
     text-decoration: none;
 }
-
-
 
 .index__filter {
     width: 100vw;
@@ -68,14 +71,31 @@ body {
 
 .shortcuts {
     position: absolute;
-    top: 365px;
-    left: 16px;
+    top: 500px;
+    left: 10vw;
+}
+
+.index__syne {
+    position: relative;
+    margin-left: 30vw;
+    transform: translateY(-30vw);
+    width: 90vw;
+    height: 49.7vw;
+    z-index: 10;
+}
+
+.index__syne__wrp {
+    height: 49.7vw;
+}
+
+.index__syne__img {
+    width: 90vw;
 }
 
 .index__voices {
     position: relative;
-    margin-left: 38vw;
-    transform: translateY(-30vw);
+    margin-left: 49vw;
+    transform: translateY(-38vw);
     width: 72vw;
     height: 198vw;
     z-index: 10;
@@ -91,8 +111,8 @@ body {
 
 .index__type-mirror {
     position: relative;
-    margin-left: 4vw;
-    transform: translateY(-94vw);
+    margin-left: 8vw;
+    transform: translateY(-105vw);
     width: 50vw;
     height: 36vw;
     z-index: 10;
@@ -109,7 +129,7 @@ body {
 .index__doodler {
     position: relative;
     margin-left: -13vw;
-    transform: translateY(-70vw);
+    transform: translateY(-78vw);
     width: 90vw;
     height: 42vw;
     z-index: 10;
@@ -125,7 +145,7 @@ body {
 
 .index__semaphore {
     position: relative;
-    transform: translate(32vw, -55vw);
+    transform: translate(32vw, -57vw);
     width: 70vw;
     height: 57vw;
     z-index: 100;
@@ -141,10 +161,10 @@ body {
 
 .index__kilotype {
     position: relative;
-    transform: translate(-9vw, -37vw);
+    transform: translate(-9vw, -54vw);
     width: 85vw;
     height: 60vw;
-    z-index: 50;
+    z-index: 100;
 }
 
 .index__kilotype__wrp {
@@ -155,29 +175,10 @@ body {
     width: 85vw;
 }
 
-.index__sel {
-    position: relative;
-    margin-left: 14vw;
-    transform: translateY(-24vw);
-    width: 120vw;
-    height: 80vw;
-    z-index: 51;
-
-}
-
-.index__sel__wrp {
-    height: 80vw;
-}
-
-.index__sel__img {
-    width: 120vw;
-}
-
-
 .index__audio-visualizer {
     position: relative;
     margin-left: 23vw;
-    transform: translateY(-15vw);
+    transform: translateY(-40vw);
     width: 88vw;
     height: 58vw;
     z-index: 100;
@@ -189,92 +190,6 @@ body {
 
 .index__audio-visualizer__img {
     width: 88vw;
-}
-
-.index__posters {
-    transform: translateY(-45vw);
-    position: relative;
-    margin-left: 4vw;
-}
-
-.index__posters__1 {
-    margin-left: 8vw;
-    transform: translateY(10vw);
-}
-
-.index__posters__1_img {
-    width: 39vw;
-}
-
-.index__posters__2 {
-    margin-left: 3vw;
-    transform: translateY(10vw);
-}
-
-.index__posters__2_img {
-    width: 34vw;
-}
-
-
-.index__posters__3 {
-    margin-left: 10vw;
-}
-
-.index__posters__3_img {
-    width: 42vw;
-}
-
-.index__canvas {
-    position: relative;
-    margin-left: 65vw;
-    transform: translateY(-30vw);
-    height: 50vw
-}
-
-.index__canvas__spine {
-    height: 50vw
-}
-
-.index__canvas__wrapper {
-    height: 50vw
-}
-
-.index__canvas__img {
-    height: 50vw
-}
-
-.index__ditto {
-    position: relative;
-    margin-left: 30vw;
-    transform: translateY(-10vw);
-    width: 60vw;
-    height: 40vw;
-    z-index: 100;
-
-}
-
-.index__ditto__wrp {
-    height: 40vw;
-}
-
-.index__ditto__img {
-    width: 60vw;
-
-}
-
-.index__pixel {
-    position: relative;
-    margin-left: 8vw;
-    transform: translateY(-20vw);
-    z-index: 100;
-    width: 75vw;
-    height: 100vw;
-}
-
-.index__pixel__wrp {}
-
-.index__pixel__img {
-    width: 75vw;
 }
 
 .index__colophon {
@@ -304,24 +219,52 @@ body {
 
 
 @media only screen and (min-width: 760px) {
+
     .index__wrapper {
-        height: calc(194vw + 470px);
+        height: calc(248vw + 470px);
+
+
         overflow-y: hidden;
     }
 
+    /* .index__wrapper {
+        margin-bottom: -100vw;
+        overflow-y: hidden;
+
+    } */
 
 
     .shortcuts {
         position: absolute;
-        top: 160px;
+        top: 180px;
         left: 70px;
     }
 
+    .index__syne {
+        position: relative;
+        margin-left: 60vw;
+        transform: translateY(-12vw);
+        width: 60vw;
+        height: 33.2vw;
+        z-index: 100;
+    }
+
+
+    .index__syne__wrp {
+        height: 33.2vw;
+    }
+
+    .index__syne__img {
+        width: 60vw;
+    }
+
     .index__voices {
+        position: relative;
+        margin-left: 34vw;
+        transform: translateY(-38vw);
         width: 58vw;
         height: 150vw;
-        margin-left: 37vw;
-        transform: translateY(-10vw);
+        z-index: 10;
     }
 
     .index__voices-and-voids__wrp {
@@ -336,7 +279,7 @@ body {
         margin-left: 5vw;
         width: 24vw;
         height: 18vw;
-        transform: translateY(-145vw);
+        transform: translateY(-167vw);
     }
 
     .index__type-mirror__wrp {
@@ -351,7 +294,7 @@ body {
     .index__doodler {
         position: relative;
         margin-left: 9vw;
-        transform: translateY(-120vw);
+        transform: translateY(-128vw);
         width: 48vw;
         height: 22vw;
         z-index: 10;
@@ -367,7 +310,7 @@ body {
 
     .index__semaphore {
         position: relative;
-        transform: translate(-2vw, -80vw);
+        transform: translate(-2vw, -90vw);
         width: 44vw;
     }
 
@@ -377,7 +320,7 @@ body {
 
     .index__kilotype {
         position: relative;
-        transform: translate(6vw, -84vw);
+        transform: translate(6vw, -89vw);
         width: 40vw;
         height: 28vw;
     }
@@ -393,7 +336,7 @@ body {
     .index__audio-visualizer {
         position: relative;
         margin-left: 55vw;
-        transform: translateY(-126vw);
+        transform: translateY(-140vw);
         width: 45vw;
         height: 31vw;
     }
@@ -416,105 +359,5 @@ body {
         width: 8vw;
         margin-bottom: -1vw;
     }
-
-    /* .index__sel {
-        position: relative;
-        margin-left: 40vw;
-        transform: translateY(-52vw);
-        width: 80vw;
-        height: 70vw;
-    }
-
-    .index__sel__wrp {
-        height: 70vw;
-    }
-
-    .index__sel__img {
-        width: 80vw;
-    } */
-
-
-    /* .index__posters {
-        transform: translateY(-150vw);
-        position: relative;
-    }
-
-    .index__posters__1 {
-        transform: translateY(4vw);
-    }
-
-    .index__posters__1_img {
-        width: 14vw;
-    }
-
-    .index__posters__2 {
-        transform: translateY(-3vw);
-        margin-left: 16vw;
-
-    }
-
-    .index__posters__2_img {
-        width: 12vw;
-    }
-
-    .index__posters__3 {
-        margin-left: 0vw;
-        transform: translateY(2vw);
-
-    }
-
-    .index__posters__3_img {
-        width: 14vw;
-    }
-
-    .index__canvas {
-        position: relative;
-        margin-left: 80vw;
-        transform: translateY(-90vw);
-        height: 20vw;
-        z-index: 101;
-    }
-
-    .index__canvas__spine {
-        height: 20vw
-    }
-
-    .index__canvas__wrapper {
-        height: 20vw;
-    }
-
-    .index__canvas__img {
-        height: 20vw
-    }
-
-    .index__ditto {
-        position: relative;
-        margin-left: 6vw;
-        transform: translateY(-145vw);
-        width: 40vw;
-        height: 25vw;
-    }
-
-    .index__ditto__wrp {
-        height: 25vw;
-    }
-
-    .index__ditto__img {
-        width: 40vw;
-    }
-
-    .index__pixel {
-        position: relative;
-        margin-left: 52vw;
-        transform: translateY(-140vw);
-        z-index: 100;
-        width: 50vw;
-    }
-
-    .index__pixel__img {
-        width: 50vw;
-    }
-
- */
 
 }

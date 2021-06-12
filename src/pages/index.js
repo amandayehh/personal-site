@@ -24,6 +24,7 @@ import mail from "../images/shortcut/mail.png"
 import web from "../images/shortcut/web.png"
 
 //large
+import syne from "../images/index/syne.png"
 import voicesAndVoids from "../images/index/voicesandvoids.png"
 import typeMirror from "../images/index/type-mirror.png"
 import keyboardDoodler from "../images/index/doodler.png"
@@ -32,6 +33,7 @@ import sema from "../images/index/sema.png"
 import audioVisualizer from "../images/index/audio.png"
 
 //small
+import syneSmall from "../images/index/small-syne.png"
 import voicesAndVoidsSmall from "../images/index/small-voicesandvoids.png"
 import typeMirrorSmall from "../images/index/small-type-mirror.png"
 import keyboardDoodlerSmall from "../images/index/small-doodler.png"
@@ -43,6 +45,12 @@ import audioVisualizerSmall from "../images/index/small-audio.png"
 import cat from "../images/cat.gif"
 
 import noise from "../images/noise.png"
+
+//Syne
+import syne__img1 from "../images/syne/interpretation 1.gif"
+import syne__img2 from "../images/syne/mobile.png"
+import syne__img3 from "../images/syne/interpretation 2.gif"
+import syne__img4 from "../images/syne/hover.gif"
 
 
 //Voices and Voids
@@ -205,7 +213,13 @@ class Index extends Component {
             <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
           </div>
 
-          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", "voicesandvoids.net", "Net Art, Front-end Development", "React, Gatsby, Github", "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting", voices__img1, "screenshot of AI generated google assistant text", voices__img2, "screenshot of numerous voice assistant inputs", voices__img3, "screenshot of artists and musicians and artists performing with voice assistances", voices__img4, "screenshot of Alexa poem overlayed on alexas")}>
+          <div className="index__syne" onClick={(e) => this.openWindow(e, "Synesthetic Perceptions — Info", "Synesthetic Perceptions is an exploration of the relationship between visual and auditory composition. The website features a series of musical compositions and their visual interpretation.", "https://synestheticperceptions.art/", "synestheticperceptions.art", "Music visualization, Front-end Development", "P5 sound", "Verli Chen", syne__img3, "screen recording of audio visualizer", syne__img2, "mobile version of synesthetic perceptions", syne__img4, "screen recordings of exhibits and their hover states", syne__img1, "screen recording of audio visualizer")}>
+            <Window imgClass={"index__syne__img"} wrpClass={"index__syne__wrp"} large={syne} small={syneSmall} title={"Synesthetic Perceptions"} alt="Screen shot of Synesthetics perception'music visualizer" />
+          </div>
+
+
+
+          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", "voicesandvoids.net", "Net Art, Front-end Development", "React", "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting", voices__img1, "screenshot of AI generated google assistant text", voices__img2, "screenshot of numerous voice assistant inputs", voices__img3, "screenshot of artists and musicians and artists performing with voice assistances", voices__img4, "screenshot of Alexa poem overlayed on alexas")}>
             <Window imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} large={voicesAndVoids} small={voicesAndVoidsSmall} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
           </div>
 
@@ -214,7 +228,7 @@ class Index extends Component {
             <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} large={typeMirror} small={typeMirrorSmall} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
           </div>
 
-          <div className="index__doodler" onClick={(e) => this.openWindow(e, "Keyboard Doodler — Info", "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", "Try it out!", "Design tool", "Typescript, Figma pluginAPI", "Josh Shi", doodler__img1, "Generative drawings created with Keyboard Doodler", doodler__img2, "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY", doodler__img3, "Keyboard Doodler UI", doodler__img4, "Drawings superimposed over a keyboard")}>
+          <div className="index__doodler" onClick={(e) => this.openWindow(e, "Keyboard Doodler — Info", "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", "Try it out!", "Design tool", "Typescript, Figma plugin API", "Josh Shi", doodler__img1, "Generative drawings created with Keyboard Doodler", doodler__img2, "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY", doodler__img3, "Keyboard Doodler UI", doodler__img4, "Drawings superimposed over a keyboard")}>
             <Window imgClass={"index__doodler__img"} wrpClass={"index__doodler__wrp"} large={keyboardDoodler} small={keyboardDoodlerSmall} title={"Keyboard Doodler"} alt="Screen shot of type mirror's website" />
           </div>
 
