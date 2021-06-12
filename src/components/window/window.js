@@ -7,9 +7,6 @@ import "../../css/global.css"
 import "../../css/reset.css"
 import "../../css/type.css"
 
-import voicesAndVoids from "../../images/index/voicesandvoids.png"
-
-
 class Window extends Component {
   constructor(props) {
     super(props);

@@ -100,8 +100,6 @@ class InnerPage extends Component {
   render() {
 
     return (
-
-
       < div className="innerPage" >
         <div className="innerPage__background" onClick={(e) => this.closeWindow(e)}></div>
         <div className="innerPage__window">
