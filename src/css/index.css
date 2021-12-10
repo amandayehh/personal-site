@@ -10,6 +10,12 @@ body {
     vertical-align: bottom;
 }
 
+.index_grid {
+    position: fixed;
+    z-index: 1;
+
+}
+
 /* .index__wrapper {
     height: calc(328vh - 300px);
     overflow-y: hidden;
@@ -73,6 +79,7 @@ body {
     position: absolute;
     top: 500px;
     left: 10vw;
+    z-index: 2;
 }
 
 .index__syne {

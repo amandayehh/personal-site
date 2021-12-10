@@ -13,6 +13,8 @@ import Book from "../components/book/book"
 import Colophon from "../components/colophon/colophon"
 import Footer from "../components/footer/footer"
 import InnerPage from "../components/innerPage/innerPage"
+import Transparency from "../components/transparency/transparency"
+
 
 import "../css/global.css"
 import "../css/reset.css"
@@ -162,6 +164,9 @@ class Index extends Component {
     return (
 
       <div className="index">
+        <div class="index_grid">
+          <Transparency />
+        </div>
 
         {/* */}
         {this.renderCompnent()}
