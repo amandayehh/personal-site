@@ -15,6 +15,10 @@ class Footer extends Component {
     this.height = props.sizeH
   }
 
+  getYear() {
+    return new Date().getFullYear();
+  }
+
   render() {
     return (
       <footer className="footer">
@@ -25,16 +29,16 @@ class Footer extends Component {
           </div>
           <p><a href="https://www.are.na/amanda" target="_blank" rel="noopener">www.are.na/amanda</a></p>
           <p><a href="https://github.com/amandayehh" target="_blank" rel="noopener" >github.com/amandayehh</a></p>
-          <p><a href="mailto:ayeh01@mica.edu" target="_blank"rel="noopener">aye01@mica.edu</a></p>
+          <p><a href="mailto:ayeh01@mica.edu" target="_blank" rel="noopener">aye01@mica.edu</a></p>
         </div>
         <div className="footer__note">
           <div className="footer__note__heart">
             <p className="footer__note__heart__text">My heart belongs to</p>
-            <a href="https://yg.is/" target="_blank"rel="noopener" >
+            <a href="https://yg.is/" target="_blank" rel="noopener" >
               <img className="footer__note__heart__img" src={yargle} alt="bear running" />
             </a>
           </div>
-          <p>2020 © Amanda Yeh</p>
+          <p>{this.getYear()} © Amanda Yeh</p>
         </div>
       </footer >
     )

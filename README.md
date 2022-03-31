@@ -8,5 +8,4 @@
   <p align="center">Visit Site</p>
 </a>
 
-<p align="center">
-Hi! My homepage, featuring a collection of my recent adventures in design and code.</p>
+<p align="center">My homepage, featuring a collection of my recent adventures in design and code.</p>
