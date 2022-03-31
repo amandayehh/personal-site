@@ -182,9 +182,9 @@ class Index extends Component {
           <Sticky />
 
           <div className="shortcuts">
-            <Shortcut href={"mailto:ayeh01@mica.edu"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"ayeh@mica.edu"} />
+            <Shortcut href={"mailto:amandayeh123@gmail.com"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"Email"} />
             <Shortcut href={"https://www.are.na/amanda"} className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
-            <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"github"} />
+            <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"Github"} />
           </div>
 
           <div className="index__syne" onClick={(e) => this.openWindow(e, "Synesthetic Perceptions — Info", "Synesthetic Perceptions explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of  tangible objects that drive those interpretations.", "https://synestheticperceptions.art/", "synestheticperceptions.art", "Music visualization, Front-end Development", "P5 sound", "Verli Chen", syne__img3, "screen recording of audio visualizer", syne__img2, "mobile version of synesthetic perceptions", syne__img4, "screen recordings of exhibits and their hover states", syne__img1, "screen recording of audio visualizer")}>
