@@ -29,9 +29,9 @@ class Footer extends Component {
           </div>
           <p><a href="https://www.are.na/amanda" target="_blank" rel="noopener">www.are.na/amanda</a></p>
           <p><a href="https://github.com/amandayehh" target="_blank" rel="noopener" >github.com/amandayehh</a></p>
-          <p><a href="mailto:ayeh01@mica.edu" target="_blank" rel="noopener">aye01@mica.edu</a></p>
+          <p><a href="mailto:amandayeh123@gmail.com" target="_blank" rel="noopener">amandayeh123@gmail.com</a></p>
         </div>
-        <div className="footer__note">
+        <div className="footer__note">\
           <div className="footer__note__heart">
             <p className="footer__note__heart__text">My heart belongs to</p>
             <a href="https://yg.is/" target="_blank" rel="noopener" >
