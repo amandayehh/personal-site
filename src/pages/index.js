@@ -182,7 +182,7 @@ class Index extends Component {
           <Sticky />
 
           <div className="shortcuts">
-            <Shortcut href={"mailto:amandayeh123@gmail.com"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"Email"} />
+            <Shortcut href={"mailto:amandayeh@proton.me"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@proton.me"} />
             <Shortcut href={"https://www.are.na/amanda"} className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
             <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"Github"} />
           </div>
