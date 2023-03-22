@@ -72,7 +72,7 @@ class Sticky extends Component {
       <div className="sticky">
         <div className="sticky__bio">
           <h3 className="sticky__bio__1" >Welcome to my corner of the internet! Here's a collection of my recent adventures in design and code. </h3>
-          <h3 className="sticky__bio__2" >Open to work on weird things. Just <span className="serif"> <a id="sticky__bio_a" href="mailto:amandayeh123@gmail.com" target="_blank" rel="noopener">reach out</a></span>!</h3>
+          <h3 className="sticky__bio__2" >Open to work on weird things. Just <span className="serif"> <a id="sticky__bio_a" href="mailto:amandayeh@proton.me" target="_blank" rel="noopener">reach out</a></span>!</h3>
 
           <div className="sticky__bio__links">
 
