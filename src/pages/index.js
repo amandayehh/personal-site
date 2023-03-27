@@ -1,7 +1,11 @@
 // import React from "react"
-import React, { Component } from "react"
+import React, {
+  Component
+} from "react"
 
-import { Link } from "gatsby"
+import {
+  Link
+} from "gatsby"
 
 
 import SEO from "../components/seo"
@@ -117,7 +121,32 @@ class Index extends Component {
   }
 
   openWindow(e, title, summary, mainLink, linkText, scope, tech1, collaborator1, img1, alt1, img2, alt2, img3, alt3, img4, alt4, img5, alt5, img6, alt6, img7, alt7, img8, alt8) {
-    this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink, linkText: linkText, scope: scope, tech1: tech1, collaborator1: collaborator1, img1: img1, alt1: alt1, img2: img2, alt2: alt2, img3: img3, alt3: alt3, img4: img4, alt4: alt4, img5: img5, alt5: alt5, img6: img6, alt6: alt6, img7: img7, alt7: alt7, img8: img8, alt8: alt8 })
+    this.setState({
+      openWindow: true,
+      title: title,
+      summary: summary,
+      mainLink: mainLink,
+      linkText: linkText,
+      scope: scope,
+      tech1: tech1,
+      collaborator1: collaborator1,
+      img1: img1,
+      alt1: alt1,
+      img2: img2,
+      alt2: alt2,
+      img3: img3,
+      alt3: alt3,
+      img4: img4,
+      alt4: alt4,
+      img5: img5,
+      alt5: alt5,
+      img6: img6,
+      alt6: alt6,
+      img7: img7,
+      alt7: alt7,
+      img8: img8,
+      alt8: alt8
+    })
     document.getElementsByClassName("index__filter")[0].classList.add("fadeIn")
     document.getElementsByClassName("index__filter")[0].classList.remove("fadeOut")
 
@@ -151,7 +180,77 @@ class Index extends Component {
 
       if (this.state.openWindow == true) {
         // console.log("open + render")
-        return (<InnerPage className="index__innerPage" title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} linkText={this.state.linkText} scope={this.state.scope} tech1={this.state.tech1} collaborator1={this.state.collaborator1} img1={this.state.img1} alt1={this.state.alt1} img2={this.state.img2} alt2={this.state.alt2} img3={this.state.img3} alt3={this.state.alt3} img4={this.state.img4} alt4={this.state.alt4} img5={this.state.img5} alt5={this.state.alt5} img6={this.state.img6} alt6={this.state.alt6} img7={this.state.img7} alt7={this.state.alt7} img8={this.state.img8} alt8={this.state.alt8} />
+        return ( < InnerPage className = "index__innerPage"
+          title = {
+            this.state.title
+          }
+          summary = {
+            this.state.summary
+          }
+          mainLink = {
+            this.state.mainLink
+          }
+          linkText = {
+            this.state.linkText
+          }
+          scope = {
+            this.state.scope
+          }
+          tech1 = {
+            this.state.tech1
+          }
+          collaborator1 = {
+            this.state.collaborator1
+          }
+          img1 = {
+            this.state.img1
+          }
+          alt1 = {
+            this.state.alt1
+          }
+          img2 = {
+            this.state.img2
+          }
+          alt2 = {
+            this.state.alt2
+          }
+          img3 = {
+            this.state.img3
+          }
+          alt3 = {
+            this.state.alt3
+          }
+          img4 = {
+            this.state.img4
+          }
+          alt4 = {
+            this.state.alt4
+          }
+          img5 = {
+            this.state.img5
+          }
+          alt5 = {
+            this.state.alt5
+          }
+          img6 = {
+            this.state.img6
+          }
+          alt6 = {
+            this.state.alt6
+          }
+          img7 = {
+            this.state.img7
+          }
+          alt7 = {
+            this.state.alt7
+          }
+          img8 = {
+            this.state.img8
+          }
+          alt8 = {
+            this.state.alt8
+          }
+          />
         )
       }
     }
@@ -163,77 +262,294 @@ class Index extends Component {
 
     return (
 
-      <div className="index">
-        <div class="index_grid">
-          <Transparency />
-        </div>
+      <
+      div className = "index" >
+      <
+      div class = "index_grid" >
+      <
+      Transparency / >
+      <
+      /div>
 
-        {/* */}
-        {this.renderCompnent()}
-        <SEO title="Amanda Yeh" />
+      {
+        /* */ } {
+        this.renderCompnent()
+      } <
+      SEO title = "Amanda Yeh" / >
 
-        <div className="index__background"></div>
-        <div className="index__filter fadeOut">
-        </div>
+      <
+      div className = "index__background" > < /div> <
+      div className = "index__filter fadeOut" >
+      <
+      /div>
 
-        <div className="index__wrapper">
+      <
+      div className = "index__wrapper" >
 
-          <Name />
-          <Sticky />
+      <
+      Name / >
+      <
+      Sticky / >
 
-          <div className="shortcuts">
-            <Shortcut href={"mailto:amandayeh@proton.me"} className="shortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@proton.me"} />
-            <Shortcut href={"https://www.are.na/amanda"} className="shortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
-            <Shortcut href={"https://github.com/amandayehh"} className="shortcuts__3" src={web} alt={"website icon"} text={"Github"} />
-          </div>
+      <
+      div className = "shortcuts" >
+      <
+      Shortcut href = {
+        "mailto:amandayeh@proton.me"
+      }
+      className = "shortcuts__1"
+      src = {
+        mail
+      }
+      alt = {
+        "mail icon"
+      }
+      text = {
+        "amandayeh@proton.me"
+      }
+      /> <
+      Shortcut href = {
+        "https://www.are.na/amanda"
+      }
+      className = "shortcuts__2"
+      src = {
+        web
+      }
+      alt = {
+        "website icon"
+      }
+      text = {
+        "are.na"
+      }
+      /> <
+      Shortcut href = {
+        "https://github.com/amandayehh"
+      }
+      className = "shortcuts__3"
+      src = {
+        web
+      }
+      alt = {
+        "website icon"
+      }
+      text = {
+        "Github"
+      }
+      /> <
+      /div>
 
-          <div className="index__syne" onClick={(e) => this.openWindow(e, "Synesthetic Perceptions — Info", "Synesthetic Perceptions explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of  tangible objects that drive those interpretations.", "https://synestheticperceptions.art/", "synestheticperceptions.art", "Music visualization, Front-end Development", "P5 sound", "Verli Chen", syne__img3, "screen recording of audio visualizer", syne__img2, "mobile version of synesthetic perceptions", syne__img4, "screen recordings of exhibits and their hover states", syne__img1, "screen recording of audio visualizer")}>
-            <Window imgClass={"index__syne__img"} wrpClass={"index__syne__wrp"} large={syne} small={syneSmall} title={"Synesthetic Perceptions"} alt="Screen shot of Synesthetics perception'music visualizer" />
-          </div>
+      <
+      div className = "index__syne"
+      onClick = {
+        (e) => this.openWindow(e, "Synesthetic Perceptions — Info", "Synesthetic Perceptions explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of  tangible objects that drive those interpretations.", "https://synestheticperceptions.art/", "synestheticperceptions.art", "Music visualization, Front-end Development", "P5 sound", "Verli Chen", syne__img3, "screen recording of audio visualizer", syne__img2, "mobile version of synesthetic perceptions", syne__img4, "screen recordings of exhibits and their hover states", syne__img1, "screen recording of audio visualizer")
+      } >
+      <
+      Window imgClass = {
+        "index__syne__img"
+      }
+      wrpClass = {
+        "index__syne__wrp"
+      }
+      large = {
+        syne
+      }
+      small = {
+        syneSmall
+      }
+      title = {
+        "Synesthetic Perceptions"
+      }
+      alt = "Screen shot of Synesthetics perception'music visualizer" / >
+      <
+      /div>
 
-          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", "voicesandvoids.net", "Net Art, Front-end Development", "React", "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting", voices__img1, "screenshot of AI generated google assistant text", voices__img2, "screenshot of numerous voice assistant inputs", voices__img3, "screenshot of artists and musicians and artists performing with voice assistances", voices__img4, "screenshot of Alexa poem overlayed on alexas")}>
-            <Window imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} large={voicesAndVoids} small={voicesAndVoidsSmall} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
-          </div>
+      <
+      div className = "index__voices"
+      onClick = {
+        (e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", "voicesandvoids.net", "Net Art, Front-end Development", "React", "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting", voices__img1, "screenshot of AI generated google assistant text", voices__img2, "screenshot of numerous voice assistant inputs", voices__img3, "screenshot of artists and musicians and artists performing with voice assistances", voices__img4, "screenshot of Alexa poem overlayed on alexas")
+      } >
+      <
+      Window imgClass = {
+        "index__voices-and-voids__img"
+      }
+      wrpClass = {
+        "index__voices-and-voids__wrp"
+      }
+      large = {
+        voicesAndVoids
+      }
+      small = {
+        voicesAndVoidsSmall
+      }
+      title = {
+        "Voices and Voids"
+      }
+      alt = "Screen shot of Voices and Voids website" / >
+      <
+      /div>
 
-          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography.", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror", mirror__img3, "gif of user spinning in type mirror")}>
-            <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} large={typeMirror} small={typeMirrorSmall} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
-          </div>
+      <
+      div className = "index__type-mirror"
+      onClick = {
+        (e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography.", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror", mirror__img3, "gif of user spinning in type mirror")
+      } >
+      <
+      Window imgClass = {
+        "index__type-mirror__img"
+      }
+      wrpClass = {
+        "index__type-mirror__wrp"
+      }
+      large = {
+        typeMirror
+      }
+      small = {
+        typeMirrorSmall
+      }
+      title = {
+        "Type Mirror"
+      }
+      alt = "Screen shot of type mirror's website" / >
+      <
+      /div>
 
-          <div className="index__doodler" onClick={(e) => this.openWindow(e, "Keyboard Doodler — Info", "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", "Try it out!", "Design tool", "Typescript, Figma plugin API", "Josh Shi", doodler__img1, "Generative drawings created with Keyboard Doodler", doodler__img2, "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY", doodler__img3, "Keyboard Doodler UI", doodler__img4, "Drawings superimposed over a keyboard")}>
-            <Window imgClass={"index__doodler__img"} wrpClass={"index__doodler__wrp"} large={keyboardDoodler} small={keyboardDoodlerSmall} title={"Keyboard Doodler"} alt="Screen shot of type mirror's website" />
-          </div>
+      <
+      div className = "index__doodler"
+      onClick = {
+        (e) => this.openWindow(e, "Keyboard Doodler — Info", "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", "Try it out!", "Design tool", "Typescript, Figma plugin API", "Josh Shi", doodler__img1, "Generative drawings created with Keyboard Doodler", doodler__img2, "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY", doodler__img3, "Keyboard Doodler UI", doodler__img4, "Drawings superimposed over a keyboard")
+      } >
+      <
+      Window imgClass = {
+        "index__doodler__img"
+      }
+      wrpClass = {
+        "index__doodler__wrp"
+      }
+      large = {
+        keyboardDoodler
+      }
+      small = {
+        keyboardDoodlerSmall
+      }
+      title = {
+        "Keyboard Doodler"
+      }
+      alt = "Screen shot of type mirror's website" / >
+      <
+      /div>
 
-          <div className="index__semaphore" onClick={(e) => this.openWindow(e, "Learn Semaphore — Info", "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")}>
-            <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} large={sema} small={semaSmall} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
-          </div>
+      <
+      div className = "index__semaphore"
+      onClick = {
+        (e) => this.openWindow(e, "Learn Semaphore — Info", "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")
+      } >
+      <
+      Window imgClass = {
+        "index__semaphore__img"
+      }
+      wrpClass = {
+        "index__sempahore__wrp"
+      }
+      large = {
+        sema
+      }
+      small = {
+        semaSmall
+      }
+      title = {
+        "Learn Semaphore"
+      }
+      alt = "Screen shot of learnsemaphore.com" / >
+      <
+      /div>
 
 
-          <div className="index__kilotype" onClick={(e) => this.openWindow(e, "Kilotype — Info", "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch’s debut typefaces.", "https://kilotype.de/", "kilotype.de", "Web design", "Sketch", "Friends of the Web, Kilotype", kilo__img1, "screenshot of Kilotype's type testers", kilo__img2, "screenshot of kilotype's homepage", kilo__img3, "screenshot of kilotype's about page")}>
-            <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} large={kilotype} small={kilotypeSmall} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
-          </div>
+      <
+      div className = "index__kilotype"
+      onClick = {
+        (e) => this.openWindow(e, "Kilotype — Info", "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch’s debut typefaces.", "https://kilotype.de/", "kilotype.de", "Web design", "Sketch", "Friends of the Web, Kilotype", kilo__img1, "screenshot of Kilotype's type testers", kilo__img2, "screenshot of kilotype's homepage", kilo__img3, "screenshot of kilotype's about page")
+      } >
+      <
+      Window imgClass = {
+        "index__kilotype__img"
+      }
+      wrpClass = {
+        "index__kilotype__wrp"
+      }
+      large = {
+        kilotype
+      }
+      small = {
+        kilotypeSmall
+      }
+      title = {
+        "Kilotype"
+      }
+      alt = "Screen shot of Kilotype's website" / >
+      <
+      /div>
 
-          <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
-            <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} large={audioVisualizer} small={audioVisualizerSmall} title={"Audio Visualizer"} alt="Video of music animation" />
-          </div>
+      <
+      div className = "index__audio-visualizer"
+      onClick = {
+        (e) => this.openWindow(e, "Audio Visaulizer — Info", "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")
+      } >
+      <
+      Window imgClass = {
+        "index__audio-visualizer__img"
+      }
+      wrpClass = {
+        "index__audio-visualizer__wrp"
+      }
+      isVideo = {
+        false
+      }
+      large = {
+        audioVisualizer
+      }
+      small = {
+        audioVisualizerSmall
+      }
+      title = {
+        "Audio Visualizer"
+      }
+      alt = "Video of music animation" / >
+      <
+      /div>
 
-        </div>
+      <
+      /div>
 
-        <div className="index__colophon">
-          <Colophon />
-        </div>
-        <div className="index__bottom">
-          <div className="index__cat">
-            <a href="https://amandayehh.github.io/uwu/">
-              <img className="index__cat__img" src={cat} alt="vibing cat" />
-            </a>
-          </div>
-          <div className="index__footer">
-            <Footer />
-          </div>
-        </div>
+      <
+      div className = "index__colophon" >
+      <
+      Colophon / >
+      <
+      /div> <
+      div className = "index__bottom" >
+      <
+      div className = "index__cat" >
+      <
+      a href = "https://amandayehh.github.io/uwu/" >
+      <
+      img className = "index__cat__img"
+      src = {
+        cat
+      }
+      alt = "vibing cat" / >
+      <
+      /a> <
+      /div> <
+      div className = "index__footer" >
+      <
+      Footer / >
+      <
+      /div> <
+      /div>
 
 
-      </div >
+      <
+      /div >
     )
   }
 }
