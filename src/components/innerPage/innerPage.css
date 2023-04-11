@@ -106,7 +106,7 @@
   background-color: white;
   border-radius: 100%;
   border: 1px solid var(--black);
-  z-index: 120;
+  z-index: 200;
   bottom: 12px;
   left: 12px;
   cursor: pointer;
