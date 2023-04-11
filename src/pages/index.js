@@ -237,7 +237,7 @@ class Index extends Component {
             <Window imgClass={"index__cloister__img"} wrpClass={"index__cloister__wrp"} large={cloister} small={cloister} title={"Cloister"} alt="W glyph shown in the typeface Cloister" />
           </div>
 
-          <SmallSticky className="index__smallSticky" />
+          <SmallSticky className="index__smallSticky" href="mailto:amandayeh@proton.me?subject=Fonts&body=I would like a copy of your typefaces for personal use." />
 
           <div className="index__fontShortcuts">
             <Shortcut className="index__fontShortcuts__1" src={font} alt={"font icon"} text={"Cork"} href="mailto:amandayeh@proton.me?subject=Snatch me a copy of Cork&body=I would like a copy of Cork for personal use." />
