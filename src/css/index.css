@@ -45,7 +45,7 @@ body {
 }
 
 .index__wrapper {
-    margin-bottom: -20vw;
+    margin-bottom: -15vw;
 }
 
 .index__wrapper a {
@@ -61,21 +61,7 @@ body {
     mix-blend-mode: lighten;
 }
 
-/* .index__blur {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    filter: blur(200px);
-    top: 0;
-    z-index: 1000;
-
-} */
-
-.index__wrapper {}
-
-
-
-.shortcuts {
+.index__infoShortcuts {
     position: absolute;
     top: 500px;
     left: 10vw;
@@ -104,22 +90,89 @@ body {
     margin-left: 49vw;
     transform: translateY(-38vw);
     width: 72vw;
-    height: 198vw;
+    height: 190vw;
     z-index: 10;
 }
 
 .index__voices-and-voids__wrp {
-    height: 198vw;
+    height: 190vw;
 }
 
 .index__voices-and-voids__img {
     width: 72vw;
 }
 
+
+.index__cork {
+    position: relative;
+    margin-left: -4vw;
+    transform: translateY(-100vw);
+    width: 60vw;
+    height: 39vw;
+    z-index: 10;
+}
+
+.index__cork__wrp {
+    height: 39vw;
+}
+
+.index__cork__img {
+    width: 60vw;
+}
+
+.index__cycl {
+    position: relative;
+    margin-left: 22vw;
+    transform: translateY(-75vw);
+    width: 33vw;
+    height: 31vw;
+    z-index: 8;
+}
+
+.index__cycl__wrp {
+    height: 31vw;
+}
+
+.index__cycl__img {
+    width: 33vw;
+}
+
+.index__cloister {
+    position: relative;
+    margin-left: 52vw;
+    transform: translateY(-81vw);
+    width: 33vw;
+    height: 31vw;
+    z-index: 7;
+}
+
+.index__cloister__wrp {
+    height: 31vw;
+}
+
+.index__cloister__img {
+    width: 33vw;
+}
+
+.index__smallSticky{
+    position: relative;
+    transform: translateY(-10vw);
+}
+
+.index__fontShortcuts{
+    position: relative;
+    margin-left: 10vw;
+    display:flex;
+    flex-direction:row;
+    transform: translateY(-74vw);
+    z-index: 11;
+}
+
+
 .index__type-mirror {
     position: relative;
-    margin-left: 8vw;
-    transform: translateY(-105vw);
+    margin-left: 53vw;
+    transform: translateY(-69vw);
     width: 50vw;
     height: 36vw;
     z-index: 10;
@@ -135,11 +188,11 @@ body {
 
 .index__doodler {
     position: relative;
-    margin-left: -13vw;
-    transform: translateY(-78vw);
+    margin-left: -10vw;
+    transform: translateY(-73vw);
     width: 90vw;
     height: 42vw;
-    z-index: 10;
+    z-index: 8;
 }
 
 .index__doodler__wrp {
@@ -152,10 +205,10 @@ body {
 
 .index__semaphore {
     position: relative;
-    transform: translate(32vw, -57vw);
+    transform: translate(33vw, -55vw);
     width: 70vw;
     height: 57vw;
-    z-index: 100;
+    z-index: 10;
 }
 
 .index__semaphore__wrp {
@@ -168,10 +221,10 @@ body {
 
 .index__kilotype {
     position: relative;
-    transform: translate(-9vw, -54vw);
+    transform: translate(-10vw, -56vw);
     width: 85vw;
     height: 60vw;
-    z-index: 100;
+    z-index: 11;
 }
 
 .index__kilotype__wrp {
@@ -184,8 +237,8 @@ body {
 
 .index__audio-visualizer {
     position: relative;
-    margin-left: 23vw;
-    transform: translateY(-40vw);
+    margin-left: 18vw;
+    transform: translateY(-38vw);
     width: 88vw;
     height: 58vw;
     z-index: 100;
@@ -201,7 +254,7 @@ body {
 
 .index__colophon {
     position: relative;
-    z-index: 100;
+    z-index: 200;
     /* margin-top: 5vw; */
 }
 
@@ -224,24 +277,23 @@ body {
     margin-bottom: -1vw;
 }
 
-
 @media only screen and (min-width: 760px) {
+    .index__wrapper {
+        height: calc(650vw + 100px);
+ 
+     }
+}
+
+@media only screen and (min-width: 1000px) {
 
     .index__wrapper {
-        height: calc(248vw + 470px);
+       height: calc(275vw + 200px);
 
 
         overflow-y: hidden;
     }
 
-    /* .index__wrapper {
-        margin-bottom: -100vw;
-        overflow-y: hidden;
-
-    } */
-
-
-    .shortcuts {
+    .index__infoShortcuts {
         position: absolute;
         top: 180px;
         left: 70px;
@@ -282,11 +334,68 @@ body {
         width: 58vw;
     }
 
+    .index__cork {
+        position: relative;
+        margin-left: 4vw;
+        transform: translateY(-145vw);
+        width: 40vw;
+        height: 26vw;
+        z-index: 10;
+    }
+
+    .index__cork__wrp {
+        height: 26vw;
+    }
+
+    .index__cork__img {
+        width: 40vw;
+    }
+
+    .index__cycl {
+        position: relative;
+        margin-left: 12vw;
+        transform: translateY(-139vw);
+        width: 11vw;
+        height: 11vw;
+        z-index: 11;
+    }
+
+    .index__cycl__wrp {
+        height: 11vw;
+    }
+
+    .index__cycl__img {
+        width: 11vw;
+    }
+
+    .index__cloister {
+        position: relative;
+        margin-left: 20vw;
+        transform: translateY(-140vw);
+        width: 11vw;
+        height: 11vw;
+        z-index: 10;
+    }
+
+    .index__cloister__wrp {
+        height: 11vw;
+    }
+
+    .index__cloister__img {
+        width: 11vw;
+    }
+
+
+    .index__fontShortcuts{
+        margin-left: 7vw;
+        transform: translateY(-135vw);
+    }
+
     .index__type-mirror {
-        margin-left: 5vw;
+        margin-left: 14vw;
         width: 24vw;
         height: 18vw;
-        transform: translateY(-167vw);
+        transform: translateY(-127vw);
     }
 
     .index__type-mirror__wrp {
@@ -300,8 +409,8 @@ body {
 
     .index__doodler {
         position: relative;
-        margin-left: 9vw;
-        transform: translateY(-128vw);
+        margin-left: 60vw;
+        transform: translateY(-112vw);
         width: 48vw;
         height: 22vw;
         z-index: 10;
@@ -317,7 +426,7 @@ body {
 
     .index__semaphore {
         position: relative;
-        transform: translate(-2vw, -90vw);
+        transform: translate(-3vw, -128vw);
         width: 44vw;
     }
 
@@ -327,23 +436,24 @@ body {
 
     .index__kilotype {
         position: relative;
-        transform: translate(6vw, -89vw);
-        width: 40vw;
-        height: 28vw;
+        transform: translate(7vw, -140vw);
+        z-index: 150;
+        width: 48vw;
+        height: 35vw;
     }
 
     .index__kilotype__wrp {
-        height: 28vw;
+        height: 35vw;
     }
 
     .index__kilotype__img {
-        width: 40vw;
+        width: 48vw;
     }
 
     .index__audio-visualizer {
         position: relative;
-        margin-left: 55vw;
-        transform: translateY(-140vw);
+        margin-left: 51vw;
+        transform: translateY(-196vw);
         width: 45vw;
         height: 31vw;
     }
@@ -358,7 +468,7 @@ body {
 
     .index__colophon {
         position: relative;
-        z-index: 100;
+        z-index: 200;
     }
 
 
@@ -367,4 +477,11 @@ body {
         margin-bottom: -1vw;
     }
 
+}
+
+@media only screen and (min-width: 1500px) {
+
+    .index__wrapper {
+        height: calc(270vw + 100px);
+    }
 }

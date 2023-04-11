@@ -1,0 +1,32 @@
+.smallSticky {
+  position: relative;
+  left: 8vw;
+  z-index: 10;
+  width: 124px;
+  transform: translateY(-70vw);
+
+}
+
+.smallSticky__text {
+  position: absolute;
+  z-index: 1;
+  padding: 12px;
+}
+
+.smallSticky__text__link{
+  font-weight: bold;
+  font-family: 'Mondwest', serif;
+  font-size: 16px;
+}
+
+.smallSticky__svg{
+  width: 124px;
+}
+
+@media only screen and (min-width: 760px) {
+  .smallSticky {
+    left: 5vw;
+    transform: translateY(-134vw);
+  }
+}
+

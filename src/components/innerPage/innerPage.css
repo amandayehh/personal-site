@@ -1,12 +1,11 @@
 .innerPage__window {
   width: 90vw;
   position: fixed;
-  z-index: 100;
   left: 5vw;
   height: 88vh;
   background-color: white;
   outline: 1px solid var(--black);
-  z-index: 120;
+  z-index: 200;
   top: 6vh;
   overflow: scroll;
 }
