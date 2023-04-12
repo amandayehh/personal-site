@@ -6,7 +6,7 @@
   background-color: white;
   outline: 1px solid var(--black);
   z-index: 200;
-  top: 6vh;
+  top: 5.5vh;
   overflow: scroll;
 }
 
