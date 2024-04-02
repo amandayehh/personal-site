@@ -45,6 +45,13 @@
   border-radius: 100%;
   border: 1px solid var(--black);
   margin-right: 6px;
+  transition: 0.2s;
+
+}
+
+.innerPage__window__circle__close:hover {
+  background-color: var(--accent);
+  cursor: pointer;
 }
 
 .innerPage__window__bar__info {

@@ -10,16 +10,6 @@ import "../../css/type.css"
 class InnerPage extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   img1: this.props.img1,
-    //   img2: this.props.img2,
-    //   img3: this.props.img3,
-    //   img4: this.props.img4,
-    //   img5: this.props.img5,
-    //   img6: this.props.img6,
-    //   img7: this.props.img7,
-    //   img8: this.props.img8,
-    // };
   }
 
   componentDidMount() {
@@ -105,7 +95,7 @@ class InnerPage extends Component {
         <div className="innerPage__window">
           <div className="innerPage__window__bar" style={{ width: this.width }} >
             <div className="innerPage__window__circles">
-              <div className="innerPage__window__circle"></div>
+              <div className="innerPage__window__circle innerPage__window__circle__close" onClick={(e) => this.closeWindow(e)} ></div>
               <div className="innerPage__window__circle"></div>
               <div className="innerPage__window__circle"></div>
               <p className="innerPage__window__bar__info" id="small-title">{this.props.title}</p>
