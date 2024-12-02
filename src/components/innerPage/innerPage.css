@@ -154,6 +154,5 @@
     overflow: scroll;
     outline: 1px solid var(--black);
     margin-top: 24px;
-    overflow-y: hidden;
   }
 }
