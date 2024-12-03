@@ -91,7 +91,7 @@
   flex-direction: column;
   position: absolute;
   top: 60vh;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   outline: 1px solid var(--black);
   background: #242424;
 }
