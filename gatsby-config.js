@@ -70,3 +70,15 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+exports.onCreateWebpackConfig = ({ actions }) => {
+  if (stage === 'build-javascript') {
+    actions.setWebpackConfig({
+      optimization: {
+        minimize: true,
+        splitChunks: {
+          chunks: 'all',
+        },
+      },
+    })
+  }
+}
