@@ -30,6 +30,7 @@ import font from "../images/shortcut/font.png"
 
 
 //large
+import boygame from "../images/index/boygame.png"
 import syne from "../images/index/syne.png"
 import voicesAndVoids from "../images/index/voicesandvoids.png"
 import cork from "../images/index/cork.png"
@@ -50,8 +51,13 @@ import keyboardDoodlerSmall from "../images/index/small-doodler.png"
 import kilotypeSmall from "../images/index/small-kilotype.png"
 import semaSmall from "../images/index/small-sema.png"
 import audioVisualizerSmall from "../images/index/small-audio.png"
-
 import cat from "../images/cat.gif"
+
+//Boygame
+import boygame__img1 from "../images/boygame/gameboy.png" 
+import boygame__img2 from "../images/boygame/home.png" 
+import boygame__img3 from "../images/boygame/tamagotchi.png" 
+import boygame__img4 from "../images/boygame/pk.png" 
 
 //Syne
 import syne__img1 from "../images/syne/interpretation 1.gif"
@@ -215,6 +221,10 @@ class Index extends Component {
             <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@proton.me"} />
             <Shortcut href={"https://www.are.na/amanda"} className="index__infoShortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
             <Shortcut href={"https://github.com/amandayehh"} className="index__infoShortcuts__3" src={web} alt={"website icon"} text={"Github"} />
+          </div>
+
+          <div className="index__boygame" onClick={(e) => this.openWindow(e, "BOY♡GAME — Info", "BOY♡GAME is a couch co-op style party game where players build boys together and rate their favorites.", "https://www.instagram.com/b0ygame/", "@B0YGAME", "Game design, front end development", "React", "Melissa Liu", boygame__img1, "Gameboy showing the logo of Boygame", boygame__img2, "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing", boygame__img3, "Boygame branded Tamagotchi", boygame__img4, "Screenshot showing 2 boy profiles")}>
+            <Window imgClass={"index__boygame__img"} wrpClass={"index__boygame__img"} large={boygame} small={boygame} title={"BOY♡GAME"} alt="Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing." />
           </div>
 
           <div className="index__syne" onClick={(e) => this.openWindow(e, "Synesthetic Perceptions — Info", "Synesthetic Perceptions explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of  tangible objects that drive those interpretations.", "https://synestheticperceptions.art/", "synestheticperceptions.art", "Music visualization, Front-end Development", "P5 sound", "Verli Chen", syne__img3, "screen recording of audio visualizer", syne__img2, "mobile version of synesthetic perceptions", syne__img4, "screen recordings of exhibits and their hover states", syne__img1, "screen recording of audio visualizer")}>

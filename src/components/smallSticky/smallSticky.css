@@ -1,9 +1,9 @@
 .smallSticky {
   position: relative;
-  left: 8vw;
+  left: 6vw;
   z-index: 10;
   width: 124px;
-  transform: translateY(-70vw);
+  transform: translateY(-35vw);
 
 }
 
@@ -13,20 +13,19 @@
   padding: 12px;
 }
 
-.smallSticky__text__link{
+.smallSticky__text__link {
   font-weight: bold;
   font-family: 'Mondwest', serif;
   font-size: 16px;
 }
 
-.smallSticky__svg{
+.smallSticky__svg {
   width: 124px;
 }
 
 @media only screen and (min-width: 760px) {
   .smallSticky {
     left: 5vw;
-    transform: translateY(-134vw);
+    transform: translateY(-38vw);
   }
 }
-
