@@ -27,7 +27,9 @@ import "../css/index.css"
 import mail from "../images/shortcut/mail.png"
 import web from "../images/shortcut/web.png"
 import font from "../images/shortcut/font.png"
-
+import desktop from "../images/shortcut/desktop.png"
+import image from "../images/shortcut/image.png"
+import notepad from "../images/shortcut/notepad.png"
 
 //large
 import boygame from "../images/index/boygame.png"
@@ -219,11 +221,13 @@ class Index extends Component {
 
           <div className="index__infoShortcuts">
             <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@proton.me"} />
-            <Shortcut href={"https://www.are.na/amanda"} className="index__infoShortcuts__2" src={web} alt={"website icon"} text={"are.na"} />
-            <Shortcut href={"https://github.com/amandayehh"} className="index__infoShortcuts__3" src={web} alt={"website icon"} text={"Github"} />
+            <Shortcut href={"https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?ouid=117237055574131097484&usp=sheets_home&ths=true"} className="index__infoShortcuts__2" src={desktop} alt={"desktop icon"} text={"Work"} />
+            <Shortcut href={"https://www.are.na/amanda"} className="index__infoShortcuts__3" src={web} alt={"website icon"} text={"are.na"} />
+            <Shortcut href={"https://github.com/amandayehh"} className="index__infoShortcuts__4" src={web} alt={"website icon"} text={"Github"} />
+            <Shortcut href={"https://agilityleaf.blog/"} className="index__infoShortcuts__6" src={notepad} alt={"image icon"} text={"Notes"} />
           </div>
 
-          <div className="index__boygame" onClick={(e) => this.openWindow(e, "BOY♡GAME — Info", "BOY♡GAME is a couch co-op style party game where players build boys together and rate their favorites.", "https://www.instagram.com/b0ygame/", "@B0YGAME", "Game design, front end development", "React", "Melissa Liu", boygame__img1, "Gameboy showing the logo of Boygame", boygame__img2, "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing", boygame__img3, "Boygame branded Tamagotchi", boygame__img4, "Screenshot showing 2 boy profiles")}>
+          <div className="index__boygame" onClick={(e) => this.openWindow(e, "BOY♡GAME — Info", "BOY♡GAME is a couch co-op style party game where players build boys together and vote for their favorites.", "https://www.instagram.com/b0ygame/", "@B0YGAME", "Game design, front end development", "React", "Melissa Liu", boygame__img1, "Gameboy showing the logo of Boygame", boygame__img2, "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing", boygame__img3, "Boygame branded Tamagotchi", boygame__img4, "Screenshot showing 2 boy profiles")}>
             <Window imgClass={"index__boygame__img"} wrpClass={"index__boygame__img"} large={boygame} small={boygame} title={"BOY♡GAME"} alt="Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing." />
           </div>
 
