@@ -26,6 +26,6 @@
 @media only screen and (min-width: 760px) {
   .smallSticky {
     left: 5vw;
-    transform: translateY(-38vw);
+    transform: translateY(-134vw);
   }
 }
