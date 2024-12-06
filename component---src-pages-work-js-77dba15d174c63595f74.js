@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkAmanda_Yeh_s_Personal_Site=self.webpackChunkAmanda_Yeh_s_Personal_Site||[]).push([[670],{7618:function(e,s,a){a.r(s);var t=a(4794),h=a(6540);s.default=()=>((0,h.useEffect)((()=>{(0,t.navigate)("https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?ouid=117237055574131097484&usp=sheets_home&ths=true",{replace:!0})}),[]),null)}}]);
+//# sourceMappingURL=component---src-pages-work-js-77dba15d174c63595f74.js.map
