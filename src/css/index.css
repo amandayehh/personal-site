@@ -277,6 +277,8 @@ body {
 
 .index__footer {
     position: relative;
+    z-index: 200;
+
 }
 
 .index__bottom {
