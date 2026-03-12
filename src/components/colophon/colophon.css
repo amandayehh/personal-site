@@ -18,6 +18,11 @@
   margin-bottom: 20px;
 }
 
+.colophon__group__1 p.bold,
+.colophon__group__2 p.bold {
+  margin-bottom: 4px;
+}
+
 @media only screen and (min-width: 600px) {
   .colophon {
     width: 520px;

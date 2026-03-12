@@ -29,6 +29,19 @@
     font-display: swap
 }
 
+@font-face {
+    font-family: 'Albertus Nova';
+    src: url(../fonts/AlbertusNovaRegular.woff2) format('woff2'),
+        url(../fonts/AlbertusNovaRegular.woff) format('woff');
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Martina Plantijn';
+    src: url(../fonts/martina-plantijn-regular.woff2) format('woff2');
+    font-display: swap
+}
+
 * {
     color: var(--black);
 }

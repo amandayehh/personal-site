@@ -1,0 +1,131 @@
+.projects {
+  --color-border: #DCDCDC;
+  --color-description: #666;
+
+  padding: 40px 24px;
+  max-width: 800px;
+}
+
+.projects h1 {
+  font-family: 'Albertus Nova', serif;
+  font-size: 40px;
+}
+
+.projects h2 {
+  font-family: 'Albertus Nova', serif;
+  font-size: 18px;
+}
+
+.projects p,
+.projects button,
+.projects span {
+  font-family: 'Martina Plantijn', serif;
+  letter-spacing: 0.015em;
+  font-size: 14px;
+}
+
+/* Header */
+
+.projects__header {
+  margin-bottom: 48px;
+}
+
+.projects__title {
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.projects__subtitle {
+  color: var(--color-description);
+}
+
+/* Filters */
+
+.projects__filters {
+  margin-bottom: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  align-items: baseline;
+  line-height: 1.8;
+}
+
+.projects__filters-label {
+  font-weight: bold;
+}
+
+.projects__filter-tag {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+.projects__filter-tag:hover {
+  text-decoration: underline;
+}
+
+.projects__filter-tag--active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Sections */
+
+.projects__section {
+  margin-bottom: 48px;
+}
+
+.projects__section-title {
+  padding-bottom: 8px;
+  padding-top: 12px;
+  margin-bottom: 4px;
+}
+
+/* Items */
+
+a.projects__item {
+  text-decoration: none;
+}
+
+.projects__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px 0;
+  padding: 16px 0;
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.projects__item:last-child {
+  border-bottom: none;
+}
+
+.projects__item-name {
+  font-style: italic;
+}
+
+.projects__item-description {
+  color: var(--color-description);
+}
+
+.projects__item-tags {
+  display: flex;
+  gap: 12px;
+}
+
+@media (min-width: 800px) {
+  .projects {
+    padding: 160px;
+  }
+
+  .projects h1 {
+    font-size: 72px;
+  }
+
+  .projects__item {
+    grid-template-columns: minmax(220px, 1fr) minmax(220px, 2fr) auto;
+    gap: 0 24px;
+    align-items: baseline;
+  }
+}
