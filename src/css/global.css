@@ -3,28 +3,27 @@
   --black: #000000;
   --secondary: white;
   --accent: #F64A00;
-}
-
-html {
-  /* background: linear-gradient(180deg, #D59EFF 0%, #95A7F6 100%); */
-}
-
-.popOut {
-  animation: popOut 0.7s cubic-bezier(.31, 1.49, .48, 1) forwards;
-  position: fixed;
-  z-index: 120;
+  --animation-duration: 0.4s;
+  --animation-spring: cubic-bezier(0.31, 1.49, 0.48, 1);
+  --animation-soft-spring: cubic-bezier(0.2, 1.4, 0.5, 1);
+  --animation-ease: ease-in-out;
+  --animation-ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 .popUp {
-  animation: popUp 0.7s cubic-bezier(.31, 1.49, .48, 1);
+  animation: popUp 0.7s var(--animation-soft-spring) forwards;
+}
+
+.popOut {
+  animation: popOut 0.4s ease-out forwards;
 }
 
 .fadeIn {
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn var(--animation-duration) var(--animation-ease) forwards;
 }
 
 .fadeOut {
-  animation: fadeOut 1s ease-in-out forwards;
+  animation: fadeOut var(--animation-duration) var(--animation-ease) forwards;
 }
 
 .remove {
@@ -36,61 +35,22 @@ html {
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
-  99% {
-    opacity: 0;
-    margin-top: 30px;
-  }
-
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-
-}
-
-@keyframes popOut {
-  0% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-
-  }
-
-  99% {
-    opacity: 0;
-    transform: translate(0px, 30px);
-  }
-
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
 }
 
 @keyframes popUp {
-  from {
-    opacity: 0;
-    transform: translate(0px, 30px);
-  }
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  to {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
+@keyframes popOut {
+  0% { opacity: 1; transform: translateY(0); }
+  40% { opacity: 0; }
+  100% { opacity: 0; transform: translateY(60px); visibility: hidden; }
 }

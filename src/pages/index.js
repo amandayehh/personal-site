@@ -1,19 +1,15 @@
-// import React from "react"
 import React, { Component } from "react"
 
 import SEO from "../components/seo"
 import Name from "../components/name/name"
 import Sticky from "../components/sticky/sticky"
 import SmallSticky from "../components/smallSticky/smallSticky"
-
 import Shortcut from "../components/shortcut/shortcut"
 import Window from "../components/window/window"
-import Book from "../components/book/book"
 import Colophon from "../components/colophon/colophon"
 import Footer from "../components/footer/footer"
 import InnerPage from "../components/innerPage/innerPage"
 import Transparency from "../components/transparency/transparency"
-
 
 import "../css/global.css"
 import "../css/reset.css"
@@ -25,7 +21,6 @@ import mail from "../images/shortcut/mail.png"
 import web from "../images/shortcut/web.png"
 import font from "../images/shortcut/font.png"
 import desktop from "../images/shortcut/desktop.png"
-import image from "../images/shortcut/image.png"
 import notepad from "../images/shortcut/notepad.png"
 
 //large
@@ -53,10 +48,10 @@ import audioVisualizerSmall from "../images/index/small-audio.png"
 import cat from "../images/cat.gif"
 
 //Boygame
-import boygame__img1 from "../images/boygame/gameboy.png" 
-import boygame__img2 from "../images/boygame/home.png" 
-import boygame__img3 from "../images/boygame/tamagotchi.png" 
-import boygame__img4 from "../images/boygame/pk.png" 
+import boygame__img1 from "../images/boygame/gameboy.png"
+import boygame__img2 from "../images/boygame/home.png"
+import boygame__img3 from "../images/boygame/tamagotchi.png"
+import boygame__img4 from "../images/boygame/pk.png"
 
 //Syne
 import syne__img1 from "../images/syne/interpretation 1.gif"
@@ -92,7 +87,7 @@ import mirror__img1 from "../images/mirror/typose_1.gif"
 import mirror__img2 from "../images/mirror/typose.png"
 import mirror__img3 from "../images/mirror/yana.gif"
 
-//Keyboard doodler
+//Keyboard Doodler
 import doodler__img1 from "../images/doodler/doodler1.png"
 import doodler__img2 from "../images/doodler/doodler2.png"
 import doodler__img3 from "../images/doodler/doodler3.png"
@@ -103,7 +98,7 @@ import kilo__img1 from "../images/kilotype/inner-color.png"
 import kilo__img2 from "../images/kilotype/home.png"
 import kilo__img3 from "../images/kilotype/about.png"
 
-//Semapore
+//Semaphore
 import sema__img1 from "../images/sema/home.png"
 import sema__img2 from "../images/sema/me.gif"
 import sema__img3 from "../images/sema/game.png"
@@ -114,139 +109,271 @@ import audio__img2 from "../images/audio/example2.png"
 import audio__img3 from "../images/audio/example.gif"
 
 
+const projects = [
+  {
+    className: "index__boygame",
+    large: boygame, small: boygame,
+    imgClass: "index__boygame__img", wrpClass: "index__boygame__img",
+    windowTitle: "BOY♡GAME", windowAlt: "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing.",
+    title: "BOY♡GAME — Info",
+    summary: "BOY♡GAME is a couch co-op style party game where players build boys together and vote for their favorites.",
+    mainLink: "https://www.instagram.com/b0ygame/", linkText: "@B0YGAME",
+    scope: "Game design, front end development", tech1: "React", collaborator1: "Melissa Liu",
+    images: [
+      { src: boygame__img1, alt: "Gameboy showing the logo of Boygame" },
+      { src: boygame__img2, alt: "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing" },
+      { src: boygame__img3, alt: "Boygame branded Tamagotchi" },
+      { src: boygame__img4, alt: "Screenshot showing 2 boy profiles" },
+    ],
+  },
+  {
+    className: "index__syne",
+    large: syne, small: syneSmall,
+    imgClass: "index__syne__img", wrpClass: "index__syne__wrp",
+    windowTitle: "Synesthetic Perceptions", windowAlt: "Screen shot of Synesthetics perception's music visualizer",
+    title: "Synesthetic Perceptions — Info",
+    summary: "Synesthetic Perceptions explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of tangible objects that drive those interpretations.",
+    mainLink: "https://synestheticperceptions.art/", linkText: "synestheticperceptions.art",
+    scope: "Music visualization, Front-end Development", tech1: "P5 sound", collaborator1: "Verli Chen",
+    images: [
+      { src: syne__img3, alt: "screen recording of audio visualizer" },
+      { src: syne__img2, alt: "mobile version of synesthetic perceptions" },
+      { src: syne__img4, alt: "screen recordings of exhibits and their hover states" },
+      { src: syne__img1, alt: "screen recording of audio visualizer" },
+    ],
+  },
+  {
+    className: "index__voices",
+    large: voicesAndVoids, small: voicesAndVoidsSmall,
+    imgClass: "index__voices-and-voids__img", wrpClass: "index__voices-and-voids__wrp",
+    windowTitle: "Voices and Voids", windowAlt: "Screen shot of Voices and Voids website",
+    title: "Voices and Voids — Info",
+    summary: "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.",
+    mainLink: "https://voicesandvoids.net/", linkText: "voicesandvoids.net",
+    scope: "Net Art, Front-end Development", tech1: "React", collaborator1: "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting",
+    images: [
+      { src: voices__img1, alt: "screenshot of AI generated google assistant text" },
+      { src: voices__img2, alt: "screenshot of numerous voice assistant inputs" },
+      { src: voices__img3, alt: "screenshot of artists and musicians and artists performing with voice assistances" },
+      { src: voices__img4, alt: "screenshot of Alexa poem overlayed on alexas" },
+    ],
+  },
+  {
+    className: "index__cork",
+    large: cork, small: corkSmall,
+    imgClass: "index__cork__img", wrpClass: "index__cork__wrp",
+    windowTitle: "Cork", windowAlt: "A word Denïm shown in the Typeface cork",
+    title: "Cork — Info",
+    summary: "Cork is a variable display typeface that features flared terminals, swooping curves, and humanist proportions. Reminiscent of mushrooms, bell bottom jeans, and warm summer breezes, Cork draws its inspiration from art nouveau, psychedelic type, as well as the organic shapes found in nature and those created by swift brush strokes.",
+    mainLink: "https://typewest.letterformarchive.org/2022/typeface/cork/", linkText: "Type test",
+    scope: "Type Design", tech1: "Glyphs App", collaborator1: "Type West at the Letterform Archive",
+    images: [
+      { src: cork__img1, alt: "White on red text showing the entire glyph set of Cork, which includes upper and lowercase latin alphabet, various diacritics, numbers, punctuation, and special characters." },
+      { src: cork__img2, alt: "3 poster of the same design showing a flower bouquet that looks like an octopus, and the text 'Overgrown Dreamwever', set in Cork." },
+      { src: cork__img3, alt: "White on red text showing Cork's preset styles, which includes regular, book, medium, bold, black, narrow black, and condensed black." },
+      { src: cork__img4, alt: "red on white text set in Cork showing the word 'tempo', with the 'o' repeated numerous times to fill up the page." },
+      { src: cork__img5, alt: "The text 'Denim', set in Cork Black and Book." },
+    ],
+  },
+  {
+    className: "index__cycl",
+    large: cycl, small: cycl,
+    imgClass: "index__cycl__img", wrpClass: "index__cycl__wrp",
+    windowTitle: "Cycl", windowAlt: "Ampersand shown in the typeface Cycl",
+    title: "Cycl — Info",
+    summary: "Cycl is inspired by a hand lettered signage at a Seattle cafe and bike shop. With its bold, all-caps design, wide width, ample counter spaces, and slanted terminals, Cycl emanates a playful yet confident vibe that commands attention.",
+    mainLink: "", linkText: "",
+    scope: "Type Design", tech1: "Glyphs App", collaborator1: "Just me",
+    images: [
+      { src: cycl__img1, alt: "Black text showing the entire glyph set of Cycl, which includes the uppercase latin alphabet and ampersand." },
+      { src: cycl__img2, alt: "light yellow words set in Cycl over a green background." },
+      { src: cycl__img3, alt: "A picture of a signage that reads 'Racing and Coffee' is juxtaposed next to the same text set to Cycl, comparing the inspiration and the typeface." },
+    ],
+  },
+  {
+    className: "index__cloister",
+    large: cloister, small: cloister,
+    imgClass: "index__cloister__img", wrpClass: "index__cloister__wrp",
+    windowTitle: "Cloister", windowAlt: "W glyph shown in the typeface Cloister",
+    title: "Cloister — Info",
+    summary: "Cloister is a revival of the 1926 Morris Benton typeface of the same name, which was designed based on Nicolas Jenson's prints from the 1470s.",
+    mainLink: "", linkText: "",
+    scope: "Type Design", tech1: "Glyphs App", collaborator1: "Type West at the Letterform Archive",
+    images: [
+      { src: cloister__img3, alt: "Red title case and uppercase text, as well as short phrases, set in Cloister over a pink background. Cloister is a light weight, serif, translational font." },
+      { src: cloister__img2, alt: "Text set in Cloister showing the range entire glyph set, which includes uppercase, lowercase, numbers, and punctuation." },
+      { src: cloister__img1, alt: "A diagram of the text 'Kindle805' set in Cloister, highlighting 11.5 degree pen angle, medium contrast, and offset number and letter heights." },
+    ],
+  },
+]
+
+const projectsAfter = [
+  {
+    className: "index__type-mirror",
+    large: typeMirror, small: typeMirrorSmall,
+    imgClass: "index__type-mirror__img", wrpClass: "index__type-mirror__wrp",
+    windowTitle: "Type Mirror", windowAlt: "Screen shot of type mirror's website",
+    title: "Type Mirror — Info",
+    summary: "Type Mirror is a mirror made of typography.",
+    mainLink: "https://amandayehh.github.io/type-mirror/", linkText: "amandayehh.github.io/type-mirror",
+    scope: "Creative coding, Interactive art", tech1: "p5.js", collaborator1: "Just me",
+    images: [
+      { src: mirror__img1, alt: "gif of my reflection in type mirror" },
+      { src: mirror__img2, alt: "ui of type mirror" },
+      { src: mirror__img3, alt: "gif of user spinning in type mirror" },
+    ],
+  },
+  {
+    className: "index__doodler",
+    large: keyboardDoodler, small: keyboardDoodlerSmall,
+    imgClass: "index__doodler__img", wrpClass: "index__doodler__wrp",
+    windowTitle: "Keyboard Doodler", windowAlt: "Screen shot of Keyboard Doodler's plugin UI",
+    title: "Keyboard Doodler — Info",
+    summary: "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.",
+    mainLink: "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", linkText: "Try it out!",
+    scope: "Design tool", tech1: "Typescript, Figma plugin API", collaborator1: "Josh Shi",
+    images: [
+      { src: doodler__img1, alt: "Generative drawings created with Keyboard Doodler" },
+      { src: doodler__img2, alt: "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY" },
+      { src: doodler__img3, alt: "Keyboard Doodler UI" },
+      { src: doodler__img4, alt: "Drawings superimposed over a keyboard" },
+    ],
+  },
+  {
+    className: "index__semaphore",
+    large: sema, small: semaSmall,
+    imgClass: "index__semaphore__img", wrpClass: "index__sempahore__wrp",
+    windowTitle: "Learn Semaphore", windowAlt: "Screen shot of learnsemaphore.com",
+    title: "Learn Semaphore — Info",
+    summary: "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.",
+    mainLink: "https://ygev.github.io/semaphore/", linkText: "ygev.github.io/semaphore",
+    scope: "Game Design, Creative Coding, Machine Learning Application", tech1: "p5.js, poseNet()", collaborator1: "Yana Gevorgyan",
+    images: [
+      { src: sema__img1, alt: "Game start page for Say no more, Semaphore" },
+      { src: sema__img3, alt: "Image of me playing Say no more, Semaphore" },
+      { src: sema__img2, alt: "Gif of me playing Say no more, Semaphore" },
+    ],
+  },
+  {
+    className: "index__kilotype",
+    large: kilotype, small: kilotypeSmall,
+    imgClass: "index__kilotype__img", wrpClass: "index__kilotype__wrp",
+    windowTitle: "Kilotype", windowAlt: "Screen shot of Kilotype's website",
+    title: "Kilotype — Info",
+    summary: "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch's debut typefaces.",
+    mainLink: "https://kilotype.de/", linkText: "kilotype.de",
+    scope: "Web design", tech1: "Sketch", collaborator1: "Friends of the Web, Kilotype",
+    images: [
+      { src: kilo__img1, alt: "screenshot of Kilotype's type testers" },
+      { src: kilo__img2, alt: "screenshot of kilotype's homepage" },
+      { src: kilo__img3, alt: "screenshot of kilotype's about page" },
+    ],
+  },
+  {
+    className: "index__audio-visualizer",
+    large: audioVisualizer, small: audioVisualizerSmall,
+    imgClass: "index__audio-visualizer__img", wrpClass: "index__audio-visualizer__wrp",
+    windowTitle: "Audio Visualizer", windowAlt: "Video of music animation",
+    title: "Audio Visualizer — Info",
+    summary: "Audio Visualizer is a program that visualizes music using frequencies and peak detection.",
+    mainLink: "https://amandayehh.github.io/audio-visualizer/", linkText: "amandayehh.github.io/audio-visualizer",
+    scope: "Creative Coding, Generative Design", tech1: "p5.js", collaborator1: "Just me",
+    images: [
+      { src: audio__img1, alt: "Dropping a music file into Audio Visualizer" },
+      { src: audio__img2, alt: "screenshot of audio visualizer" },
+      { src: audio__img3, alt: "screen recording of audio visualizer" },
+    ],
+  },
+]
+
+
 class Index extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
-      openWindow: false,
-      mainLink: "/",
-      linkText: "/",
-      title: "/",
-      summary: "/",
-      scope: "/",
-      tech1: "/",
-      collaborator1: "/",
-      img1: "",
-      img2: "",
-      img3: "",
-      img4: "",
-      img5: "",
-      img6: "",
-      img7: "",
-      img8: "",
-      alt1: "",
-      alt2: "",
-      alt3: "",
-      alt4: "",
-      alt5: "",
-      alt6: "",
-      alt7: "",
-      alt8: ""
+      isOpen: false,
+      title: "", summary: "", mainLink: "", linkText: "",
+      scope: "", tech1: "", collaborator1: "",
+      images: [],
     }
-    this.openWindow = this.openWindow.bind(this);
-
+    this.openWindow = this.openWindow.bind(this)
+    this.closeWindow = this.closeWindow.bind(this)
   }
 
-  openWin = (e) => { console.log("hi") }
-
-
-  openWindow(e, title, summary, mainLink, linkText, scope, tech1, collaborator1, img1, alt1, img2, alt2, img3, alt3, img4, alt4, img5, alt5, img6, alt6, img7, alt7, img8, alt8) {
-    this.setState({ openWindow: true, title: title, summary: summary, mainLink: mainLink, linkText: linkText, scope: scope, tech1: tech1, collaborator1: collaborator1, img1: img1, alt1: alt1, img2: img2, alt2: alt2, img3: img3, alt3: alt3, img4: img4, alt4: alt4, img5: img5, alt5: alt5, img6: img6, alt6: alt6, img7: img7, alt7: alt7, img8: img8, alt8: alt8 })
-    document.getElementsByClassName("index__filter")[0].classList.add("fadeIn")
-    document.getElementsByClassName("index__filter")[0].classList.remove("fadeOut")
-
-    document.getElementsByTagName("body")[0].classList.add("noScroll")
-
-    console.log("hi")
-
-
-    if (document.getElementsByClassName("index__filter")[0].classList.contains("fadeOut")) {
-      document.getElementsByClassName("index__filter")[0].classList.remove("fadeOut")
-    }
-
-    if (document.getElementsByClassName("innerPage")[0] != undefined) {
-      document.getElementsByClassName("innerPage__window")[0].scrollTo(0, 0)
-      document.getElementsByClassName("innerPage__window")[0].classList.add("popUp")
-      document.getElementsByClassName("innerPage__window")[0].classList.remove("popOut")
-    }
-
-    if (document.getElementsByClassName("innerPage__back")[0] != undefined) {
-      document.getElementsByClassName("innerPage__back")[0].classList.add("fadeIn")
-      document.getElementsByClassName("innerPage__back")[0].classList.remove("popOut")
-    }
-
-
-    // .remove__window
-
+  openWindow(e, project) {
+    const { className, imgClass, wrpClass, large, small, windowTitle, windowAlt, ...projectData } = project
+    this.setState({ isOpen: true, ...projectData })
+    document.body.classList.add("noScroll")
   }
 
-  renderCompnent() {
-
-    {
-
-      if (this.state.openWindow == true) {
-        // console.log("open + render")
-        return (<InnerPage className="index__innerPage" title={this.state.title} summary={this.state.summary} mainLink={this.state.mainLink} linkText={this.state.linkText} scope={this.state.scope} tech1={this.state.tech1} collaborator1={this.state.collaborator1} img1={this.state.img1} alt1={this.state.alt1} img2={this.state.img2} alt2={this.state.alt2} img3={this.state.img3} alt3={this.state.alt3} img4={this.state.img4} alt4={this.state.alt4} img5={this.state.img5} alt5={this.state.alt5} img6={this.state.img6} alt6={this.state.alt6} img7={this.state.img7} alt7={this.state.alt7} img8={this.state.img8} alt8={this.state.alt8} />
-        )
-      }
-    }
+  closeWindow() {
+    this.setState({ isOpen: false })
+    document.body.classList.remove("noScroll")
   }
 
+  renderComponent() {
+    if (!this.state.title) return null
+    return (
+      <InnerPage
+        isOpen={this.state.isOpen}
+        onClose={this.closeWindow}
+        title={this.state.title}
+        summary={this.state.summary}
+        mainLink={this.state.mainLink}
+        linkText={this.state.linkText}
+        scope={this.state.scope}
+        tech1={this.state.tech1}
+        collaborator1={this.state.collaborator1}
+        images={this.state.images}
+      />
+    )
+  }
 
+  renderProject(project) {
+    return (
+      <div
+        key={project.className}
+        className={project.className}
+        onClick={(e) => this.openWindow(e, project)}
+      >
+        <Window
+          imgClass={project.imgClass}
+          wrpClass={project.wrpClass}
+          large={project.large}
+          small={project.small}
+          title={project.windowTitle}
+          alt={project.windowAlt}
+        />
+      </div>
+    )
+  }
 
   render() {
-
     return (
-
       <div className="index">
         <SEO title="Amanda Yeh" />
         <div className="index_grid">
           <Transparency />
         </div>
 
-        {/* */}
-        {this.renderCompnent()}
+        {this.renderComponent()}
 
         <div className="index__background"></div>
-        <div className="index__filter fadeOut">
-        </div>
+        <div className={`index__filter ${this.state.isOpen ? "fadeIn" : "fadeOut"}`}></div>
 
         <div className="index__wrapper">
-
           <Name />
           <Sticky />
 
           <div className="index__infoShortcuts">
             <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@proton.me"} />
-            <Shortcut href={"https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?ouid=117237055574131097484&usp=sheets_home&ths=true"} className="index__infoShortcuts__2" src={desktop} alt={"desktop icon"} text={"Work"} />
+<Shortcut href={"https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?ouid=117237055574131097484&usp=sheets_home&ths=true"} className="index__infoShortcuts__2" src={desktop} alt={"desktop icon"} text={"Work"} />
             <Shortcut href={"https://www.are.na/amanda"} className="index__infoShortcuts__3" src={web} alt={"website icon"} text={"are.na"} />
             <Shortcut href={"https://github.com/amandayehh"} className="index__infoShortcuts__4" src={web} alt={"website icon"} text={"Github"} />
             <Shortcut href={"https://agilityleaf.blog/"} className="index__infoShortcuts__6" src={notepad} alt={"image icon"} text={"Notes"} />
           </div>
 
-          <div className="index__boygame" onClick={(e) => this.openWindow(e, "BOY♡GAME — Info", "BOY♡GAME is a couch co-op style party game where players build boys together and vote for their favorites.", "https://www.instagram.com/b0ygame/", "@B0YGAME", "Game design, front end development", "React", "Melissa Liu", boygame__img1, "Gameboy showing the logo of Boygame", boygame__img2, "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing", boygame__img3, "Boygame branded Tamagotchi", boygame__img4, "Screenshot showing 2 boy profiles")}>
-            <Window imgClass={"index__boygame__img"} wrpClass={"index__boygame__img"} large={boygame} small={boygame} title={"BOY♡GAME"} alt="Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing." />
-          </div>
-
-          <div className="index__syne" onClick={(e) => this.openWindow(e, "Synesthetic Perceptions — Info", "Synesthetic Perceptions explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of  tangible objects that drive those interpretations.", "https://synestheticperceptions.art/", "synestheticperceptions.art", "Music visualization, Front-end Development", "P5 sound", "Verli Chen", syne__img3, "screen recording of audio visualizer", syne__img2, "mobile version of synesthetic perceptions", syne__img4, "screen recordings of exhibits and their hover states", syne__img1, "screen recording of audio visualizer")}>
-            <Window imgClass={"index__syne__img"} wrpClass={"index__syne__wrp"} large={syne} small={syneSmall} title={"Synesthetic Perceptions"} alt="Screen shot of Synesthetics perception'music visualizer" />
-          </div>
-
-          <div className="index__voices" onClick={(e) => this.openWindow(e, "Voices and Voids — Info", "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", "https://voicesandvoids.net/", "voicesandvoids.net", "Net Art, Front-end Development", "React", "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting", voices__img1, "screenshot of AI generated google assistant text", voices__img2, "screenshot of numerous voice assistant inputs", voices__img3, "screenshot of artists and musicians and artists performing with voice assistances", voices__img4, "screenshot of Alexa poem overlayed on alexas")}>
-            <Window imgClass={"index__voices-and-voids__img"} wrpClass={"index__voices-and-voids__wrp"} large={voicesAndVoids} small={voicesAndVoidsSmall} title={"Voices and Voids"} alt="Screen shot of Voices and Voids website" />
-          </div>
-
-          <div className="index__cork" onClick={(e) => this.openWindow(e, "Cork — Info", "Cork is a variable display typeface that features flared terminals, swooping curves, and humanist proportions. Reminiscent of mushrooms, bell bottom jeans, and warm summer breezes, Cork draws its inspiration from art nouveau, psychedelic type, as well as the organic shapes found in nature and those created by swift brush strokes.", "https://typewest.letterformarchive.org/2022/typeface/cork/", "Type test", "Type Design", "Glyphs App", "Type West at the Letterform Archive", cork__img1, "White on red text showing the entire glyph set of Cork, which includes upper and lowercase latin alphabet, various diacritics, numbers, punctuation, and special characters.", cork__img2, "3 poster of the same design showing a flower bouquet that looks like an octopus, and the text 'Overgrown Dreamwever', set in Cork. ", cork__img3, "White on red text showing Cork's preset styles, which includes regular, book, medium, bold, black, narrow black, and condensed black.", cork__img4, "red on white text set in Cork showing the word 'tempo', with the 'o' repeeat numerous times to fill up the page. The 'o' is set in a different weight from the previous one to create a wavey texture", cork__img5, "The text 'Denim', set in Cork Black and Book.")}>
-            <Window imgClass={"index__cork__img"} wrpClass={"index__cork__wrp"} large={cork} small={corkSmall} title={"Cork"} alt="A word Denïm shown in the Typeface cork" />
-          </div>
-
-          <div className="index__cycl" onClick={(e) => this.openWindow(e, "Cycl — Info", "Cycl is inspired by a hand lettered signage at a Seattle cafe and bike shop. With its bold, all-caps design, wide width, ample counter spaces, and slanted terminals, Cycl emanates a playful yet confident vibe that commands attention.", "", "", "Type Design", "Glyphs App", "Just me", cycl__img1, "Black text showing the entire glyph set of Cycl, which includes the uppercase latin alphabet and ampersand.", cycl__img2, "light yellow words set in Cycl over a green background.", cycl__img3, "A picture of a signage that reads 'Racing and Coffee' is juxtaposed next to the same text set to Cycl, comparing the inspiration and the typeface.")}>
-            <Window imgClass={"index__cycl__img"} wrpClass={"index__cycl__wrp"} large={cycl} small={cycl} title={"Cycl"} alt="Ampersand shown in the typeface Cycl" />
-          </div>
-
-          <div className="index__cloister" onClick={(e) => this.openWindow(e, "Cloister — Info", "Cloister is a revival of the 1926 Morris Benton typeface of the same name, which was designed based on Nicolas Jenson's prints from the 1470s.", "", "", "Type Design", "Glyphs App", "Type West at the Letterform Archive", cloister__img3, "Red title case and uppercase text, as well as short phrases, set in Cloister over a pink background. Cloister is a light weight, serif, translational font.", cloister__img2, "Text set in Cloister showing the range entire glyph set, which inlcudes uppercase, lowercase, numbers, and punctuation.", cloister__img1, "A diagram of the text 'Kindle805' set in Cloister, highlighting 11.5 degree pen angle, medium contrast, and offset number and letter heights.")}>
-            <Window imgClass={"index__cloister__img"} wrpClass={"index__cloister__wrp"} large={cloister} small={cloister} title={"Cloister"} alt="W glyph shown in the typeface Cloister" />
-          </div>
+          {projects.map((project) => this.renderProject(project))}
 
           <SmallSticky className="index__smallSticky" href="mailto:amandayeh@proton.me?subject=Fonts&body=I would like a copy of your typefaces for personal use." />
 
@@ -256,25 +383,7 @@ class Index extends Component {
             <Shortcut className="index__fontShortcuts__3" src={font} alt={"font icon"} text={"Cloister"} href="mailto:amandayeh@proton.me?subject=Snatch me a copy of Cloister&body=I would like a copy of Cloister for personal use." />
           </div>
 
-          <div className="index__type-mirror" onClick={(e) => this.openWindow(e, "Type Mirror — Info", "Type Mirror is a mirror made of typography.", "https://amandayehh.github.io/type-mirror/", "amandayehh.github.io/type-mirror", "Creative coding, Interactive art", "p5.js", "Just me", mirror__img1, "gif of my reflection in type mirror", mirror__img2, "ui of type mirror", mirror__img3, "gif of user spinning in type mirror")}>
-            <Window imgClass={"index__type-mirror__img"} wrpClass={"index__type-mirror__wrp"} large={typeMirror} small={typeMirrorSmall} title={"Type Mirror"} alt="Screen shot of type mirror's website" />
-          </div>
-
-          <div className="index__doodler" onClick={(e) => this.openWindow(e, "Keyboard Doodler — Info", "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", "Try it out!", "Design tool", "Typescript, Figma plugin API", "Josh Shi", doodler__img1, "Generative drawings created with Keyboard Doodler", doodler__img2, "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY", doodler__img3, "Keyboard Doodler UI", doodler__img4, "Drawings superimposed over a keyboard")}>
-            <Window imgClass={"index__doodler__img"} wrpClass={"index__doodler__wrp"} large={keyboardDoodler} small={keyboardDoodlerSmall} title={"Keyboard Doodler"} alt="Screen shot of type mirror's website" />
-          </div>
-
-          <div className="index__semaphore" onClick={(e) => this.openWindow(e, "Learn Semaphore — Info", "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", "https://ygev.github.io/semaphore/", "ygev.github.io/semaphore", "Game Design, Creative Coding, Machine Learning Application", "p5.js, poseNet()", "Yana Gevorgyan", sema__img1, "Game start page for Say no more, Semaphore", sema__img3, "Image of me playing Say no more, Semaphore", sema__img2, "Gif of me playing Say no more, Semaphore")}>
-            <Window imgClass={"index__semaphore__img"} wrpClass={"index__sempahore__wrp"} large={sema} small={semaSmall} title={"Learn Semaphore"} alt="Screen shot of learnsemaphore.com" />
-          </div>
-
-          <div className="index__kilotype" onClick={(e) => this.openWindow(e, "Kilotype — Info", "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch’s debut typefaces.", "https://kilotype.de/", "kilotype.de", "Web design", "Sketch", "Friends of the Web, Kilotype", kilo__img1, "screenshot of Kilotype's type testers", kilo__img2, "screenshot of kilotype's homepage", kilo__img3, "screenshot of kilotype's about page")}>
-            <Window imgClass={"index__kilotype__img"} wrpClass={"index__kilotype__wrp"} large={kilotype} small={kilotypeSmall} title={"Kilotype"} alt="Screen shot of Kilotype's website" />
-          </div>
-
-          <div className="index__audio-visualizer" onClick={(e) => this.openWindow(e, "Audio Visaulizer — Info", "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", "https://amandayehh.github.io/audio-visualizer/", "amandayehh.github.io/audio-visualizer", "Creative Coding, Generative Design", "p5.js", "Just me", audio__img1, "Dropping a music file into Audio Visualizer", audio__img2, "screenshot of audio visualizer", audio__img3, "screen recording of audio visualizer")}>
-            <Window imgClass={"index__audio-visualizer__img"} wrpClass={"index__audio-visualizer__wrp"} isVideo={false} large={audioVisualizer} small={audioVisualizerSmall} title={"Audio Visualizer"} alt="Video of music animation" />
-          </div>
+          {projectsAfter.map((project) => this.renderProject(project))}
         </div>
 
         <div className="index__colophon">
@@ -290,12 +399,9 @@ class Index extends Component {
             <Footer />
           </div>
         </div>
-
-
-      </div >
+      </div>
     )
   }
 }
-
 
 export default Index

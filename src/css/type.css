@@ -59,6 +59,8 @@ h2 {
 h3 {
     font-family: 'NeueBit', sans-serif;
     font-size: 24px;
+    letter-spacing: 1.5%;
+
 }
 
 h3.serif {
@@ -74,6 +76,8 @@ h3 .serif {
 
 a {
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
     transition-duration: 0s;
     transition-timing-function: ease-in-out;
 }
@@ -85,6 +89,7 @@ a:hover {
 p {
     font-family: 'NeueBit', sans-serif;
     font-size: 18px;
+    letter-spacing: 2%;
 }
 
 #small-title {

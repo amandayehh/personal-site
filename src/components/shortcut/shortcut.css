@@ -18,3 +18,7 @@
 .shortcut__link__text {
   text-decoration: none;
 }
+
+.shortcut__link:hover .shortcut__link__text {
+  letter-spacing: 0.05em;
+}
