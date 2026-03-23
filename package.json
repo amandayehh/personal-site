@@ -26,7 +26,7 @@
     "develop": "vite",
     "start": "vite",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist",
+    "deploy": "vite build && cp dist/index.html dist/404.html && gh-pages -d dist",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   }
 }
