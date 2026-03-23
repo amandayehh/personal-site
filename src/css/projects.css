@@ -3,12 +3,13 @@
   --color-description: #666;
 
   padding: 40px 24px;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .projects h1 {
   font-family: 'Albertus Nova', serif;
   font-size: 40px;
+  letter-spacing: -0.02em;
 }
 
 .projects h2 {
@@ -103,6 +104,7 @@ a.projects__item {
 
 .projects__item-name {
   font-style: italic;
+  text-transform: capitalize;
 }
 
 .projects__item-description {
@@ -124,7 +126,7 @@ a.projects__item {
   }
 
   .projects__item {
-    grid-template-columns: minmax(220px, 1fr) minmax(220px, 2fr) auto;
+    grid-template-columns: minmax(160px, 1fr) minmax(200px, 2fr) auto;
     gap: 0 24px;
     align-items: baseline;
   }

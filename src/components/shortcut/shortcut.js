@@ -1,6 +1,4 @@
-import { Link } from "gatsby"
 import React, { Component } from "react"
-import { reactLocalStorage } from "reactjs-localstorage"
 
 import "./shortcut.css"
 import "../../css/global.css"

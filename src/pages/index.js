@@ -1,9 +1,6 @@
 // import React from "react"
 import React, { Component } from "react"
 
-import { Link } from "gatsby"
-
-
 import SEO from "../components/seo"
 import Name from "../components/name/name"
 import Sticky from "../components/sticky/sticky"
@@ -202,13 +199,13 @@ class Index extends Component {
     return (
 
       <div className="index">
-        <div class="index_grid">
+        <SEO title="Amanda Yeh" />
+        <div className="index_grid">
           <Transparency />
         </div>
 
         {/* */}
         {this.renderCompnent()}
-        <SEO title="Amanda Yeh" />
 
         <div className="index__background"></div>
         <div className="index__filter fadeOut">

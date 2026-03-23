@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "react-router-dom"
 import SEO from "../components/seo"
 import Name from "../components/name/name"
 import Transparency from "../components/transparency/transparency"

@@ -56,8 +56,9 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
+# build output
 .cache/
+dist/
 public/*
 !public/CNAME
 

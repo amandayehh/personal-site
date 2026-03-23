@@ -1,6 +1,4 @@
-import { Link } from "gatsby"
 import React, { Component } from "react"
-import { reactLocalStorage } from "reactjs-localstorage"
 
 
 import "./sticky.css"
@@ -18,7 +16,7 @@ class Sticky extends Component {
   }
 
   changeWidth(mobileWidth) {
-    reactLocalStorage.set("enterSite", true)
+    localStorage.setItem("enterSite", "true")
 
     this.setState({
       mobileWidth: 0,
@@ -33,7 +31,7 @@ class Sticky extends Component {
     window.addEventListener("resize", this.updateDimensions)
     this.setState({ width: window.innerWidth })
 
-    if (reactLocalStorage.getObject("enterSite") == true) {
+    if (localStorage.getItem("enterSite") === "true") {
       this.setState({
         mobileWidth: 0,
       })

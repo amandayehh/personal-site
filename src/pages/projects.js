@@ -91,7 +91,6 @@ class Projects extends Component {
     return (
       <div className="projects">
         <SEO title="Index — Amanda Yeh" />
-
         <div className="projects__header">
           <h1 className="projects__title">Index</h1>
           <p className="projects__subtitle">An incomplete Index of Amanda Yeh’s work</p>

@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React, { Component } from "react"
 import ReactDOM from "react-dom"
 
