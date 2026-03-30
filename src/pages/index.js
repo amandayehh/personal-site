@@ -287,6 +287,12 @@ const projectsAfter = [
 ]
 
 
+function toSlug(title) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")
+}
+
+const allProjects = [...projects, ...projectsAfter]
+
 class Index extends Component {
   constructor() {
     super()
@@ -298,17 +304,46 @@ class Index extends Component {
     }
     this.openWindow = this.openWindow.bind(this)
     this.closeWindow = this.closeWindow.bind(this)
+    this.handlePopState = this.handlePopState.bind(this)
   }
 
-  openWindow(e, project) {
+  componentDidMount() {
+    window.addEventListener("popstate", this.handlePopState)
+    const hash = window.location.hash.slice(1)
+    if (hash) {
+      const match = allProjects.find(p => toSlug(p.windowTitle) === hash)
+      if (match) this.openWindow(null, match, true)
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("popstate", this.handlePopState)
+  }
+
+  handlePopState() {
+    const hash = window.location.hash.slice(1)
+    if (!hash) {
+      this.setState({ isOpen: false })
+      document.body.classList.remove("noScroll")
+    } else {
+      const match = allProjects.find(p => toSlug(p.windowTitle) === hash)
+      if (match) this.openWindow(null, match, true)
+    }
+  }
+
+  openWindow(e, project, fromHistory = false) {
     const { className, imgClass, wrpClass, large, small, windowTitle, windowAlt, ...projectData } = project
     this.setState({ isOpen: true, ...projectData })
     document.body.classList.add("noScroll")
+    if (!fromHistory) {
+      history.pushState(null, "", "#" + toSlug(windowTitle))
+    }
   }
 
   closeWindow() {
     this.setState({ isOpen: false })
     document.body.classList.remove("noScroll")
+    history.pushState(null, "", window.location.pathname)
   }
 
   renderComponent() {

@@ -42,6 +42,13 @@
     font-display: swap
 }
 
+@font-face {
+    font-family: 'Martina Plantijn';
+    src: url(../fonts/martina-plantijn-italic.woff2) format('woff2');
+    font-style: italic;
+    font-display: swap
+}
+
 * {
     color: var(--black);
 }
