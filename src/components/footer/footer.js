@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 
+import { BubbleContainer } from "../../utils/bubble"
 import "./footer.css"
 import "../../css/global.css"
 import "../../css/reset.css"
@@ -7,6 +8,14 @@ import "../../css/type.css"
 
 import me from "../../images/me.png"
 import yargle from "../../images/footer/yargle.gif"
+
+function BubbleLink({ href, children, ...props }) {
+  return (
+    <BubbleContainer as="a" href={href} target="_blank" rel="noopener" variant="dramatic" underline leaveDuration={1300} {...props}>
+      {children}
+    </BubbleContainer>
+  )
+}
 
 class Footer extends Component {
   constructor(props) {
@@ -26,14 +35,14 @@ class Footer extends Component {
             <img className="footer__links__title__img" src={me} alt="Pixelated Amanda's face" />
             <p className="bold footer__links__title__text">Find me at</p>
           </div>
-          <p><a href="https://www.are.na/amanda" target="_blank" rel="noopener">www.are.na/amanda</a></p>
-          <p><a href="https://github.com/amandayehh" target="_blank" rel="noopener" >github.com/amandayehh</a></p>
-          <p><a href="mailto:amandayeh@proton.me" target="_blank" rel="noopener">amandayeh@proton.me</a></p>
+          <p><BubbleLink href="https://www.are.na/amanda">www.are.na/amanda</BubbleLink></p>
+          <p><BubbleLink href="https://github.com/amandayehh">github.com/amandayehh</BubbleLink></p>
+          <p><BubbleLink href="mailto:amandayeh@proton.me">amandayeh@proton.me</BubbleLink></p>
         </div>
         <div className="footer__note">
           <div className="footer__note__heart">
             <p className="footer__note__heart__text">My heart belongs to</p>
-            <a href="https://yg.is/" target="_blank" rel="noopener" >
+            <a href="https://yg.is/" target="_blank" rel="noopener">
               <img className="footer__note__heart__img" src={yargle} alt="bear running" />
             </a>
           </div>

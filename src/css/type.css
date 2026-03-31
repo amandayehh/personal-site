@@ -89,10 +89,6 @@ a {
     transition-timing-function: ease-in-out;
 }
 
-a:hover {
-    letter-spacing: 0.05em;
-}
-
 p {
     font-family: 'NeueBit', sans-serif;
     font-size: 18px;

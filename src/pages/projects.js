@@ -2,9 +2,44 @@ import React, { Component } from "react"
 import * as Tone from "tone"
 
 import SEO from "../components/seo"
+import { BubbleContainer, BubbleText } from "../utils/bubble"
+
+import imgTypose from "../images/mirror/typose.png"
+import imgTypose1 from "../images/mirror/typose_1.gif"
+
+//web
+import imgHomepage from "../images/projects/homepage.png"
+import imgQuanta from "../images/projects/quanta.png"
+import imgElicit from "../images/projects/elicit.png"
+import imgVoices from "../images/index/voicesandvoids.png"
+import imgSyne from "../images/index/syne.png"
+import imgWebX from "../images/projects/pixelation.png"
+import imgTypeWest from "../images/projects/type-west.png"
+import imgFrereJones from "../images/projects/frerejones.png"
+import imgKilotype from "../images/index/kilotype.png"
+import imgSel from "../images/sel/home.png"
+import imgSyneExample from "../images/syne/interpretation 2.gif"
+import imgAudio from "../images/audio/audio-intro.gif"
+
+//games
+import imgBoy from "../images/boygame/pk.png"
+import imgMadlads from "../images/projects/madlads.png"
+import imgBuncho from "../images/projects/buncho.png"
+import imgSema from "../images/sema/me.gif"
+
+//plugins
+import imgDoodler from "../images/projects/doodler.png"
+
+//type
+import imgCloister from "../images/projects/cloister.png"
+import imgCork from "../images/projects/cork.png"
+import imgCycl from "../images/projects/cycl.png"
+
+//products
+import imgDocs from "../images/projects/docs.png"
+import imgFigma from "../images/projects/figma.png"
 
 const SCALE = ['C4', 'D4', 'E4', 'G4', 'A4', 'C5', 'D5', 'E5', 'G5', 'A5']
-const LEAVE_DURATION_MS = 2100 // matches synth envelope: attack(0.1) + decay(0.8) + release(1.2)
 
 import "../css/global.css"
 import "../css/reset.css"
@@ -15,42 +50,46 @@ const sections = [
   {
     title: "Web",
     items: [
-      { name: "Elicit", description: "Website for AI research tool", tools: ["Framer"], domain: ["Research", "AI"], url: "https://elicit.com" },
-      { name: "Quanta", description: "Website for accounting service", tools: ["Framer"], domain: ["Finance"], url: "https://usequanta.com" },
-      { name: "Serif", description: "Website for writing app", tools: ["Framer"], domain: ["Productivity", "Writing"] },
-      { name: "Voices and Voices", description: "Website for voice assistant vignettes", tools: ["React"], domain: ["Audio", "Interaction"] },
-      { name: "Synesthetic perceptions", description: "Website with audio and visual compositions", tools: ["React"], domain: ["Audio", "Interaction"] },
-      { name: "Type West 2022", description: "Website for Type West 2021 exhibit", tools: ["React"], typographic: ["Education", "Specimen"] },
-      { name: "MICA WebX 2020", description: "Website for graphic design BFA thesis show", tools: ["React"], domain: ["Education", "Graphic design"] },
+      { name: "Amanda’s homepage", description: "My personal website", tools: ["React"], domain: ["Graphic", "Specimen"], url: "https://amandayeh.com", image: imgHomepage },
+      { name: "Elicit", description: "AI research tool homepage", tools: ["Framer"], domain: ["Research", "AI"], url: "https://elicit.com", image: imgElicit },
+      { name: "Quanta", description: "Accounting service homepage", tools: ["Framer"], domain: ["Finance"], url: "https://usequanta.com", image: imgQuanta },
+      { name: "Type West 2022", description: "Type West 2021 digital exhibit", tools: ["React"], domain: ["Specimen"], url: "https://typewest.letterformarchive.org/2022/", image: imgTypeWest },
+      { name: "Voices and Voices", description: "Voice assistant vignettes", tools: ["React"], domain: ["Audio", "Interaction"], url: "https://voicesandvoids.net/", image: imgVoices },
+      { name: "Synesthetic perceptions", description: "Audio and visual compositions", tools: ["React"], domain: ["Audio", "Interaction"], url: "https://synestheticperceptions.art/", image: imgSyneExample },
+      { name: "MICA WebX 2020", description: "Graphic Design BFA thesis show", tools: ["React"], domain: ["Education", "Graphic"], url: "https://web.archive.org/web/20200807235205/https://pixelation.micagraphicdesign.org/", image: imgWebX },
+      { name: "Explore SEL", description: "Learning frameworks visualized", tools: [], domain: ["Education", "Research"], url: "http://exploresel.gse.harvard.edu/", image: imgSel },
+      { name: "Kilotype", description: "Kilotype's website", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://kilotype.de/", image: imgKilotype },
+      { name: "Frere Jones Type", description: "Frere Jone's website", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://frerejones.com/", image: imgFrereJones},
     ],
   },
   {
     title: "Games",
     items: [
-      { name: "BOY♡GAME", description: "Analog and digital boy-dating game", tools: ["Print"], domain: ["Boardgame", "Video game"] },
-      { name: "Say no more, Semaphore", description: "Semaphore education game", tools: ["React"], domain: ["Education"] },
-      { name: "Buncho the Lost Bird", description: "UI/UX for 3D adventure game", tools: ["Unity"], domain: ["3D"] },
+      { name: "BOY♡GAME", description: "Analog and digital dating game", tools: [], domain: ["Boardgame", "Video game"], image: imgBoy },
+      { name: "Say no more, Semaphore", description: "Semaphore education game", tools: ["P5.js"], domain: ["Education", "Video game"], url: "https://ygev.github.io/semaphore/", image: imgSema },
+      { name: "Mad Lads", description: "Camera-based Mad Libs", tools: ["P5.js"], domain: ["Mobile game", "Video game"], url: "https://ygev.github.io/madlads/", image: imgMadlads },
+      { name: "Buncho the Lost Bird", description: "UI/UX for 3D adventure game", tools: ["Unity"], domain: ["3D"], url: "https://jamiepark.itch.io/buncho-the-lost-bird", image: imgBuncho },
     ],
   },
   {
     title: "Plugins",
     items: [
-      { name: "Keyboard Doodler", description: "Keyboard-based vectorizer", tools: ["Figma"], domain: ["Design tools"] },
+      { name: "Keyboard Doodler", description: "Keyboard-based vectorizer", tools: ["Typescript"], domain: ["Design tool"], url:"https://www.figma.com/community/plugin/917914510168637203/keyboard-doodler", image: imgDoodler },
     ],
   },
   {
     title: "Typefaces",
     items: [
-      { name: "Cork", description: "Original display typeface", tools: ["Glyphs"], typographic: ["Variable", "Display"] },
-      { name: "Cloister Revival", description: "Old-style serif typeface revival", tools: ["Glyphs"], typographic: ["Serif", "Old-style"] },
-      { name: "Cycle", description: "Cafe font digitization", tools: ["Glyphs"], typographic: ["Grotesque", "Display"] },
+      { name: "Cork", description: "Original display typeface", tools: ["Glyphs"], type: ["Display", "Typography"], image: imgCork },
+      { name: "Cloister Revival", description: "Old-style serif typeface revival", tools: ["Glyphs"], type: ["Serif", "Typography"], image: imgCloister },
+      { name: "Cycle", description: "Cafe font digitization", tools: ["Glyphs"], type: ["Typography", "Display"], image: imgCycl },
     ],
   },
   {
     title: "Products",
     items: [
-      { name: "Figma", description: "Design for web-based canvas", tools: ["Figma"], domain: ["Design tools"] },
-      { name: "Google Docs", description: "Website for mobile app", tools: ["Figma"], domain: ["Productivity"] },
+      { name: "Figma", description: "Design for web-based canvas", tools: [], domain: ["Design tool", "Productivity"], url: "https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?gid=0#gid=0", image: imgFigma },
+      { name: "Google Docs", description: "Website for mobile app", tools: [], domain: ["Productivity"], url: "https://docs.google.com/", image: imgDocs },
     ],
   },
 ]
@@ -60,10 +99,10 @@ const allItems = sections.flatMap(s => s.items)
 const filterGroups = [
   { label: "Tools", key: "tools" },
   { label: "Domain", key: "domain" },
-  { label: "Typographic", key: "typographic" },
+  { label: "Type style", key: "type" },
 ].map(group => ({
   ...group,
-  tags: [...new Set(allItems.flatMap(item => item[group.key] || []))],
+  tags: [...new Set(allItems.flatMap(item => item[group.key] || []))].sort((a, b) => a.localeCompare(b)),
 }))
 
 class Projects extends Component {
@@ -72,6 +111,7 @@ class Projects extends Component {
     this.state = {
       activeFilter: null,
       soundEnabled: false,
+      hoveredItem: null,
     }
   }
 
@@ -85,21 +125,21 @@ class Projects extends Component {
       const kick = new Tone.MembraneSynth({
         pitchDecay: 0.25, octaves: 1,
         envelope: { attack: 0.04, decay: 0.8, sustain: 0, release: 2.5 },
-        volume: -4,
+        volume: 6,
       }).connect(kickFilter)
       // Beater click — short noise transient layered on top for organic attack
       const kickClickFilter = new Tone.Filter({ frequency: 180, type: 'lowpass' }).connect(kickSat)
       const kickClick = new Tone.NoiseSynth({
         noise: { type: 'brown' },
         envelope: { attack: 0.001, decay: 0.03, sustain: 0, release: 0.03 },
-        volume: -16,
+        volume: -4,
       }).connect(kickClickFilter)
 
       // Mid bell — sine tuned to G3, soft mallet feel
       const clap = new Tone.Synth({
         oscillator: { type: 'sine' },
         envelope: { attack: 0.005, decay: 0.25, sustain: 0, release: 1.0 },
-        volume: -9.7,
+        volume: 0,
       }).connect(reverb)
 
       // Lo-fi jazz tock — dry sine thud + dark brown-noise knock, heavily saturated and low-passed for a grounded dead-wood feel
@@ -108,32 +148,32 @@ class Projects extends Component {
       const tock = new Tone.Synth({
         oscillator: { type: 'sine' },
         envelope: { attack: 0.001, decay: 0.1, sustain: 0, release: 0.3 },
-        volume: -11,
+        volume: 0,
       }).connect(tockBodyFilter)
       // Dead knock — broad brown-noise burst in low-mid for heavy, grounded texture
       const tockKnockFilter = new Tone.Filter({ frequency: 480, type: 'bandpass', Q: 1.5 }).connect(tockSat)
       const tockKnock = new Tone.NoiseSynth({
         noise: { type: 'brown' },
         envelope: { attack: 0.001, decay: 0.06, sustain: 0, release: 0.06 },
-        volume: -15,
+        volume: -3,
       }).connect(tockKnockFilter)
 
       // Ambient jazz shimmer — soft metallic, long airy tail like a distant cymbal
       const shaker = new Tone.MetalSynth({
-        frequency: 280,
+        frequency: 2,
         envelope: { attack: 0.008, decay: 0.3, release: 1.8 },
         harmonicity: 3.1,
         modulationIndex: 8,
         octaves: 0.8,
         resonance: 800,
-        volume: -35,
+        volume: -20,
       }).connect(reverb)
 
       // Bell tone — sine tuned to A4, pentatonic friendly
       const snap = new Tone.Synth({
         oscillator: { type: 'sine' },
         envelope: { attack: 0.001, decay: 0.3, sustain: 0, release: 1.2 },
-        volume: -11.7,
+        volume: 0,
       }).connect(reverb)
 
       this._drums = [
@@ -169,8 +209,8 @@ class Projects extends Component {
     }))
   }
 
-  async handleItemMouseEnter(e, note) {
-    const item = e.currentTarget
+  async handleItemMouseEnter(note, itemData) {
+    this.setState({ hoveredItem: itemData })
 
     if (!this.state.soundEnabled) return
 
@@ -196,53 +236,10 @@ class Projects extends Component {
       this._nextNoteTime = time + MIN_STAGGER
       this._synth.triggerAttackRelease(note, '8n', time)
     })
-    if (item._leaveRAF) {
-      cancelAnimationFrame(item._leaveRAF)
-      item._leaveRAF = null
-    }
-    item.classList.add('projects__item--bubbling')
-    const startAmp = parseFloat(item.style.getPropertyValue('--bubble-amp') || 0)
-    if (startAmp >= 1) return
-    const duration = 300
-    const start = performance.now()
-    const animate = (now) => {
-      const progress = Math.min((now - start) / duration, 1)
-      const eased = startAmp + (1 - startAmp) * (1 - Math.pow(1 - progress, 2))
-      item.style.setProperty('--bubble-amp', eased)
-      if (progress < 1) {
-        item._enterRAF = requestAnimationFrame(animate)
-      } else {
-        item.style.setProperty('--bubble-amp', 1)
-        item._enterRAF = null
-      }
-    }
-    item._enterRAF = requestAnimationFrame(animate)
   }
 
-  handleItemMouseLeave(e) {
-    const item = e.currentTarget
-    if (item._enterRAF) {
-      cancelAnimationFrame(item._enterRAF)
-      item._enterRAF = null
-    }
-    const duration = LEAVE_DURATION_MS
-    item.style.setProperty('--leave-duration', `${LEAVE_DURATION_MS}ms`)
-    const start = performance.now()
-    const startAmp = parseFloat(item.style.getPropertyValue('--bubble-amp') || 1)
-
-    const animate = (now) => {
-      const progress = Math.min((now - start) / duration, 1)
-      const eased = startAmp * Math.pow(1 - progress, 2)
-      item.style.setProperty('--bubble-amp', eased)
-      if (progress < 1) {
-        item._leaveRAF = requestAnimationFrame(animate)
-      } else {
-        item.style.removeProperty('--bubble-amp')
-        item.classList.remove('projects__item--bubbling')
-        item._leaveRAF = null
-      }
-    }
-    item._leaveRAF = requestAnimationFrame(animate)
+  handleItemMouseLeave() {
+    this.setState({ hoveredItem: null })
   }
 
   handleItemClick(note) {
@@ -271,7 +268,7 @@ class Projects extends Component {
         </button>
         <div className="projects__header">
           <h1 className="projects__title">Index</h1>
-          <p className="projects__subtitle">An incomplete Index of Amanda Yeh’s work</p>
+          <p className="projects__subtitle">An incomplete index of Amanda Yeh’s work</p>
         </div>
 
         <div className="projects__filters">
@@ -301,51 +298,60 @@ class Projects extends Component {
             <div className="projects__section" key={si}>
               <h2 className="projects__section-title">{section.title}</h2>
               {filteredItems.map((item, ii) => {
-                const nameLetters = item.name.split('').map((char, ci) =>
-                  char === ' ' ? ' ' : <span key={ci} className="projects__letter" style={{ '--i': ci }}>{char}</span>
-                )
-                const descLetters = item.description.split('').map((char, ci) =>
-                  char === ' ' ? ' ' : <span key={ci} className="projects__letter" style={{ '--i': ci }}>{char}</span>
-                )
                 const note = SCALE[allItems.indexOf(item) % SCALE.length]
-                const tags = (
-                  <div className="projects__item-tags">
-                    {filterGroups.map(g => (item[g.key] || []).map((tag, ti) => (
-                      <span
-                        className="projects__filter-tag"
-                        key={g.key + ti}
-                        onClick={e => { e.preventDefault(); this.handleFilterClick(tag) }}
-                        onMouseEnter={() => this.handleTagMouseEnter(tag, note)}
-                      >{tag}</span>
-                    )))}
-                  </div>
-                )
                 return (
-                  <div className="projects__item" key={ii} onMouseEnter={e => this.handleItemMouseEnter(e, note)} onMouseLeave={e => this.handleItemMouseLeave(e)} onClick={() => this.handleItemClick(note)}>
+                  <BubbleContainer className="projects__item" key={ii} onMouseEnter={() => this.handleItemMouseEnter(note, item)} onMouseLeave={() => this.handleItemMouseLeave()} onClick={() => this.handleItemClick(note)}>
                     {item.url ? (
                       <a className="projects__item-link" href={item.url} target="_blank" rel="noopener noreferrer">
                         <span className="projects__item-name">
-                          {nameLetters}
+                          <BubbleText>{item.name}</BubbleText>
+                          <span className="projects__item-arrow"> →</span>
                           {item.note && <span className="projects__item-note"> {item.note}</span>}
                         </span>
-                        <span className="projects__item-description">{descLetters}</span>
+                        <BubbleText className="projects__item-description">{item.description}</BubbleText>
                       </a>
                     ) : (
                       <>
                         <span className="projects__item-name">
-                          {nameLetters}
+                          <BubbleText>{item.name}</BubbleText>
+                          <span className="projects__item-arrow"> →</span>
                           {item.note && <span className="projects__item-note"> {item.note}</span>}
                         </span>
-                        <span className="projects__item-description">{descLetters}</span>
+                        <BubbleText className="projects__item-description">{item.description}</BubbleText>
                       </>
                     )}
-                    {tags}
-                  </div>
+                    <div className="projects__item-tags">
+                      {filterGroups.flatMap(g => (item[g.key] || []).map(tag => ({ tag, key: g.key }))).sort((a, b) => a.tag.localeCompare(b.tag)).map(({ tag, key }, ti) => (
+                        <span
+                          className="projects__filter-tag"
+                          key={key + ti}
+                          onClick={e => { e.preventDefault(); this.handleFilterClick(tag) }}
+                          onMouseEnter={() => this.handleTagMouseEnter(tag, note)}
+                        >{tag}</span>
+                      ))}
+                    </div>
+                  </BubbleContainer>
                 )
               })}
             </div>
           )
         })}
+
+        {this.state.hoveredItem && (
+          <div className="projects__preview">
+            <div className="projects__preview-bar">
+              <span className="projects__preview-name">{this.state.hoveredItem.name}</span>
+              {this.state.hoveredItem.url && (
+                <span className="projects__preview-url">{new URL(this.state.hoveredItem.url).hostname}</span>
+              )}
+            </div>
+            <div className="projects__preview-image">
+              {this.state.hoveredItem.image && (
+                <img src={this.state.hoveredItem.image} alt={this.state.hoveredItem.name} />
+              )}
+            </div>
+          </div>
+        )}
       </div>
     )
   }

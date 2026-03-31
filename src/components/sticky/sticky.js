@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-
+import { BubbleContainer } from "../../utils/bubble"
 import "./sticky.css"
 import "../../css/global.css"
 import "../../css/reset.css"
@@ -47,17 +47,12 @@ class Sticky extends Component {
           <path d="M70 298.5V298H69.5H0.5V0.5H382.5V367.5H70V298.5ZM69 299V366.793L1.2071 299H69Z" fill="#FFED47" />
           <path d="M70 298.5V298H69.5H0.5V0.5H382.5V367.5H70V298.5ZM69 299V366.793L1.2071 299H69Z" stroke="black" />
         </svg>
-
-
       )
     } else {
       return (
         <svg className="sticky__svg" viewBox="0 0 247 290" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M35.4623 255.061V254.561H34.9623H0.5V0.5H246.5V289.5H35.4623V255.061ZM34.4623 255.561V288.793L1.20768 255.561H34.4623Z" fill="#FFED47" stroke="black" />
         </svg>
-
-
-
       )
     }
   }
@@ -65,12 +60,13 @@ class Sticky extends Component {
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions)
   }
+
   render() {
     return (
       <div className="sticky">
         <div className="sticky__bio">
           <h3 className="sticky__bio__1" >Welcome to my corner of the internet! Here's some things I recently made. </h3>
-          <h3 className="sticky__bio__2" >Open to work on weird things. Just <span className="serif"> <a id="sticky__bio_a" href="mailto:amandayeh@proton.me" target="_blank" rel="noopener">reach out</a></span>!</h3>
+          <h3 className="sticky__bio__2" >Open to work on weird things. Just <span className="serif"><BubbleContainer as="a" id="sticky__bio_a" href="mailto:amandayeh@proton.me" target="_blank" rel="noopener" variant="dramatic" leaveDuration={1300}>reach out</BubbleContainer></span>!</h3>
 
           <div className="sticky__bio__links">
 
@@ -86,4 +82,3 @@ class Sticky extends Component {
 }
 
 export default Sticky
-

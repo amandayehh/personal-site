@@ -1,0 +1,65 @@
+[data-bl] {
+  display: inline-block;
+  color: inherit;
+}
+
+
+@keyframes bubble {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(calc(-0.3px * var(--bubble-amp, 0)), calc(-0.8px * var(--bubble-amp, 0))) rotate(calc(-0.2deg * var(--bubble-amp, 0)));
+  }
+
+  50% {
+    transform: translate(calc(0.4px * var(--bubble-amp, 0)), calc(-0.5px * var(--bubble-amp, 0))) rotate(calc(0.15deg * var(--bubble-amp, 0)));
+  }
+
+  75% {
+    transform: translate(calc(-0.2px * var(--bubble-amp, 0)), calc(-1px * var(--bubble-amp, 0))) rotate(calc(-0.1deg * var(--bubble-amp, 0)));
+  }
+}
+
+.bubbling [data-bl] {
+  animation: bubble 1.8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * -55ms);
+}
+
+.bubbling [data-bl]:nth-child(even) {
+  animation-duration: 2.2s;
+}
+
+@keyframes bubble-dramatic {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(calc(-0.8px * var(--bubble-amp, 0)), calc(-2.5px * var(--bubble-amp, 0))) rotate(calc(-0.7deg * var(--bubble-amp, 0)));
+  }
+
+  50% {
+    transform: translate(calc(1.3px * var(--bubble-amp, 0)), calc(-1.8px * var(--bubble-amp, 0))) rotate(calc(0.5deg * var(--bubble-amp, 0)));
+  }
+
+  75% {
+    transform: translate(calc(-0.5px * var(--bubble-amp, 0)), calc(-3px * var(--bubble-amp, 0))) rotate(calc(-0.35deg * var(--bubble-amp, 0)));
+  }
+}
+
+.bubble--dramatic.bubbling [data-bl] {
+  animation-name: bubble-dramatic;
+  animation-duration: 1.4s;
+}
+
+.bubble--dramatic.bubbling [data-bl]:nth-child(even) {
+  animation-duration: 1.8s;
+}
+
+.bubble--underline [data-bl] {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}

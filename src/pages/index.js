@@ -401,11 +401,10 @@ class Index extends Component {
           <Sticky />
 
           <div className="index__infoShortcuts">
-            <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@proton.me"} />
+            <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@\nproton.me"} />
 <Shortcut href={"https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?ouid=117237055574131097484&usp=sheets_home&ths=true"} className="index__infoShortcuts__2" src={desktop} alt={"desktop icon"} text={"Work"} />
             <Shortcut href={"https://www.are.na/amanda"} className="index__infoShortcuts__3" src={web} alt={"website icon"} text={"are.na"} />
             <Shortcut href={"https://github.com/amandayehh"} className="index__infoShortcuts__4" src={web} alt={"website icon"} text={"Github"} />
-            <Shortcut href={"https://agilityleaf.blog/"} className="index__infoShortcuts__6" src={notepad} alt={"image icon"} text={"Notes"} />
           </div>
 
           {projects.map((project) => this.renderProject(project))}

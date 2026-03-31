@@ -1,5 +1,6 @@
 import React, { Component, createRef } from "react"
 
+import { BubbleContainer } from "../../utils/bubble"
 import "./innerPage.css"
 import "../../css/global.css"
 import "../../css/reset.css"
@@ -53,7 +54,6 @@ class InnerPage extends Component {
 
   render() {
     const { onClose, title, summary, mainLink, linkText, scope, tech1, collaborator1 } = this.props
-
     return (
       <div className="innerPage">
         <div className="innerPage__background" ref={this.backgroundRef} onClick={onClose} />
@@ -72,7 +72,9 @@ class InnerPage extends Component {
               <div className="innerPage__window__main__text__container">
                 <h3 className="innerPage__window__main__text__sum">{summary}</h3>
                 <h3 className="serif innerPage__window__main__text__link">
-                  <a className="innerPage__window__main__text__link__a" href={mainLink} target="_blank" rel="noopener">{linkText}</a>
+                  <BubbleContainer as="a" className="innerPage__window__main__text__link__a" href={mainLink} target="_blank" rel="noopener" variant="dramatic" leaveDuration={1300}>
+                    {linkText}
+                  </BubbleContainer>
                 </h3>
                 <section className="innerPage__window__main__text__info">
                   <div className="innerPage__window__main__text__info__sec">
