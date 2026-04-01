@@ -136,26 +136,33 @@
 
 /* Items */
 
+.projects__item-link,
+.projects__item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+  padding: 16px 0 8px;
+  min-width: 0;
+}
+
 .projects__item-link {
-  display: contents;
-}
-
-.projects__item-link .projects__item-name,
-.projects__item-link .projects__item-description {
   text-decoration: none;
-  color: var(--color-description);
+  color: inherit;
 }
 
 .projects__item-link .projects__item-description {
   color: var(--color-description);
 }
 
+.projects__item-tags {
+  padding: 0 0 16px;
+}
 
 .projects__item {
   display: flex;
   flex-direction: column;
-  gap: 8px 0;
-  padding: 16px 0;
+  gap: 0;
   border-bottom: 0.5px solid var(--color-border);
   position: relative;
   transition: border-color 0.2s ease;
@@ -187,6 +194,12 @@
 
 .projects__section .projects__item:last-of-type::before {
   background: radial-gradient(100% 100% at 0% 0%, var(--color-hover) 0%, var(--secondary) 100%);
+}
+
+.projects__section .projects__item:first-of-type:last-of-type::before {
+  background:
+    linear-gradient(to bottom, white, transparent 30%, transparent 70%, white),
+    radial-gradient(50% 100% at 0% 50%, var(--color-hover) 0%, var(--secondary) 100%);
 }
 
 
@@ -225,6 +238,7 @@
 .projects__item-tags {
   display: flex;
   gap: 6px;
+  align-items: center;
 }
 
 /* Preview card */
@@ -292,7 +306,15 @@
   .projects__item {
     flex-direction: row;
     gap: 0 8px;
-    align-items: baseline;
+    align-items: stretch;
+  }
+
+  .projects__item-link,
+  .projects__item-content {
+    flex-direction: row;
+    gap: 0 8px;
+    align-items: center;
+    padding: 16px 0;
   }
 
   .projects__item-name {
@@ -302,21 +324,17 @@
 
   .projects__item-description {
     flex: 2;
-    padding-bottom: 0px;
-
+    padding-bottom: 0;
   }
 
-
-
   .projects__item-tags {
-    margin-left: auto;
+    padding: 16px 0;
   }
 }
 
 @media (min-width: 1100px) {
   .projects {
     padding: 160px;
-    padding-top: 80px;
   }
 
 }

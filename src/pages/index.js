@@ -22,6 +22,8 @@ import web from "../images/shortcut/web.png"
 import font from "../images/shortcut/font.png"
 import desktop from "../images/shortcut/desktop.png"
 import notepad from "../images/shortcut/notepad.png"
+import computer from "../images/shortcut/computer.png"
+
 
 //large
 import boygame from "../images/index/boygame.png"
@@ -402,6 +404,7 @@ class Index extends Component {
 
           <div className="index__infoShortcuts">
             <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@\nproton.me"} />
+            <Shortcut href={"/projects"} className="index__infoShortcuts__5" src={computer} alt={"computer icon"} text={"Projects"} />
 <Shortcut href={"https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?ouid=117237055574131097484&usp=sheets_home&ths=true"} className="index__infoShortcuts__2" src={desktop} alt={"desktop icon"} text={"Work"} />
             <Shortcut href={"https://www.are.na/amanda"} className="index__infoShortcuts__3" src={web} alt={"website icon"} text={"are.na"} />
             <Shortcut href={"https://github.com/amandayehh"} className="index__infoShortcuts__4" src={web} alt={"website icon"} text={"Github"} />

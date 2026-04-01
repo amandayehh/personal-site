@@ -58,14 +58,14 @@ const sections = [
       { name: "Synesthetic perceptions", description: "Audio and visual compositions", tools: ["React"], domain: ["Audio", "Interaction"], url: "https://synestheticperceptions.art/", image: imgSyneExample },
       { name: "MICA WebX 2020", description: "Graphic Design BFA thesis show", tools: ["React"], domain: ["Education", "Graphic"], url: "https://web.archive.org/web/20200807235205/https://pixelation.micagraphicdesign.org/", image: imgWebX },
       { name: "Explore SEL", description: "Learning frameworks visualized", tools: [], domain: ["Education", "Research"], url: "http://exploresel.gse.harvard.edu/", image: imgSel },
-      { name: "Kilotype", description: "Kilotype's website", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://kilotype.de/", image: imgKilotype },
-      { name: "Frere Jones Type", description: "Frere Jone's website", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://frerejones.com/", image: imgFrereJones},
+      { name: "Kilotype", description: "Kilotype’s website", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://kilotype.de/", image: imgKilotype },
+      { name: "Frere Jones Type", description: "Frere Jone’s website", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://frerejones.com/", image: imgFrereJones},
     ],
   },
   {
     title: "Games",
     items: [
-      { name: "BOY♡GAME", description: "Analog and digital dating game", tools: [], domain: ["Boardgame", "Video game"], image: imgBoy },
+      { name: "BOY♡GAME", description: "Analog and digital dating game", tools: [], domain: ["Boardgame", "Video game"], url: "https://instagram.com/b0ygame/", image: imgBoy },
       { name: "Say no more, Semaphore", description: "Semaphore education game", tools: ["P5.js"], domain: ["Education", "Video game"], url: "https://ygev.github.io/semaphore/", image: imgSema },
       { name: "Mad Lads", description: "Camera-based Mad Libs", tools: ["P5.js"], domain: ["Mobile game", "Video game"], url: "https://ygev.github.io/madlads/", image: imgMadlads },
       { name: "Buncho the Lost Bird", description: "UI/UX for 3D adventure game", tools: ["Unity"], domain: ["3D"], url: "https://jamiepark.itch.io/buncho-the-lost-bird", image: imgBuncho },
@@ -80,7 +80,7 @@ const sections = [
   {
     title: "Typefaces",
     items: [
-      { name: "Cork", description: "Original display typeface", tools: ["Glyphs"], type: ["Display", "Typography"], image: imgCork },
+      { name: "Cork", description: "Original display typeface", tools: ["Glyphs"], type: ["Display", "Typography"], url: "https://typewest.letterformarchive.org/2022/typeface/cork/", image: imgCork },
       { name: "Cloister Revival", description: "Old-style serif typeface revival", tools: ["Glyphs"], type: ["Serif", "Typography"], image: imgCloister },
       { name: "Cycle", description: "Cafe font digitization", tools: ["Glyphs"], type: ["Typography", "Display"], image: imgCycl },
     ],
@@ -119,27 +119,26 @@ class Projects extends Component {
     if (!this._drums) {
       const reverb = new Tone.Reverb({ decay: 3.5, wet: 0.55 }).toDestination()
 
-      // Analog kick — membrane body + noise transient layered, Chebyshev saturation for lo-fi warmth
-      const kickSat = new Tone.Chebyshev(2).connect(reverb)
-      const kickFilter = new Tone.Filter({ frequency: 320, type: 'lowpass', rolloff: -12 }).connect(kickSat)
+      // Analog kick — membrane body + noise transient layered, lowpass filtered for clean reproduction on small speakers
+      const kickFilter = new Tone.Filter({ frequency: 200, type: 'lowpass', rolloff: -24 }).connect(reverb)
       const kick = new Tone.MembraneSynth({
         pitchDecay: 0.25, octaves: 1,
         envelope: { attack: 0.04, decay: 0.8, sustain: 0, release: 2.5 },
-        volume: 6,
+        volume: 3,
       }).connect(kickFilter)
-      // Beater click — short noise transient layered on top for organic attack
-      const kickClickFilter = new Tone.Filter({ frequency: 180, type: 'lowpass' }).connect(kickSat)
+      // Beater click — quiet noise transient for subtle attack texture
+      const kickClickFilter = new Tone.Filter({ frequency: 120, type: 'lowpass' }).connect(reverb)
       const kickClick = new Tone.NoiseSynth({
         noise: { type: 'brown' },
-        envelope: { attack: 0.001, decay: 0.03, sustain: 0, release: 0.03 },
-        volume: -4,
+        envelope: { attack: 0.001, decay: 0.02, sustain: 0, release: 0.02 },
+        volume: -10,
       }).connect(kickClickFilter)
 
       // Mid bell — sine tuned to G3, soft mallet feel
       const clap = new Tone.Synth({
         oscillator: { type: 'sine' },
         envelope: { attack: 0.005, decay: 0.25, sustain: 0, release: 1.0 },
-        volume: 0,
+        volume: -6,
       }).connect(reverb)
 
       // Lo-fi jazz tock — dry sine thud + dark brown-noise knock, heavily saturated and low-passed for a grounded dead-wood feel
@@ -148,14 +147,14 @@ class Projects extends Component {
       const tock = new Tone.Synth({
         oscillator: { type: 'sine' },
         envelope: { attack: 0.001, decay: 0.1, sustain: 0, release: 0.3 },
-        volume: 0,
+        volume: -5,
       }).connect(tockBodyFilter)
       // Dead knock — broad brown-noise burst in low-mid for heavy, grounded texture
       const tockKnockFilter = new Tone.Filter({ frequency: 480, type: 'bandpass', Q: 1.5 }).connect(tockSat)
       const tockKnock = new Tone.NoiseSynth({
         noise: { type: 'brown' },
         envelope: { attack: 0.001, decay: 0.06, sustain: 0, release: 0.06 },
-        volume: -3,
+        volume: -2,
       }).connect(tockKnockFilter)
 
       // Ambient jazz shimmer — soft metallic, long airy tail like a distant cymbal
@@ -166,20 +165,20 @@ class Projects extends Component {
         modulationIndex: 8,
         octaves: 0.8,
         resonance: 800,
-        volume: -20,
+        volume: -25,
       }).connect(reverb)
 
       // Bell tone — sine tuned to A4, pentatonic friendly
       const snap = new Tone.Synth({
         oscillator: { type: 'sine' },
         envelope: { attack: 0.001, decay: 0.3, sustain: 0, release: 1.2 },
-        volume: 0,
+        volume: -8,
       }).connect(reverb)
 
       this._drums = [
         { name: 'kick',   synth: kick,   play: (s, note, vel) => { s.triggerAttackRelease('C2', '4n', Tone.now(), vel); kickClick.triggerAttack(Tone.now()); kickClick.triggerRelease(Tone.now() + 0.03) } },
         { name: 'clap',   synth: clap,   play: (s, note, vel) => s.triggerAttackRelease('G3', '8n', Tone.now(), vel) },
-        { name: 'tock',   synth: tock,   play: (s, note, vel) => { s.triggerAttackRelease(note || 'D4', '8n', Tone.now(), vel); tockKnock.triggerAttack(Tone.now()); tockKnock.triggerRelease(Tone.now() + 0.04) } },
+        { name: 'tock',   synth: tock,   play: (s, note, vel) => { s.triggerAttackRelease('D4', '8n', Tone.now(), vel); tockKnock.triggerAttack(Tone.now()); tockKnock.triggerRelease(Tone.now() + 0.04) } },
         { name: 'shaker', synth: shaker, play: (s, note, vel) => { if (note) s.frequency.value = Tone.Frequency(note).toFrequency(); s.triggerAttackRelease(Tone.now(), vel) } },
         { name: 'snap',   synth: snap,   play: (s, note, vel) => s.triggerAttackRelease(note || 'A4', '8n', Tone.now(), vel) },
       ]
@@ -257,7 +256,7 @@ class Projects extends Component {
   render() {
     return (
       <div className="projects">
-        <SEO title="Index — Amanda Yeh" />
+        <SEO title="Projects — Amanda Yeh" />
         <button
           className="projects__sound-toggle"
           data-playing={this.state.soundEnabled}
@@ -311,14 +310,13 @@ class Projects extends Component {
                         <BubbleText className="projects__item-description">{item.description}</BubbleText>
                       </a>
                     ) : (
-                      <>
+                      <div className="projects__item-content">
                         <span className="projects__item-name">
                           <BubbleText>{item.name}</BubbleText>
-                          <span className="projects__item-arrow"> →</span>
                           {item.note && <span className="projects__item-note"> {item.note}</span>}
                         </span>
                         <BubbleText className="projects__item-description">{item.description}</BubbleText>
-                      </>
+                      </div>
                     )}
                     <div className="projects__item-tags">
                       {filterGroups.flatMap(g => (item[g.key] || []).map(tag => ({ tag, key: g.key }))).sort((a, b) => a.tag.localeCompare(b.tag)).map(({ tag, key }, ti) => (
