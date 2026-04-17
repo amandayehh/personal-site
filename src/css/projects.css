@@ -1,8 +1,11 @@
 .projects {
   --color-border: #DCDCDC;
-  --color-border-hover: #58DAAB;
+  --color-border-hover: #61B1FF;
+  --color-accent: #0080FF;
+  --color-button: #CBE5FF;
+  --color-card-bg: #F0F0F0;
   --color-description: #666;
-  --color-hover: #F1F6F4;
+  --color-hover: #F5FAFF;
   --letter-spacing: 0.015em;
   padding: 40px 24px;
   max-width: 625px;
@@ -10,43 +13,34 @@
 
 .projects__sound-toggle {
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: 0px;
+  right: 0px;
   display: flex;
   align-items: center;
+  padding: 4px 10px;
+  border-radius: 0 0 0 12px;
   gap: 4px;
-  background: none;
   border: none;
   cursor: pointer;
+  background-color: var(--color-button);
   color: var(--black);
   z-index: 100;
+  width: 6.5em;
+  transition: color 0.2s ease;
 }
 
-.projects__sound-toggle[data-playing="false"] {
-  background: linear-gradient(70deg, #000 45%, #58DAAB 50%, #000 55%);
-  background-size: 240% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: sound-shimmer 2s linear infinite;
+.projects__sound-toggle:hover * {
+  color: #0061C3;
 }
 
-@keyframes sound-shimmer {
-  from {
-    background-position: 100% 0;
-  }
-
-  to {
-    background-position: 0% 0;
-  }
+.projects__sound-toggle svg path {
+  stroke: currentColor;
+  transition: stroke 0.2s ease;
 }
 
-.projects__sound-toggle .material-symbols-sharp {
-  font-family: 'Material Symbols Sharp';
-  font-size: 18px;
-  font-variation-settings: 'wght' 100;
+.projects__sound-toggle:hover svg path {
+  stroke: #0061C3;
 }
-
 
 .projects h1 {
   font-family: 'Albertus Nova', serif;
@@ -75,7 +69,6 @@
 
 .projects__title {
   line-height: 1;
-  margin-bottom: 8px;
 }
 
 .projects__subtitle {
@@ -110,10 +103,12 @@
   padding: 2px 6px;
   text-decoration: none;
   line-height: 1;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .projects__filter-tag:hover:not(.projects__filter-tag--active) {
-  background: var(--color-hover);
+  background: var(--color-button);
+  border-color: var(--color-button);
 }
 
 .projects__filter-tag--active {
@@ -197,9 +192,7 @@
 }
 
 .projects__section .projects__item:first-of-type:last-of-type::before {
-  background:
-    linear-gradient(to bottom, white, transparent 30%, transparent 70%, white),
-    radial-gradient(50% 100% at 0% 50%, var(--color-hover) 0%, var(--secondary) 100%);
+  background: radial-gradient(50% 100% at 0% 50%, var(--color-hover) 0%, var(--secondary) 100%);
 }
 
 
@@ -227,7 +220,7 @@
   opacity: 0;
   transform: translateX(-8px);
   transition: opacity 0.2s ease, transform 0.2s ease;
-  color: #1A9165;
+  color: var(--color-accent);
 }
 
 .projects__item:hover .projects__item-arrow {
@@ -243,48 +236,121 @@
 
 /* Preview card */
 
-.projects__preview {
-  display: none;
-}
+@keyframes preview-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
 
-@media (min-width: 640px) {
-
-  .projects__preview {
-    display: block;
-    position: fixed;
-    bottom: 0px;
-    right: 5%;
-    width: 320px;
-    background: var(--color-hover);
-    border: 1px solid var(--color-border);
-    z-index: 50;
-    padding: 10px;
-    padding-top: 0px;
-    border-radius: 10px 10px 0px 0px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.projects__preview-bar {
+@keyframes preview-slide-down {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.projects__preview-wrapper {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+
+
+  .projects__preview-wrapper {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: calc(362.5px + 50vw);
+    transform: translateX(-50%);
+    width: 420px;
+    z-index: 50;
+  }
+
+  .projects__preview-info {
+    display: none;
+  }
+
+  /* Image card — sits in front, anchored bottom-right of wrapper */
+  .projects__preview-image {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    background: var(--color-hover);
+    padding: 0px 12px 0px 12px;
+    border-radius: 10px 10px 0 0;
+    z-index: 1;
+    overflow: hidden;
+    animation: popUp 0.7s var(--animation-soft-spring) both;
+    animation-delay: 0.2s;
+  }
+
+  .projects__preview-image--exit {
+    animation: popOut 0.6s cubic-bezier(0.3, -0.3, 0.4, 1.2) both;
+    animation-delay: 0s;
+  }
+}
+
+
+.projects__preview-info * {
+  color: inherit;
+}
+
+.projects__preview-info-name {
+  color: inherit;
+}
+
+
+.projects__preview-info-tags {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.projects__preview-info-tag-row {
+  display: flex;
+  gap: 4px;
+}
+
+.projects__preview-info-tag-label {
+  font-style: italic;
+}
+
+.projects__preview-image-bar {
+  display: flex;
   align-items: baseline;
-  padding: 10px 0px;
-  gap: 0px;
+  padding: 8px 0px;
 }
 
-.projects__preview-url {
-  color: var(--color-description);
+.projects__preview-image-bar * {
+  color: inherit;
 }
 
-.projects__preview-image {
+.projects__preview-image-url {
+  color: inherit;
+}
+
+.projects__preview-image-screen {
   height: 200px;
   background: white;
   overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
+  border-radius: 6px 6px 0px 0px;
 }
 
-.projects__preview-image img {
+.projects__preview-image-screen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -292,9 +358,9 @@
 }
 
 
-@media (min-width: 760px) {
+@media (min-width: 740px) {
   .projects {
-    padding: 80px;
+    padding: 60px;
     padding-bottom: 240px;
   }
 
@@ -332,9 +398,49 @@
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .projects {
-    padding: 160px;
+    padding: 80px;
   }
+
+  /* Info card — in normal flow, its height drives the wrapper height */
+  .projects__preview-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 320px;
+    background: var(--color-card-bg);
+    border-radius: 10px;
+    padding: 12px;
+    padding-bottom: 260px;
+    z-index: 0;
+    color: var(--black);
+    animation: popUp 0.7s var(--animation-soft-spring) both;
+    animation-delay: 0s;
+  }
+
+  .projects__preview-info-name {
+    padding-bottom: 8px;
+    padding-top: 6px;
+
+  }
+
+  .projects__preview-info-description,
+  .projects__preview-info-tags {
+    line-height: 1.5em;
+    padding-bottom: 8px;
+  }
+
+  .projects__preview-info--exit {
+    animation: popOut 0.6s cubic-bezier(0.3, -0.3, 0.4, 1.2) both;
+    animation-delay: 0.1s;
+  }
+}
+
+@media (min-width: 1400px) {
+  .projects {
+    padding: 120px;
+  }
+
 
 }

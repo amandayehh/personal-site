@@ -10,15 +10,15 @@
   }
 
   25% {
-    transform: translate(calc(-0.3px * var(--bubble-amp, 0)), calc(-0.8px * var(--bubble-amp, 0))) rotate(calc(-0.2deg * var(--bubble-amp, 0)));
+    transform: translate(calc(-0.4px * var(--bubble-amp, 0)), calc(-1px * var(--bubble-amp, 0))) rotate(calc(-0.25deg * var(--bubble-amp, 0)));
   }
 
   50% {
-    transform: translate(calc(0.4px * var(--bubble-amp, 0)), calc(-0.5px * var(--bubble-amp, 0))) rotate(calc(0.15deg * var(--bubble-amp, 0)));
+    transform: translate(calc(0.5px * var(--bubble-amp, 0)), calc(-0.65px * var(--bubble-amp, 0))) rotate(calc(0.2deg * var(--bubble-amp, 0)));
   }
 
   75% {
-    transform: translate(calc(-0.2px * var(--bubble-amp, 0)), calc(-1px * var(--bubble-amp, 0))) rotate(calc(-0.1deg * var(--bubble-amp, 0)));
+    transform: translate(calc(-0.25px * var(--bubble-amp, 0)), calc(-1.25px * var(--bubble-amp, 0))) rotate(calc(-0.15deg * var(--bubble-amp, 0)));
   }
 }
 
