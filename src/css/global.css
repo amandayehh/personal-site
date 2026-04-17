@@ -76,5 +76,6 @@
   to {
     opacity: 0;
     transform: translateY(120px);
+    visibility: hidden;
   }
 }
