@@ -25,7 +25,7 @@
   background-color: var(--color-button);
   color: var(--black);
   z-index: 100;
-  width: 6.5em;
+  width: 10.7em;
   transition: color 0.2s ease;
 }
 

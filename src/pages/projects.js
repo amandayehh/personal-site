@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import * as Tone from "tone"
 
 import SEO from "../components/seo"
-import { BubbleContainer, BubbleText } from "../utils/bubble"
+import { BubbleContainer, BubbleText, handleBubbleEnter, handleBubbleLeave } from "../utils/bubble"
 
 import imgTypose from "../images/mirror/typose.png"
 import imgTypose1 from "../images/mirror/typose_1.gif"
@@ -126,7 +126,12 @@ class Projects extends Component {
       previewExiting: false,
     }
     this._colorCache = {}
+    this.soundButtonRef = React.createRef()
     this.handleSoundToggle = this.handleSoundToggle.bind(this)
+  }
+
+  componentDidMount() {
+    handleBubbleEnter(this.soundButtonRef.current)
   }
 
   extractDominantColor(imageSrc) {
@@ -210,7 +215,40 @@ class Projects extends Component {
   }
 
   handleSoundToggle() {
-    this.setState(prev => ({ soundEnabled: !prev.soundEnabled }))
+    const enabling = !this.state.soundEnabled
+    this.setState({ soundEnabled: enabling })
+    const el = this.soundButtonRef.current
+    if (el) {
+      if (enabling) {
+        handleBubbleLeave(el, { leaveDuration: 300 })
+      } else {
+        handleBubbleEnter(el)
+      }
+    }
+    if (enabling) {
+      Tone.start().then(() => {
+        if (!this._synth) {
+          const reverb = new Tone.Reverb({ decay: 5.5, wet: 0.6 }).toDestination()
+          const chorus = new Tone.Chorus({ frequency: 0.8, delayTime: 5, depth: 0.6, wet: 0.3 }).connect(reverb).start()
+          const vibrato = new Tone.Vibrato({ frequency: 3, depth: 0.08, wet: 0.6 }).connect(chorus)
+          const phaser = new Tone.Phaser({ frequency: 0.25, octaves: 3, wet: 0.2 }).connect(vibrato)
+          this._synth = new Tone.PolySynth(Tone.FMSynth, { maxPolyphony: 64,
+            harmonicity: 3,
+            modulationIndex: 8,
+            oscillator: { type: 'sine' },
+            envelope: { attack: 0.04, decay: 0.8, sustain: 0.08, release: 1.2 },
+            modulation: { type: 'triangle' },
+            modulationEnvelope: { attack: 0.01, decay: 0.6, sustain: 0, release: 1.5 },
+            volume: -11,
+          }).connect(phaser)
+          this._nextNoteTime = 0
+        }
+        const now = Tone.now()
+        this._synth.triggerAttackRelease('F3', '8n', now, 1)
+        this._synth.triggerAttackRelease('C3', '8n', now + 0.12, 1)
+        this._synth.triggerAttackRelease('G3', '8n', now + 0.24, 1)
+      })
+    }
   }
 
   getDrums() {
@@ -360,13 +398,14 @@ class Projects extends Component {
   render() {
     return (
       <div className="projects">
-        <SEO title="Projects — Amanda Yeh" />
-        <BubbleContainer as="button"
+        <SEO title="Index — Amanda Yeh" />
+        <button
+          ref={this.soundButtonRef}
           className="projects__sound-toggle"
           data-playing={this.state.soundEnabled}
           onClick={this.handleSoundToggle}
         >
-                <span data-bl="" style={{ '--i': -4, position: 'relative', top: '2px' }}>
+                <span data-bl="" style={{ '--i': -4, position: 'relative', top: '3px' }}>
                   {this.state.soundEnabled ? (
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8.99999 4.03742C8.99999 3.20657 8.04552 2.7381 7.38826 3.24636L4.77018 5.27092C4.59503 5.40637 4.37987 5.47986 4.15846 5.47986L2.49999 5.47987C1.94771 5.47987 1.5 5.92759 1.5 6.47987V9.50852C1.5 10.0608 1.94772 10.5085 2.5 10.5085H4.15755C4.37952 10.5085 4.59519 10.5824 4.77056 10.7184L7.38699 12.7485C8.04402 13.2583 9 12.79 9 11.9584L8.99999 4.03742Z" stroke="currentColor" strokeWidth="1"/>
@@ -381,8 +420,8 @@ class Projects extends Component {
                     </svg>
                   )}
                 </span>
-                <BubbleText>{this.state.soundEnabled ? "Mute" : "Unmute"}</BubbleText>
-        </BubbleContainer>
+                <BubbleText>{this.state.soundEnabled ? "Mute" : "Better with sound"}</BubbleText>
+        </button>
         <div className="projects__header">
           <h1 className="projects__title">Index</h1>
           <p className="projects__subtitle">An incomplete index of Amanda Yeh’s work</p>
