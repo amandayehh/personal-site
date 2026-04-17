@@ -52,8 +52,18 @@ class InnerPage extends Component {
     ))
   }
 
+  renderCollaborators() {
+    const { collaborators = [] } = this.props
+    return collaborators.map(({ name, url }, i) => (
+      <span key={i}>
+        {i > 0 && ", "}
+        {url ? <a href={url} target="_blank" rel="noopener noreferrer">{name}</a> : name}
+      </span>
+    ))
+  }
+
   render() {
-    const { onClose, title, summary, mainLink, linkText, scope, tech1, collaborator1 } = this.props
+    const { onClose, title, summary, mainLink, linkText, scope, tech1 } = this.props
     return (
       <div className="innerPage">
         <div className="innerPage__background" ref={this.backgroundRef} onClick={onClose} />
@@ -84,7 +94,7 @@ class InnerPage extends Component {
                     <p className="innerPage__window__main__text__info__sec__content"><span className="innerPage__window__main__text__info__sec__label bold">Technology: </span>{tech1}</p>
                   </div>
                   <div className="innerPage__window__main__text__info__sec">
-                    <p className="innerPage__window__main__text__info__sec__content"><span className="innerPage__window__main__text__info__sec__label bold">Collaborators: </span>{collaborator1}</p>
+                    <p className="innerPage__window__main__text__info__sec__content"><span className="innerPage__window__main__text__info__sec__label bold">Collaborators: </span>{this.renderCollaborators()}</p>
                   </div>
                 </section>
               </div>

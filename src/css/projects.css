@@ -5,10 +5,10 @@
   --color-button: #CBE5FF;
   --color-card-bg: #F0F0F0;
   --color-description: #666;
-  --color-hover: #F5FAFF;
+  --color-hover: #F0F7FF;
   --letter-spacing: 0.015em;
   padding: 40px 24px;
-  max-width: 625px;
+  max-width: 615px;
 }
 
 .projects__sound-toggle {
@@ -234,32 +234,6 @@
   align-items: center;
 }
 
-/* Preview card */
-
-@keyframes preview-slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes preview-slide-down {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-}
-
 .projects__preview-wrapper {
   display: none;
 }
@@ -270,8 +244,8 @@
   .projects__preview-wrapper {
     display: block;
     position: fixed;
-    bottom: 0;
-    left: calc(362.5px + 50vw);
+    bottom: -3px;
+    left: calc(307.5px + 50vw);
     transform: translateX(-50%);
     width: 420px;
     z-index: 50;
@@ -299,7 +273,7 @@
   }
 
   .projects__preview-image--exit {
-    animation: popOut 0.6s cubic-bezier(0.3, -0.3, 0.4, 1.2) both;
+    animation: popOut 0.5s cubic-bezier(0.3, -0.3, 0.4, 1.2) both;
     animation-delay: 0s;
   }
 }
@@ -403,6 +377,10 @@
     padding: 80px;
   }
 
+  .projects__preview-wrapper {
+    left: calc(357.5px + 50vw);
+  }
+
   /* Info card — in normal flow, its height drives the wrapper height */
   .projects__preview-info {
     display: flex;
@@ -410,13 +388,14 @@
     position: relative;
     width: 320px;
     background: var(--color-card-bg);
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     padding: 12px;
     padding-bottom: 260px;
     z-index: 0;
     color: var(--black);
     animation: popUp 0.7s var(--animation-soft-spring) both;
     animation-delay: 0s;
+
   }
 
   .projects__preview-info-name {
@@ -432,7 +411,7 @@
   }
 
   .projects__preview-info--exit {
-    animation: popOut 0.6s cubic-bezier(0.3, -0.3, 0.4, 1.2) both;
+    animation: popOut 0.4s cubic-bezier(0.3, -0.3, 0.4, 1.2) both;
     animation-delay: 0.1s;
   }
 }

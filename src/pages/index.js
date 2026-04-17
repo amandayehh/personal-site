@@ -120,7 +120,8 @@ const projects = [
     title: "BOY♡GAME — Info",
     summary: "BOY♡GAME is a couch co-op style party game where players build boys together and vote for their favorites.",
     mainLink: "https://www.instagram.com/b0ygame/", linkText: "@B0YGAME",
-    scope: "Game design, front end development", tech1: "React", collaborator1: "Melissa Liu",
+    scope: "Game design, front end development", tech1: "React",
+    collaborators: [{ name: "Melissa Liu", url: "https://mellyeliu.online/" }],
     images: [
       { src: boygame__img1, alt: "Gameboy showing the logo of Boygame" },
       { src: boygame__img2, alt: "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing" },
@@ -136,7 +137,8 @@ const projects = [
     title: "Synesthetic Perceptions — Info",
     summary: "Synesthetic Perceptions explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of tangible objects that drive those interpretations.",
     mainLink: "https://synestheticperceptions.art/", linkText: "synestheticperceptions.art",
-    scope: "Music visualization, Front-end Development", tech1: "P5 sound", collaborator1: "Verli Chen",
+    scope: "Music visualization, Front-end Development", tech1: "P5 sound",
+    collaborators: [{ name: "Verli Chen", url: "https://verlichen.com/" }],
     images: [
       { src: syne__img3, alt: "screen recording of audio visualizer" },
       { src: syne__img2, alt: "mobile version of synesthetic perceptions" },
@@ -152,7 +154,8 @@ const projects = [
     title: "Voices and Voids — Info",
     summary: "Voices and Voids is a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.",
     mainLink: "https://voicesandvoids.net/", linkText: "voicesandvoids.net",
-    scope: "Net Art, Front-end Development", tech1: "React", collaborator1: "Audrey Desjardins, Afroditi Psarra, Bonnie Whiting",
+    scope: "Net Art, Front-end Development", tech1: "React",
+    collaborators: [{ name: "Audrey Desjardins", url: "https://www.audreydesjardins.com/index.html" }, { name: "Afroditi Psarra", url: "https://afroditipsarra.com/" }, { name: "Bonnie Whiting", url: "https://www.bonniewhitingpercussion.com/" }],
     images: [
       { src: voices__img1, alt: "screenshot of AI generated google assistant text" },
       { src: voices__img2, alt: "screenshot of numerous voice assistant inputs" },
@@ -168,7 +171,8 @@ const projects = [
     title: "Cork — Info",
     summary: "Cork is a variable display typeface that features flared terminals, swooping curves, and humanist proportions. Reminiscent of mushrooms, bell bottom jeans, and warm summer breezes, Cork draws its inspiration from art nouveau, psychedelic type, as well as the organic shapes found in nature and those created by swift brush strokes.",
     mainLink: "https://typewest.letterformarchive.org/2022/typeface/cork/", linkText: "Type test",
-    scope: "Type Design", tech1: "Glyphs App", collaborator1: "Type West at the Letterform Archive",
+    scope: "Type Design", tech1: "Glyphs App",
+    collaborators: [{ name: "Type West at the Letterform Archive", url: "https://letterformarchive.org/"  }],
     images: [
       { src: cork__img1, alt: "White on red text showing the entire glyph set of Cork, which includes upper and lowercase latin alphabet, various diacritics, numbers, punctuation, and special characters." },
       { src: cork__img2, alt: "3 poster of the same design showing a flower bouquet that looks like an octopus, and the text 'Overgrown Dreamwever', set in Cork." },
@@ -185,7 +189,8 @@ const projects = [
     title: "Cycl — Info",
     summary: "Cycl is inspired by a hand lettered signage at a Seattle cafe and bike shop. With its bold, all-caps design, wide width, ample counter spaces, and slanted terminals, Cycl emanates a playful yet confident vibe that commands attention.",
     mainLink: "", linkText: "",
-    scope: "Type Design", tech1: "Glyphs App", collaborator1: "Just me",
+    scope: "Type Design", tech1: "Glyphs App",
+    collaborators: [{ name: "Just me" }],
     images: [
       { src: cycl__img1, alt: "Black text showing the entire glyph set of Cycl, which includes the uppercase latin alphabet and ampersand." },
       { src: cycl__img2, alt: "light yellow words set in Cycl over a green background." },
@@ -200,7 +205,8 @@ const projects = [
     title: "Cloister — Info",
     summary: "Cloister is a revival of the 1926 Morris Benton typeface of the same name, which was designed based on Nicolas Jenson's prints from the 1470s.",
     mainLink: "", linkText: "",
-    scope: "Type Design", tech1: "Glyphs App", collaborator1: "Type West at the Letterform Archive",
+    scope: "Type Design", tech1: "Glyphs App",
+    collaborators: [{ name: "Type West at the Letterform Archive", url: "https://letterformarchive.org/" }],
     images: [
       { src: cloister__img3, alt: "Red title case and uppercase text, as well as short phrases, set in Cloister over a pink background. Cloister is a light weight, serif, translational font." },
       { src: cloister__img2, alt: "Text set in Cloister showing the range entire glyph set, which includes uppercase, lowercase, numbers, and punctuation." },
@@ -218,7 +224,8 @@ const projectsAfter = [
     title: "Type Mirror — Info",
     summary: "Type Mirror is a mirror made of typography.",
     mainLink: "https://amandayehh.github.io/type-mirror/", linkText: "amandayehh.github.io/type-mirror",
-    scope: "Creative coding, Interactive art", tech1: "p5.js", collaborator1: "Just me",
+    scope: "Creative coding, Interactive art", tech1: "p5.js",
+    collaborators: [{ name: "Just me" }],
     images: [
       { src: mirror__img1, alt: "gif of my reflection in type mirror" },
       { src: mirror__img2, alt: "ui of type mirror" },
@@ -233,7 +240,8 @@ const projectsAfter = [
     title: "Keyboard Doodler — Info",
     summary: "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.",
     mainLink: "https://www.figma.com/community/plugin/917914510168637203/Keyboard-Doodler", linkText: "Try it out!",
-    scope: "Design tool", tech1: "Typescript, Figma plugin API", collaborator1: "Josh Shi",
+    scope: "Design tool", tech1: "Typescript, Figma plugin API",
+    collaborators: [{ name: "Josh Shi", url: "https://joshshi.com/" }],
     images: [
       { src: doodler__img1, alt: "Generative drawings created with Keyboard Doodler" },
       { src: doodler__img2, alt: "A bunch of keys with a different keyboard doodle drawing on it. One key group spells out WHY" },
@@ -249,7 +257,8 @@ const projectsAfter = [
     title: "Learn Semaphore — Info",
     summary: "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.",
     mainLink: "https://ygev.github.io/semaphore/", linkText: "ygev.github.io/semaphore",
-    scope: "Game Design, Creative Coding, Machine Learning Application", tech1: "p5.js, poseNet()", collaborator1: "Yana Gevorgyan",
+    scope: "Game Design, Creative Coding, Machine Learning Application", tech1: "p5.js, poseNet()",
+    collaborators: [{ name: "Yana Gevorgyan", url: "https://yg.is/" }],
     images: [
       { src: sema__img1, alt: "Game start page for Say no more, Semaphore" },
       { src: sema__img3, alt: "Image of me playing Say no more, Semaphore" },
@@ -264,7 +273,8 @@ const projectsAfter = [
     title: "Kilotype — Info",
     summary: "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch's debut typefaces.",
     mainLink: "https://kilotype.de/", linkText: "kilotype.de",
-    scope: "Web design", tech1: "Sketch", collaborator1: "Friends of the Web, Kilotype",
+    scope: "Web design", tech1: "Sketch",
+    collaborators: [{ name: "Friends of the Web", url: "https://www.friendsoftheweb.com/" }, { name: "Kilotype" }],
     images: [
       { src: kilo__img1, alt: "screenshot of Kilotype's type testers" },
       { src: kilo__img2, alt: "screenshot of kilotype's homepage" },
@@ -279,7 +289,8 @@ const projectsAfter = [
     title: "Audio Visualizer — Info",
     summary: "Audio Visualizer is a program that visualizes music using frequencies and peak detection.",
     mainLink: "https://amandayehh.github.io/audio-visualizer/", linkText: "amandayehh.github.io/audio-visualizer",
-    scope: "Creative Coding, Generative Design", tech1: "p5.js", collaborator1: "Just me",
+    scope: "Creative Coding, Generative Design", tech1: "p5.js",
+    collaborators: [{ name: "Just me" }],
     images: [
       { src: audio__img1, alt: "Dropping a music file into Audio Visualizer" },
       { src: audio__img2, alt: "screenshot of audio visualizer" },
@@ -301,7 +312,7 @@ class Index extends Component {
     this.state = {
       isOpen: false,
       title: "", summary: "", mainLink: "", linkText: "",
-      scope: "", tech1: "", collaborator1: "",
+      scope: "", tech1: "", collaborators: [],
       images: [],
     }
     this.openWindow = this.openWindow.bind(this)
@@ -360,7 +371,7 @@ class Index extends Component {
         linkText={this.state.linkText}
         scope={this.state.scope}
         tech1={this.state.tech1}
-        collaborator1={this.state.collaborator1}
+        collaborators={this.state.collaborators}
         images={this.state.images}
       />
     )
@@ -403,11 +414,11 @@ class Index extends Component {
           <Sticky />
 
           <div className="index__infoShortcuts">
-            <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@\nproton.me"} />
             <Shortcut href={"/projects"} className="index__infoShortcuts__5" src={computer} alt={"computer icon"} text={"Projects"} />
 <Shortcut href={"https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?ouid=117237055574131097484&usp=sheets_home&ths=true"} className="index__infoShortcuts__2" src={desktop} alt={"desktop icon"} text={"Work"} />
             <Shortcut href={"https://www.are.na/amanda"} className="index__infoShortcuts__3" src={web} alt={"website icon"} text={"are.na"} />
             <Shortcut href={"https://github.com/amandayehh"} className="index__infoShortcuts__4" src={web} alt={"website icon"} text={"Github"} />
+            <Shortcut href={"mailto:amandayeh@proton.me"} className="index__infoShortcuts__1" src={mail} alt={"mail icon"} text={"amandayeh@\nproton.me"} />
           </div>
 
           {projects.map((project) => this.renderProject(project))}

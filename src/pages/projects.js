@@ -53,35 +53,29 @@ const sections = [
   {
     title: "Web",
     items: [
-      { name: "Amanda’s homepage", description: "My personal website", preview: "My current homepage on the internet, inspired by the GUIs I grew up with and use today. The site contains my recent adventures in code and design.", tools: ["React"], domain: ["Graphic", "Specimen"], url: "https://amandayeh.com", image: imgHomepage },
-      { name: "Elicit", description: "AI research tool homepage", preview: "Website and branding for Elicit, an AI-assisted research tool for science.", tools: ["Framer"], domain: ["Research", "AI"], url: "https://elicit.com", image: imgElicit },
-      { name: "Quanta", description: "Accounting service homepage", preview: "Website design and development for Quanta, a full-service accounting platform.", tools: ["Framer"], domain: ["Finance", "Software"], url: "https://usequanta.com", image: imgQuanta },
-      { name: "Type West 2022", description: "Type West 2021 digital exhibit", preview: "Website design in collaboration with my graduating class at Type West, showcasing thesis work of original type families.", tools: ["React"], domain: ["Specimen"], url: "https://typewest.letterformarchive.org/2022/", image: imgTypeWest },
-      { name: "Voices and Voices", description: "Voice assistant vignettes", preview: "Website development for a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", tools: ["React"], domain: ["Audio", "Interaction"], url: "https://voicesandvoids.net/", image: imgVoices },
-      { name: "Synesthetic perceptions", description: "Audio and visual compositions", preview: "Website development for an interactive experience that explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of tangible objects that drive those interpretations.", tools: ["React"], domain: ["Audio", "Interaction"], url: "https://synestheticperceptions.art/", image: imgSyneExample },
-      { name: "Audio visualizer", description: "Musical shape experiment", preview: "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", tools: ["P5.js"], domain: ["Audio", "Graphic"], url: "https://amandayehh.github.io/audio-visualizer/", image: imgAudio },
-      { name: "Type mirror", description: "A digital mirror made of letters", preview: "Type Mirror is a digital mirror made of letters.", tools: ["P5.js"], domain: ["Interaction", "Graphic"], url: "https://amandayehh.github.io/type-mirror/", image: imgTypose1 },
-      { name: "MICA WebX 2020", description: "Graphic Design BFA thesis show", preview: "WebX is a digital exhibition for MICA’s 2020 BFA thesis show.", tools: ["React"], domain: ["Education", "Graphic"], url: "https://web.archive.org/web/20200807235205/https://pixelation.micagraphicdesign.org/", image: imgWebX },
-      { name: "Explore SEL", description: "Learning frameworks visualized", preview: "Explore SEL is an interactive hub that helps educators, policymakers, and researchers navigate, compare, and select social and emotional learning (SEL) frameworks. I contributed to the design while working at Friends of the Web.", tools: [], domain: ["Education", "Research"], url: "http://exploresel.gse.harvard.edu/", image: imgSel },
-      { name: "Kilotype", description: "Kilotype’s website", preview: "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch's debut typefaces.", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://kilotype.de/", image: imgKilotype },
-      { name: "Frere-Jones Type", description: "Frere-Jone’s website", preview: "Frere-Jones Type is an award winning, independent type design practice in New York City. I contributed to the design of this website while working at Friends of the Web.", tools: [], domain: ["Graphic", "Specimen"], type: ["Typography"], url: "https://frerejones.com/", image: imgFrereJones},
-      { name: "QLab", description: "Website for show making software", preview: "QLab is powerful macOS software for designing and playing back sound, video, light, and show control cues. This is another website I helped design while working at Friends of the Web.", tools: [], domain: ["Software"], url: "https://qlab.app/", image: imgQlab },
+      { name: "Amanda’s homepage", description: "My personal website", preview: "My current homepage on the internet, inspired by the GUIs I grew up with and use today. The site contains my recent adventures in code and design.", tools: ["React"], domains: ["Graphic", "Interaction"], url: "https://amandayeh.com", image: imgHomepage },
+      { name: "Elicit", description: "AI research tool homepage", preview: "Website and branding for Elicit, an AI-assisted research tool for science.", tools: ["Framer"], domains: ["Research", "AI"], url: "https://elicit.com", image: imgElicit },
+      { name: "Quanta", description: "Accounting service homepage", preview: "Website design and development for Quanta, a full-service accounting platform.", tools: ["Framer"], domains: ["Finance", "Software"], url: "https://usequanta.com", image: imgQuanta },
+      { name: "Type West 2022", description: "Type West 2021 digital exhibit", preview: "Website design in collaboration with my graduating class at Type West, showcasing thesis work of original type families.", tools: ["React"], domains: ["Specimen"], url: "https://typewest.letterformarchive.org/2022/", image: imgTypeWest },
+      { name: "Voices and Voices", description: "Voice assistant vignettes", preview: "Website development for a net art project that explores how we might reclaim, transcode, and embody voice assistant interactions and data through performances, artistic research, and interactive vignettes.", tools: ["React"], domains: ["Audio", "Interaction"], url: "https://voicesandvoids.net/", image: imgVoices },
+      { name: "Synesthetic perceptions", description: "Audio and visual compositions", preview: "Website development for an interactive experience that explores the relationship between visual and auditory composition. The project features a series of music and their synesthetic interpretations as well as a collection of tangible objects that drive those interpretations.", tools: ["React"], domains: ["Audio", "Interaction"], url: "https://synestheticperceptions.art/", image: imgSyneExample },
+      { name: "Audio visualizer", description: "Musical shape experiment", preview: "Audio Visualizer is a program that visualizes music using frequencies and peak detection.", tools: ["P5.js"], domains: ["Audio", "Graphic"], url: "https://amandayehh.github.io/audio-visualizer/", image: imgAudio },
+      { name: "Type mirror", description: "A digital mirror made of letters", preview: "Type Mirror is a digital mirror made of letters.", tools: ["P5.js"], domains: ["Interaction", "Graphic"], url: "https://amandayehh.github.io/type-mirror/", image: imgTypose1 },
+      { name: "MICA WebX 2020", description: "Graphic Design BFA thesis show", preview: "WebX is a digital exhibition for MICA’s 2020 BFA thesis show.", tools: ["React"], domains: ["Education", "Graphic"], url: "https://web.archive.org/web/20200807235205/https://pixelation.micagraphicdesign.org/", image: imgWebX },
+      { name: "Explore SEL", description: "Learning frameworks visualized", preview: "Explore SEL is an interactive hub that helps educators, policymakers, and researchers navigate, compare, and select social and emotional learning (SEL) frameworks. I contributed to the design while working at Friends of the Web.", tools: [], domains: ["Education", "Research"], url: "http://exploresel.gse.harvard.edu/", image: imgSel },
+      { name: "Kilotype", description: "Kilotype’s website", preview: "Kilotype.de is a website that I helped design while working at Friends of the Web. The site brings together interactive variable typography and a vibrant color palette to highlight William Montrose and Sebastian Losch's debut typefaces.", tools: [], domains: ["Graphic", "Specimen"], type: ["Typography"], url: "https://kilotype.de/", image: imgKilotype },
+      { name: "Frere-Jones Type", description: "Frere-Jone’s website", preview: "Frere-Jones Type is an award winning, independent type design practice in New York City. I contributed to the design of this website while working at Friends of the Web.", tools: [], domains: ["Graphic", "Specimen"], type: ["Typography"], url: "https://frerejones.com/", image: imgFrereJones},
+      { name: "QLab", description: "Website for show making software", preview: "QLab is powerful macOS software for designing and playing back sound, video, light, and show control cues. This is another website I helped design while working at Friends of the Web.", tools: [], domains: ["Software"], url: "https://qlab.app/", image: imgQlab },
 
     ],
   },
   {
     title: "Games",
     items: [
-      { name: "BOY♡GAME", description: "Analog and digital dating game", preview: "BOY♡GAME is a couch co-op style party game where players build boys together and vote for their favorites.", tools: [], domain: ["Boardgame", "Video game"], url: "https://instagram.com/b0ygame/", image: imgBoy },
-      { name: "Say no more, Semaphore", description: "Semaphore education game", preview: "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", tools: ["P5.js"], domain: ["Education", "Video game"], url: "https://ygev.github.io/semaphore/", image: imgSema },
-      { name: "Mad Lads", description: "Camera-based Mad Libs", preview: "MadLads is a mobile web app reinvention of the famous phrasal template word game called Mad Libs, played with your phone's camera.", tools: ["P5.js"], domain: ["Mobile game", "Video game"], url: "https://ygev.github.io/madlads/", image: imgMadlads },
-      { name: "Buncho the Lost Bird", description: "UI/UX for 3D adventure game", preview: "Buncho is a game about a baby bird that has been separated from its mother. I worked on the UI/UX of this game for 2019 Global Game Jam.", tools: ["Unity"], domain: ["3D"], url: "https://jamiepark.itch.io/buncho-the-lost-bird", image: imgBuncho },
-    ],
-  },
-  {
-    title: "Plugins",
-    items: [
-      { name: "Keyboard Doodler", description: "Keyboard-based vectorizer", preview: "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", tools: ["Typescript"], domain: ["Design tool"], url:"https://figma.com/community/plugin/917914510168637203/keyboard-doodler", image: imgDoodler },
+      { name: "BOY♡GAME", description: "Analog and digital dating game", preview: "BOY♡GAME is a couch co-op style party game where players build boys together and vote for their favorites.", tools: [], domains: ["Boardgame", "Video game"], url: "https://instagram.com/b0ygame/", image: imgBoy },
+      { name: "Say no more, Semaphore", description: "Semaphore education game", preview: "Semaphore is a perfect way of communicating with others while maintaining social distancing during the pandemic. Say no more! teaches the fundamental poses of semaphore using webcam-enabled pose recognition.", tools: ["P5.js"], domains: ["Education", "Video game"], url: "https://ygev.github.io/semaphore/", image: imgSema },
+      { name: "Mad Lads", description: "Camera-based Mad Libs", preview: "MadLads is a mobile web app reinvention of the famous phrasal template word game called Mad Libs, played with your phone's camera.", tools: ["P5.js"], domains: ["Mobile game", "Video game"], url: "https://ygev.github.io/madlads/", image: imgMadlads },
+      { name: "Buncho the Lost Bird", description: "UI/UX for 3D adventure game", preview: "Buncho is a game about a baby bird that has been separated from its mother. I worked on the UI/UX of this game for 2019 Global Game Jam.", tools: ["Unity"], domains: ["3D"], url: "https://jamiepark.itch.io/buncho-the-lost-bird", image: imgBuncho },
     ],
   },
   {
@@ -93,10 +87,16 @@ const sections = [
     ],
   },
   {
+    title: "Plugins",
+    items: [
+      { name: "Keyboard Doodler", description: "Keyboard-based vectorizer", preview: "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", tools: ["Typescript"], domains: ["Design tool"], url:"https://figma.com/community/plugin/917914510168637203/keyboard-doodler", image: imgDoodler },
+    ],
+  },
+  {
     title: "Products",
     items: [
-      { name: "Figma", description: "Design for web-based canvas", preview: "Product design work for Figma. My contributions include editor, design system, typography, sites, and mobile apps.", tools: [], domain: ["Design tool", "Software"], url: "https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?gid=0#gid=0", image: imgFigma },
-      { name: "Google Docs", description: "Website for mobile app", preview: "Product design for Google docs’s mobile app.", tools: [], domain: ["Productivity", "Software"], url: "https://docs.google.com/", image: imgDocs },
+      { name: "Figma", description: "Design for web-based canvas", preview: "Product design work for Figma. My contributions include editor, design system, typography, sites, and mobile apps.", tools: [], domains: ["Design tool", "Software"], url: "https://docs.google.com/spreadsheets/d/1whP8bzFwvkcDQD66ZhSizF6V3a93LIkv1IqubUQb9sg/edit?gid=0#gid=0", image: imgFigma },
+      { name: "Google Docs", description: "Website for mobile app", preview: "Product design for Google docs’s mobile app.", tools: [], domains: ["Productivity", "Software"], url: "https://docs.google.com/", image: imgDocs },
     ],
   },
 ]
@@ -105,7 +105,7 @@ const allItems = sections.flatMap(s => s.items)
 
 const filterGroups = [
   { label: "Tools", key: "tools" },
-  { label: "Domain", key: "domain" },
+  { label: "Domains", key: "domains" },
   { label: "Type style", key: "type" },
 ].map(group => ({
   ...group,
@@ -260,14 +260,14 @@ class Projects extends Component {
       const kick = new Tone.MembraneSynth({
         pitchDecay: 0.25, octaves: 1,
         envelope: { attack: 0.04, decay: 0.8, sustain: 0, release: 2.5 },
-        volume: 3,
+        volume: 10,
       }).connect(kickFilter)
       // Beater click — quiet noise transient for subtle attack texture
       const kickClickFilter = new Tone.Filter({ frequency: 120, type: 'lowpass' }).connect(reverb)
       const kickClick = new Tone.NoiseSynth({
         noise: { type: 'brown' },
         envelope: { attack: 0.001, decay: 0.02, sustain: 0, release: 0.02 },
-        volume: -10,
+        volume: -5,
       }).connect(kickClickFilter)
 
       // Mid bell — sine tuned to G3, soft mallet feel
@@ -293,16 +293,14 @@ class Projects extends Component {
         volume: -2,
       }).connect(tockKnockFilter)
 
-      // Ambient jazz shimmer — soft metallic, long airy tail like a distant cymbal
-      const shaker = new Tone.MetalSynth({
-        frequency: 2,
-        envelope: { attack: 0.008, decay: 0.3, release: 1.8 },
-        harmonicity: 3.1,
-        modulationIndex: 8,
-        octaves: 0.8,
-        resonance: 800,
-        volume: -25,
-      }).connect(reverb)
+      // giving a pitched rattle that resonates with the melody
+      const shakerReverb = new Tone.Reverb({ decay: 2.5, wet: 0.4 }).toDestination()
+      const shakerFilter = new Tone.Filter({ frequency: 800, type: 'bandpass', Q: 4 }).connect(shakerReverb)
+      const shaker = new Tone.NoiseSynth({
+        noise: { type: 'pink' },
+        envelope: { attack: 0.001, decay: 0.12, sustain: 0, release: 0.08 },
+        volume: 12,
+      }).connect(shakerFilter)
 
       // Bell tone — sine tuned to A4, pentatonic friendly
       const snap = new Tone.Synth({
@@ -315,7 +313,7 @@ class Projects extends Component {
         { name: 'kick',   synth: kick,   play: (s, note, vel) => { s.triggerAttackRelease('C2', '4n', Tone.now(), vel); kickClick.triggerAttack(Tone.now()); kickClick.triggerRelease(Tone.now() + 0.03) } },
         { name: 'clap',   synth: clap,   play: (s, note, vel) => s.triggerAttackRelease('G3', '8n', Tone.now(), vel) },
         { name: 'tock',   synth: tock,   play: (s, note, vel) => { s.triggerAttackRelease('D4', '8n', Tone.now(), vel); tockKnock.triggerAttack(Tone.now()); tockKnock.triggerRelease(Tone.now() + 0.04) } },
-        { name: 'shaker', synth: shaker, play: (s, note, vel) => { if (note) s.frequency.value = Tone.Frequency(note).toFrequency(); s.triggerAttackRelease(Tone.now(), vel) } },
+        { name: 'shaker', synth: shaker, play: (s, note, vel) => { shakerFilter.frequency.value = Tone.Frequency(note || 'E4').transpose(7).toFrequency(); s.triggerAttackRelease('16n', Tone.now(), vel) } },
         { name: 'snap',   synth: snap,   play: (s, note, vel) => s.triggerAttackRelease(note || 'A4', '8n', Tone.now(), vel) },
       ]
     }
