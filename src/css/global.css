@@ -15,7 +15,7 @@
 }
 
 .popOut {
-  animation: popOut 0.4s ease-out forwards;
+  animation: popOut 0.4s cubic-bezier(0.3, -0.3, 0.4, 1.2) forwards;
 }
 
 .fadeIn {
@@ -75,7 +75,7 @@
 
   to {
     opacity: 0;
-    transform: translateY(120px);
+    transform: translateY(100px);
     visibility: hidden;
   }
 }
