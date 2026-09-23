@@ -73,6 +73,7 @@
 
 .innerPage__window__main__text__link__a {
   color: var(--accent);
+  text-decoration: none;
 }
 
 .innerPage__window__main__text__link {
@@ -110,7 +111,7 @@
   background-color: white;
   border-radius: 100%;
   border: 1px solid var(--black);
-  z-index: 200;
+  z-index: 202;
   bottom: 12px;
   left: 12px;
   cursor: pointer;
@@ -127,6 +128,10 @@
 }
 
 @media only screen and (min-width: 600px) {
+
+  .innerPage__window {
+    overflow: hidden;
+  }
 
   .innerPage__window__main {
     display: flex;
@@ -150,7 +155,9 @@
     position: relative;
     top: 0vw;
     left: 0vw;
-    overflow: scroll;
+    height: calc(100% - 24px);
+    overflow-x: hidden;
+    overflow-y: auto;
     outline: 1px solid var(--black);
     margin-top: 24px;
   }

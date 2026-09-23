@@ -21,6 +21,7 @@ import imgSyneExample from "../images/syne/interpretation 2.gif"
 import imgAudio from "../images/audio/audio-intro.gif"
 import imgQlab from "../images/projects/Qlab.png"
 import imgSel from "../images/projects/ExploreSel.png"
+import imgSheet from "../images/sheet/home.png"
 
 
 
@@ -89,6 +90,7 @@ const sections = [
   {
     title: "Plugins",
     items: [
+      { name: "Spreadsheet as canvas", description: "Google Sheets collage tool", preview: "Make images and collages in Google Sheets via an Extension.", tools: [], domains: ["Graphic", "Design tool"], url: "https://docs.google.com/spreadsheets/d/1ANuecDE_kbQUUSMAUwhzvtQCkD62PUexESziMbJeQ8g/copy", image: imgSheet },
       { name: "Keyboard Doodler", description: "Keyboard-based vectorizer", preview: "Keyboard Doodler is a Figma plugin that turns your keyboard into a canvas. By simply pressing keys, vector nodes in that key's location will appear on the frame.", tools: ["Typescript"], domains: ["Design tool"], url:"https://figma.com/community/plugin/917914510168637203/keyboard-doodler", image: imgDoodler },
     ],
   },

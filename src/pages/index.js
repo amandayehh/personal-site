@@ -26,6 +26,7 @@ import computer from "../images/shortcut/computer.png"
 
 
 //large
+import sheet from "../images/sheet/home.png"
 import boygame from "../images/index/boygame.png"
 import syne from "../images/index/syne.png"
 import voicesAndVoids from "../images/index/voicesandvoids.png"
@@ -48,6 +49,12 @@ import kilotypeSmall from "../images/index/small-kilotype.png"
 import semaSmall from "../images/index/small-sema.png"
 import audioVisualizerSmall from "../images/index/small-audio.png"
 import cat from "../images/cat.gif"
+
+//Sheet Art Maker
+import sheet__img1 from "../images/sheet/home.png"
+import sheet__img3 from "../images/sheet/sheet.png"
+import sheet__img4 from "../images/sheet/cat.png"
+import sheet__img2 from "../images/sheet/nature.png"
 
 //Boygame
 import boygame__img1 from "../images/boygame/gameboy.png"
@@ -113,9 +120,26 @@ import audio__img3 from "../images/audio/example.gif"
 
 const projects = [
   {
+    className: "index__sheet",
+    large: sheet, small: sheet,
+    imgClass: "index__sheet__img", wrpClass: "index__sheet__wrp",
+    windowTitle: "Spreadsheet as Canvas", windowAlt: "Screenshot of pentaptych created in Google Sheets",
+    title: "Spreadsheet as Canvas — Info",
+    summary: "Make images and collages in Google Sheets via an Extension.",
+    mainLink: "https://docs.google.com/spreadsheets/d/1ANuecDE_kbQUUSMAUwhzvtQCkD62PUexESziMbJeQ8g/copy", linkText: "Google Sheets",
+    scope: "Extension", tech1: "Javascript",
+    collaborators: [{ name: "Just me" }],
+    images: [
+      { src: sheet__img1, alt: "Screenshot of pentaptych created in Google Sheets" },
+      { src: sheet__img2, alt: "Screenshot of 2 fishes drawn in Google Sheets" },
+      { src: sheet__img3, alt: "Screenshot of patrick on a rocking seahorse drawn in Google Sheets" },
+      { src: sheet__img4, alt: "Screenshot of 2 cats drawn in Google Sheets" },
+    ],
+  },
+  {
     className: "index__boygame",
     large: boygame, small: boygame,
-    imgClass: "index__boygame__img", wrpClass: "index__boygame__img",
+    imgClass: "index__boygame__img", wrpClass: "index__boygame__wrp",
     windowTitle: "BOY♡GAME", windowAlt: "Screen shot of BOYGAME's start screen showing input for user name and small canvas for drawing.",
     title: "BOY♡GAME — Info",
     summary: "BOY♡GAME is a couch co-op style party game where players build boys together and vote for their favorites.",

@@ -68,7 +68,7 @@ body {
     z-index: 2;
 }
 
-.index__boygame {
+.index__sheet {
     position: relative;
     transform: translate(35vw, -20vw);
     width: 77vw;
@@ -76,22 +76,38 @@ body {
     z-index: 10;
 }
 
+.index__sheet__wrp {
+    height: 36vw;
+}
+
+.index__sheet__img {
+    width: 77vw;
+
+}
+
+.index__boygame {
+    position: relative;
+    transform: translate(50vw, 2vw);
+    width: 60vw;
+    height: 0;
+    z-index: 15;
+}
+
 .index__boygame__wrp {
-    height: 17vw;
+    height: 40vw;
 }
 
 .index__boygame__img {
-    width: 77vw;
-
+    width: 60vw;
 }
 
 .index__syne {
     position: relative;
     margin-left: 30vw;
-    transform: translate(25vw, 16vw);
+    transform: translate(15vw, 90vw);
     width: 90vw;
     height: 49.7vw;
-    z-index: 10;
+    z-index: 15;
 }
 
 .index__syne__wrp {
@@ -105,7 +121,7 @@ body {
 .index__voices {
     position: relative;
     margin-left: 49vw;
-    transform: translate(-6vw, 18vw);
+    transform: translate(5vw, 12vw);
     width: 72vw;
     height: 190vw;
     z-index: 10;
@@ -269,6 +285,7 @@ body {
     width: 88vw;
 }
 
+
 .index__colophon {
     position: relative;
     z-index: 200;
@@ -318,44 +335,60 @@ body {
         left: 70px;
     }
 
-    .index__boygame {
+    .index__sheet {
         position: relative;
-        transform: translate(36vw, -12vw);
-        width: 50vw;
+        transform: translate(35.3vw, -7.8vw);
+        width: 45vw;
         height: 17vw;
         z-index: 10;
     }
 
+    .index__sheet__wrp {
+        height: 21.1vw;
+    }
+
+    .index__sheet__img {
+        width: 45vw;
+    }
+
+    .index__boygame {
+        position: relative;
+        transform: translate(60.9vw, -7.15vw);
+        width: 44vw;
+        height: 0;
+        z-index: 10;
+    }
+
     .index__boygame__wrp {
-        height: 17vw;
+        height: 29.3vw;
     }
 
     .index__boygame__img {
-        width: 50vw;
+        width: 44vw;
     }
 
     .index__syne {
         position: relative;
-        margin-left: 60vw;
-        transform: translateY(3vw);
-        width: 60vw;
+        margin-left: 5.7vw;
+        transform: translateY(8.76vw);
+        width: 48.5vw;
         height: 33.2vw;
-        z-index: 100;
+        z-index: 10;
     }
 
 
     .index__syne__wrp {
-        height: 33.2vw;
+        height: 26.8vw;
     }
 
     .index__syne__img {
-        width: 60vw;
+        width: 48.5vw;
     }
 
     .index__voices {
         position: relative;
-        margin-left: 30vw;
-        transform: translateY(-18vw);
+        margin-left: 38.5vw;
+        transform: translateY(-4.1vw);
         width: 58vw;
         height: 150vw;
         z-index: 10;
@@ -371,25 +404,25 @@ body {
 
     .index__cork {
         position: relative;
-        margin-left: 2vw;
-        transform: translateY(-152vw);
-        width: 40vw;
+        margin-left: 5.7vw;
+        transform: translateY(-108vw);
+        width: 29.4vw;
         height: 26vw;
         z-index: 10;
     }
 
     .index__cork__wrp {
-        height: 26vw;
+        height: 19.2vw;
     }
 
     .index__cork__img {
-        width: 40vw;
+        width: 29.4vw;
     }
 
     .index__cycl {
         position: relative;
         margin-left: 12vw;
-        transform: translateY(-139vw);
+        transform: translateY(-56.6vw);
         width: 11vw;
         height: 11vw;
         z-index: 11;
@@ -406,7 +439,7 @@ body {
     .index__cloister {
         position: relative;
         margin-left: 20vw;
-        transform: translateY(-140vw);
+        transform: translateY(-57.6vw);
         width: 11vw;
         height: 11vw;
         z-index: 10;
@@ -421,16 +454,22 @@ body {
     }
 
 
+    .index__wrapper .smallSticky {
+        transform: translateY(-51.6vw);
+    }
+
     .index__fontShortcuts {
         margin-left: 7vw;
-        transform: translateY(-135vw);
+        transform: translateY(-52.6vw);
     }
 
     .index__type-mirror {
-        margin-left: 14vw;
+        position: relative;
+        margin-left: 66.7vw;
         width: 24vw;
         height: 18vw;
-        transform: translateY(-127vw);
+        transform: translateY(-170.1vw);
+        z-index: 10;
     }
 
     .index__type-mirror__wrp {
@@ -444,29 +483,30 @@ body {
 
     .index__doodler {
         position: relative;
-        margin-left: 60vw;
-        transform: translateY(-112vw);
-        width: 48vw;
+        margin-left: 24.7vw;
+        transform: translateY(-218.6vw);
+        width: 46vw;
         height: 22vw;
         z-index: 10;
     }
 
     .index__doodler__wrp {
-        height: 22vw;
+        height: 21.5vw;
     }
 
     .index__doodler__img {
-        width: 48vw;
+        width: 46vw;
     }
 
     .index__semaphore {
         position: relative;
-        transform: translate(-3vw, -128vw);
-        width: 44vw;
+        transform: translate(15.9vw, -181.4vw);
+        width: 49vw;
+        z-index: 10;
     }
 
     .index__semaphore__img {
-        width: 44vw;
+        width: 49vw;
     }
 
     .index__kilotype {
@@ -500,6 +540,7 @@ body {
     .index__audio-visualizer__img {
         width: 45vw;
     }
+
 
     .index__colophon {
         position: relative;

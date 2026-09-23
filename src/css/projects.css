@@ -73,6 +73,7 @@
 
 .projects__subtitle {
   color: var(--color-description);
+  line-height: 1.5em;
 }
 
 /* Filters */
