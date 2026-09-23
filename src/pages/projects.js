@@ -19,8 +19,8 @@ import imgFrereJones from "../images/projects/frerejones.png"
 import imgKilotype from "../images/index/kilotype.png"
 import imgSyneExample from "../images/syne/interpretation 2.gif"
 import imgAudio from "../images/audio/audio-intro.gif"
-import imgQlab from "../images/projects/Qlab.png"
-import imgSel from "../images/projects/ExploreSel.png"
+import imgQlab from "../images/projects/qlab.png"
+import imgSel from "../images/projects/exploresel.png"
 import imgSheet from "../images/sheet/home.png"
 
 

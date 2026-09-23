@@ -110,7 +110,7 @@ import kilo__img3 from "../images/kilotype/about.png"
 //Semaphore
 import sema__img1 from "../images/sema/home.png"
 import sema__img2 from "../images/sema/me.gif"
-import sema__img3 from "../images/sema/game.png"
+import sema__img3 from "../images/sema/Game.png"
 
 //Audio Visualizer
 import audio__img1 from "../images/audio/audio-intro.gif"
